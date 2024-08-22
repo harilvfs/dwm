@@ -5,9 +5,16 @@ This is a customized version of the DWM patches from [Chris Titus Tech](https://
 ## Installation
 
 ```bash
-git clone https://github.com/aayushx402/dwm-aay
-cd dwm-aay
+git clone https://github.com/aayushx402/dwm-ayx
+cd dwm-ayx
 sudo make clean install
+```
+
+Add this to your `~/.xinitrc`
+
+```
+slstatus &
+exec dwm
 ```
 
 > [!IMPORTANT]
