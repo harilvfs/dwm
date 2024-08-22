@@ -16,7 +16,7 @@ static const int topbar                       = 1;   /* 0 means bottom bar */
 #define ICONSIZE                              17    /* icon size */
 #define ICONSPACING                           5     /* space between icon and title */
 #define SHOWWINICON                           1     /* 0 means no winicon */
-static const char *fonts[]                    = { "FiraCodeNerdFont:size=10", "NotoColorEmoji:pixelsize=16:antialias=true:autohint=true" };
+static const char *fonts[]                    = { "MesloLGS Nerd Font Mono:size=10", "NotoColorEmoji:pixelsize=16:antialias=true:autohint=true" };
 static const char normbordercolor[]           = "#3B4252";
 static const char normbgcolor[]               = "#2E3440";
 static const char normfgcolor[]               = "#D8DEE9";
@@ -110,10 +110,10 @@ static Key keys[] = {
     { MODKEY,                       XK_e,          spawn,                  SHCMD ("thunar")}, // open thunar file manager
     { MODKEY,                       XK_w,          spawn,                  SHCMD ("looking-glass-client -F")}, // start Looking glass
     { MODKEY|ShiftMask,             XK_w,          spawn,                  SHCMD ("feh --randomize --bg-fill ~/Downloads/nord-background//*")}, // start Looking glass
-    { 0,                            0x1008ff02,    spawn,                  SHCMD ("xbacklight -inc 10")}, // increase backlight brightness
-    { 0,                            0x1008ff03,    spawn,                  SHCMD ("xbacklight -dec 10")}, // decrease backlight brightness
-    { 0,                            0x1008ff1b,    spawn,                  SHCMD ("xbacklight -inc 10")}, // increase backlight brightness
-    { 0,                            0x1008ff8e,    spawn,                  SHCMD ("xbacklight -dec 10")}, // decrease backlight brightness
+    { MODKEY,                       XK_i,          spawn,                  SHCMD ("xbacklight -inc 10")}, // increase backlight brightness
+    { MODKEY,                       XK_t,          spawn,                  SHCMD ("xbacklight -dec 10")}, // decrease backlight brightness
+    { MODKEY,                       XK_i,          spawn,                  SHCMD ("xbacklight -inc 10")}, // increase backlight brightness
+    { MODKEY,                            XK_t,          spawn,                  SHCMD ("xbacklight -dec 10")}, // decrease backlight brightness
     { 0,                            0x1008ff11,    spawn,                  SHCMD ("amixer sset Master 5%- unmute")}, // unmute volume
     { 0,                            0x1008ff12,    spawn,                  SHCMD ("amixer sset Master $(amixer get Master | grep -q '\\[on\\]' && echo 'mute' || echo 'unmute')")}, // toggle mute/unmute
     { 0,                            0x1008ff13,    spawn,                  SHCMD ("amixer sset Master 5%+ unmute")}, // unmute volume
