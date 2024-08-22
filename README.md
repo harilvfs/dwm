@@ -20,3 +20,7 @@ exec dwm
 > [!IMPORTANT]
 > After installation, remember to adjust some keybindings to fit your use case.
 
+## Desktop
+![Desktop](https://github.com/aayushx402/images/blob/main/dwm/2024-08-22_22-54.png)
+![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-22_22-57.png)
+
