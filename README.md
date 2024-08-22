@@ -1,5 +1,7 @@
 <p align="center"> <strong>DWM</strong>  </p>
 
+![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-22_22-57.png)
+
 This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.
 
 ## Installation
@@ -22,5 +24,4 @@ exec dwm
 
 ## Desktop
 ![Desktop](https://github.com/aayushx402/images/blob/main/dwm/2024-08-22_22-54.png)
-![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-22_22-57.png)
 
