@@ -42,6 +42,7 @@ static const char *const autostart[] = {
   "picom", "-b", NULL,
   "sh", "-c", "feh --randomize --bg-fill ~/Downloads/nord-background/*", NULL,
   "nm-applet", NULL,
+  "volumeicon", NULL,
   "synergy", NULL,
   "slstatus", NULL,
   NULL /* terminate */
@@ -110,10 +111,10 @@ static Key keys[] = {
     { MODKEY,                       XK_e,          spawn,                  SHCMD ("thunar")}, // open thunar file manager
     { MODKEY,                       XK_w,          spawn,                  SHCMD ("looking-glass-client -F")}, // start Looking glass
     { MODKEY|ShiftMask,             XK_w,          spawn,                  SHCMD ("feh --randomize --bg-fill ~/Downloads/nord-background//*")}, // start Looking glass
-    { MODKEY,                       XK_i,          spawn,                  SHCMD ("xbacklight -inc 10")}, // increase backlight brightness
-    { MODKEY,                       XK_t,          spawn,                  SHCMD ("xbacklight -dec 10")}, // decrease backlight brightness
-    { MODKEY,                       XK_i,          spawn,                  SHCMD ("xbacklight -inc 10")}, // increase backlight brightness
-    { MODKEY,                            XK_t,          spawn,                  SHCMD ("xbacklight -dec 10")}, // decrease backlight brightness
+    { MODKEY|ShiftMask,                       XK_i,          spawn,                  SHCMD ("brightnessctl s +10%")}, // increase backlight brightness
+    { MODKEY|ShiftMask,                       XK_t,          spawn,                  SHCMD ("brightnessctl s 10%-")}, // decrease backlight brightness
+    { MODKEY|ShiftMask,                       XK_i,          spawn,                  SHCMD ("brightnessctl s +10%")}, // increase backlight brightness
+    { MODKEY|ShiftMask,                            XK_t,          spawn,                  SHCMD ("brightnessctl s 10%-")}, // decrease backlight brightness
     { 0,                            0x1008ff11,    spawn,                  SHCMD ("amixer sset Master 5%- unmute")}, // unmute volume
     { 0,                            0x1008ff12,    spawn,                  SHCMD ("amixer sset Master $(amixer get Master | grep -q '\\[on\\]' && echo 'mute' || echo 'unmute')")}, // toggle mute/unmute
     { 0,                            0x1008ff13,    spawn,                  SHCMD ("amixer sset Master 5%+ unmute")}, // unmute volume
