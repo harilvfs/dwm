@@ -24,7 +24,7 @@
     background-color: @background;
     spacing: 10px;
     margin: 10px 0 0 0;
-    width: 100px;
+    width: 200px;
 }
 
 #inputbar {
@@ -65,7 +65,7 @@ element-icon {
    text-color: @foreground;
    placeholder: "Search";
    placeholder-color: @grey;
-   font: "Sora Regular 12";
+   font: "Sora Regular 20";
 }
 
 #prompt {
@@ -73,13 +73,6 @@ element-icon {
    padding: 0 4px;
    margin: 0 5px 0 0;
    text-color: @foreground;
-   font: "Sora Regular 10";
+   font: "Sora Regular 20";
 }
 
-configuration {
-    font: "FiraCodeNerdFont 10";
-}
-
-window {
-    font: "FiraCodeNerdFont 10";
-}
