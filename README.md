@@ -25,3 +25,4 @@ exec dwm
 ## Desktop
 ![Desktop](https://github.com/aayushx402/images/blob/main/dwm/2024-08-22_22-54.png)
 
+[Picom Config](https://github.com/aayushx402/i3-CatDotfiles/blob/main/picom/picom.conf)
