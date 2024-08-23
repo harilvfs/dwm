@@ -1,6 +1,6 @@
 <p align="center"> <strong>DWM</strong>  </p>
 
-![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-23_22-08.png)
+![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-24_00-24.png)
 
 This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.
 
