@@ -41,8 +41,8 @@ static const char *const autostart[] = {
   "~/.config/picom.conf", NULL,
   "picom", "-b", NULL,
   "sh", "-c", "feh --randomize --bg-fill ~/Downloads/nord-background/*", NULL,
-  "nm-applet", NULL,
   "volumeicon", NULL,
+  "nm-applet", NULL,
   "synergy", NULL,
   "slstatus", NULL,
   NULL /* terminate */
