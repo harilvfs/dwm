@@ -62,8 +62,8 @@ static const Rule rules[] = {
      */
     /* class                instance  title           tags mask  isfloating  isterminal  noswallow monitor */
     { "St",                 NULL,     NULL,           0,         0,          0,          0,        0 },
-    { "kitty",              NULL,     NULL,           0,         0,          1,          0,        0 },
-    { "Alacritty",          NULL,     NULL,           0,         0,          0,          0,        0 },
+    { "kitty",              NULL,     NULL,           0,         0,          0,          0,        0 },
+    { "Alacritty",          NULL,     NULL,           0,         0,          1,          0,        0 },
     { "terminator",         NULL,     NULL,           0,         0,          0,          0,        0 },
     { "lutris",             NULL,     NULL,           0,         1,          0,          0,        0 },
     { "steam_app_default",  NULL,     NULL,           0,         1,          0,          0,        0 },
@@ -97,7 +97,7 @@ static const Layout layouts[] = {
 #define STATUSBAR "dwmblocks"
 /* commands */
 static const char *launchercmd[] = { "rofi", "-show", "drun", NULL };
-static const char *termcmd[]     = { "kitty", NULL };
+static const char *termcmd[]     = { "alacritty", NULL };
 
 static Key keys[] = {
     /* modifier                     key            function                argument */
