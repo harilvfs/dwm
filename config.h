@@ -42,7 +42,7 @@ static const char *const autostart[] = {
   "picom", "-b", NULL,
   "sh", "-c", "feh --randomize --bg-fill ~/Downloads/nord-background/*", NULL,
   "pasystray", NULL,
-    "blueman-applet", NULL,
+  "blueman-applet", NULL,
   "nm-applet", NULL,
   "synergy", NULL,
   "slstatus", NULL,
@@ -68,7 +68,7 @@ static const Rule rules[] = {
     { "terminator",         NULL,     NULL,           0,         0,          1,          0,        0 },
     { "lutris",             NULL,     NULL,           0,         1,          0,          0,        0 },
     { "steam_app_default",  NULL,     NULL,           0,         1,          0,          0,        0 },
-    { "thunar",							NULL,     NULL,           0,         1,          0,          0,       -1 },
+    { "thunar",		    NULL,     NULL,           0,         1,          0,          0,        0 },
     { NULL,                 NULL,     "Event Tester", 0,         0,          0,          1,       -1 }, /* xev */
 };
 
