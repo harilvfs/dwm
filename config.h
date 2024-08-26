@@ -42,6 +42,7 @@ static const char *const autostart[] = {
   "picom", "-b", NULL,
   "sh", "-c", "feh --randomize --bg-fill ~/Downloads/nord-background/*", NULL,
   "volumeicon", NULL,
+    "blueman-applet", NULL,
   "nm-applet", NULL,
   "synergy", NULL,
   "slstatus", NULL,
