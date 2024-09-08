@@ -48,8 +48,12 @@ slstatus &
 exec dwm
 ```
 
+<br>
+
 > [!IMPORTANT]
 > After installation, remember to adjust some keybindings in `config.h` to fit your use case.
+
+<br>
 
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
