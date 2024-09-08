@@ -2,6 +2,8 @@
   <img src="https://github.com/aayushx402/images/blob/main/dwm/Dwm.svg.png" alt="Terminal">
 </p>
 
+<strong>**This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
+
 ## Preview
 
 <details>
@@ -10,8 +12,6 @@
 ![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-24_00-24.png)
 
 </details>
-
-<strong>**This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
 
 ## Dependencies
 
@@ -41,7 +41,7 @@ cd dwm-ayx
 sudo make clean install
 ```
 
-Add this to your `~/.xinitrc`
+**Add this to your** `~/.xinitrc`
 
 ```
 slstatus &
@@ -53,9 +53,6 @@ exec dwm
 
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
-
-## Desktop
-![Desktop](https://github.com/aayushx402/images/blob/main/dwm/2024-08-23_22-08_1.png)
 
 ## Transparency
 
