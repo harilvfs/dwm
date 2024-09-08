@@ -4,7 +4,7 @@
 
 <strong>**This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
 
-## Preview
+<strong>**Preview** </strong>
 
 <details>
   <summary>Desktop</summary>
@@ -31,7 +31,7 @@ sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev l
 ```
 </details>
 
-## Installation
+<strong>**Installation** </strong>
 
 ```bash
 git clone https://github.com/aayushx402/dwm-ayx
@@ -52,7 +52,7 @@ exec dwm
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
-## Transparency
+<strong>**Transparency** </strong>
 
 For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/aayushx402/i3-CatDotfiles/main/picom/picom.conf).
 
