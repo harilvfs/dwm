@@ -1,6 +1,8 @@
-<p align="center"> <strong>DWM</strong>  </p>
+<p align="center"> <strong>DWM</strong>
 
 ![Terminal](https://github.com/aayushx402/images/blob/main/dwm/Dwm.svg.png)
+
+</p>
 
 ## Preview
 
