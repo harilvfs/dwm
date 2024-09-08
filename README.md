@@ -1,8 +1,4 @@
 <p align="center">
-  <strong>DWM</strong>
-</p>
-
-<p align="center">
   <img src="https://github.com/aayushx402/images/blob/main/dwm/Dwm.svg.png" alt="Terminal">
 </p>
 
