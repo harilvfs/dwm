@@ -50,5 +50,5 @@ exec dwm
 
 ## Transparency
 
-For transparency settings, check out this ➤ [Picom config](https://github.com/aayushx402/i3-CatDotfiles/blob/main/picom/picom.conf).
+For transparency settings, check out this ➤ [Picom Config](https://github.com/aayushx402/i3-CatDotfiles/blob/main/picom/picom.conf).
 
