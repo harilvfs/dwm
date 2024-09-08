@@ -18,15 +18,11 @@
 <details>
   <summary>Arch Linux</summary>
 
-**To install the required packages, run:**
-
 ```bash
 sudo pacman -S --needed base-devel git libx11 libxcb libxinerama libxft imlib2
 ```
 
 </details> <details> <summary>Debian/Ubuntu-based</summary>
-  
-**To install the required packages, run:**
 
 ```bash
 sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev libxinerama-dev libxft-dev libimlib2-dev
