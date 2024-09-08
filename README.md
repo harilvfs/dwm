@@ -13,6 +13,8 @@
 
 </details>
 
+<br>
+
 **Dependencies**
 
 <details>
