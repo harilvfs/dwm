@@ -4,6 +4,7 @@
 
 <details>
   <summary>Desktop</summary>
+  
 ![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-24_00-24.png)
 
 </details>
