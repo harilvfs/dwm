@@ -31,6 +31,8 @@ sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev l
 ```
 </details>
 
+<br>
+
 <strong>**Installation** </strong>
 
 ```bash
