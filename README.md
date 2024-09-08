@@ -40,7 +40,7 @@ exec dwm
 ```
 
 > [!IMPORTANT]
-> After installation, remember to adjust some keybindings to fit your use case.
+> After installation, remember to adjust some keybindings in `config.h` to fit your use case.
 
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
