@@ -13,7 +13,7 @@
 
 </details>
 
-## Dependencies
+**Dependencies**
 
 <details>
   <summary>Arch Linux</summary>
@@ -52,5 +52,5 @@ exec dwm
 
 ## Transparency
 
-For transparency settings, check out this ➤ [Picom Config](https://github.com/aayushx402/i3-CatDotfiles/blob/main/picom/picom.conf).
+For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/aayushx402/i3-CatDotfiles/main/picom/picom.conf).
 
