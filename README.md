@@ -15,7 +15,7 @@
 
 <br>
 
-**Dependencies**
+<strong>**Dependencies** </strong>
 
 <details>
   <summary>Arch Linux</summary>
