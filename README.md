@@ -1,6 +1,6 @@
 <p align="center"> <strong>DWM</strong>  </p>
 
-![Terminal](https://raw.githubusercontent.com/aayushx402/dwm-ayx/main/dwm.webp)
+![Terminal](https://github.com/aayushx402/dwm-ayx/blob/main/dwm.jpg)
 
 ## Preview
 
