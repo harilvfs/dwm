@@ -1,7 +1,9 @@
-<p align="center"> <strong>DWM</strong>
+<p align="center">
+  <strong>DWM</strong>
+</p>
 
-![Terminal](https://github.com/aayushx402/images/blob/main/dwm/Dwm.svg.png)
-
+<p align="center">
+  <img src="https://github.com/aayushx402/images/blob/main/dwm/Dwm.svg.png" alt="Terminal">
 </p>
 
 ## Preview
