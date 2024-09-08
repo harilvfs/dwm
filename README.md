@@ -7,17 +7,12 @@ This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/
 ## Dependencies
 **Debian/Ubuntu-based:**
 ```bash
-sudo apt-get install libx11-dev libxft-dev libxinerama-dev libxrandr-dev libxcomposite-dev libxdamage-dev libxcursor-dev libxpm-dev xclip xbacklight
+sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev libxinerama-dev libxft-dev libimlib2-dev
 ```
 
 **Arch Linux:**
 ```bash
-sudo pacman -S libx11 libxft libxinerama libxrandr libxcomposite libxdamage libxcursor libxpm xclip xbacklight
-```
-
-**Fedora**
-```bash
-sudo dnf install libX11-devel libXft-devel libXinerama-devel libXrandr-devel libXcomposite-devel libXdamage-devel libXcursor-devel libXpm-devel xclip xbacklight
+sudo pacman -S --needed base-devel extra/git extra/libx11 extra/libxcb extra/libxinerama extra/libxft extra/imlib2
 ```
 
 ## Installation
