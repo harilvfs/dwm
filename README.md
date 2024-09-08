@@ -1,5 +1,7 @@
 <p align="center"> <strong>DWM</strong>  </p>
 
+![Terminal](https://raw.githubusercontent.com/aayushx402/dwm-ayx/main/dwm.webp)
+
 ## Preview
 
 <details>
@@ -9,7 +11,7 @@
 
 </details>
 
-This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.
+*This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.*
 
 ## Dependencies
 
