@@ -33,10 +33,13 @@ exec dwm
 > [!IMPORTANT]
 > After installation, remember to adjust some keybindings to fit your use case.
 
+> [!NOTE]
+> Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
+
 ## Desktop
 ![Desktop](https://github.com/aayushx402/images/blob/main/dwm/2024-08-23_22-08_1.png)
 
 ## Transparency
 
-For transparency settings, check out this [Picom config](https://github.com/aayushx402/i3-CatDotfiles/blob/main/picom/picom.conf).
+For transparency settings, check out this ➤ [Picom config](https://github.com/aayushx402/i3-CatDotfiles/blob/main/picom/picom.conf).
 
