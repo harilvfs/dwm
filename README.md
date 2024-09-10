@@ -60,7 +60,7 @@ exec dwm
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
-<strong>**Transparency** </strong>
+### Picom
 
 For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/aayushx402/i3-CatDotfiles/main/picom/picom.conf).
 
