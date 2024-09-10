@@ -18,13 +18,13 @@ echo -ne "
 # Function to install dependencies for Debian-based distributions
 install_debian() {
     sudo apt update
-    sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev libxinerama-dev libxft-dev libimlib2-dev
+    sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev libxinerama-dev libxft-dev libimlib2-dev meson ninja-build
 }
 
 # Function to install dependencies for Arch-based distributions
 install_arch() {
     sudo pacman -Syu --noconfirm
-   sudo pacman -S --needed base-devel git libx11 libxcb libxinerama libxft imlib2
+   sudo pacman -S --needed base-devel git libx11 libxcb libxinerama libxft imlib2 meson ninja
 }
 
 # Detect the distribution and install the appropriate packages
