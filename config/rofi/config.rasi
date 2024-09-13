@@ -7,4 +7,4 @@ configuration {
   display-window: "﩯 ";
   display-combi: "  ";
 }
-@theme "themes/sidetab-nord.rasi"
+@theme "themes/nord.rasi"

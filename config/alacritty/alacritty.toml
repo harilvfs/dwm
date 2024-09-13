@@ -34,7 +34,7 @@ TERM = "xterm-256color"
 #glyph_offset = { x = 1, y = 0 }
 normal.family = "MesloLGS Nerd Font Mono"
 normal.style = "Regular"
-size = 16.0
+size = 10.0
 
 [font.bold]
 family = "MesloLGS Nerd Font Mono"
