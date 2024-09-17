@@ -62,6 +62,11 @@
             "keyColor": "34", 
         },
         {
+            "type": "wm",
+            "key": " ",
+            "keyColor": "34", 
+        },
+        {
             "type": "display",
             "key": " ",
             "keyColor": "34"
@@ -88,11 +93,6 @@
              "type": "memory",
             "key": "﬙ ",
             "keyColor": "34"
-        },
-        {
-            "type": "wm",
-            "key": " ",
-            "keyColor": "34", 
         },
         {
             "type": "uptime",
