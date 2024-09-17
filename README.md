@@ -5,15 +5,8 @@
 <strong>**This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
 
 <br>
-
-<strong>**Preview** </strong>
-
-<details>
-  <summary>Desktop</summary>
   
-![Terminal](https://github.com/aayushx402/images/blob/main/dwm/2024-08-24_00-24.png)
-
-</details>
+![Terminal](https://github.com/aayushx402/images/blob/main/dwm/dwm.png)
 
 <br>
 
