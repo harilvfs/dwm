@@ -1,3 +1,5 @@
+**This project has switched to Codeberg.**  [![Switched to Codeberg](https://img.shields.io/badge/Switched_to-Codeberg-blue?style=for-the-badge&logo=codeberg&logoColor=white)](https://codeberg.org/aayushchalise/dwm)
+
 <p align="center">
   <img src="https://github.com/aayushx402/images/blob/main/dwm/Dwm.svg.png" alt="Terminal">
 </p>
