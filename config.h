@@ -49,7 +49,7 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "󰣇", "", "󰊖", "", "" };
+static const char *tags[] = { "", "", "󰊖", "", "" };
 
 static const char ptagf[] = "[%s %s]";  /* format of a tag label */
 static const char etagf[] = "[%s]";     /* format of an empty tag */
@@ -79,9 +79,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    { "",      tile },    /* first entry is default */
-    { "",      NULL },    /* no layout function means floating behavior */
-    { "󰚯",      monocle },
+    { "",      tile },    /* first entry is default */
+    { "",      NULL },    /* no layout function means floating behavior */
+    { "",      monocle },
 };
 
 /* key definitions */
