@@ -6,7 +6,7 @@
 
 <br>
   
-![Terminal](https://github.com/aayushx402/images/blob/main/dwm/dwm.png)
+![Terminal](https://github.com/harilvfs/assets/blob/main/dwm/dwm.png)
 
 <br>
 
@@ -55,7 +55,7 @@ exec dwm
 
 ### Picom
 
-For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/aayushx402/i3-CatDotfiles/main/picom/picom.conf).
+For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
 
 For the inbuild animation of picom, check out this ➤ [FT-LABS](https://github.com/FT-Labs/picom)
 
