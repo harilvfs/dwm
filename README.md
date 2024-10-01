@@ -31,8 +31,8 @@ sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev l
 <strong>**Installation** </strong>
 
 ```bash
-git clone https://github.com/aayushx402/dwm-ayx
-cd dwm-ayx
+git clone https://github.com/harilvfs/dwm
+cd dwm
 sudo make clean install
 ```
 
