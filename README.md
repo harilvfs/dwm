@@ -32,7 +32,7 @@ sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev l
 
 ```bash
 git clone https://github.com/harilvfs/dwm
-cd dwm
+cd dwm/
 sudo make clean install
 ```
 
