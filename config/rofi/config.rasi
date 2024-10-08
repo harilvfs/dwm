@@ -6,6 +6,6 @@ configuration {
   display-drun: "  ";
   display-window: "﩯 ";
   display-combi: "  ";
-  font: "MesloLGS Nerd Font 12";
+  font: "JetBrains Mono 12";
 }
 @theme "themes/nord.rasi"
