@@ -36,7 +36,7 @@
         {
             "type": "os",
             "key": " ",
-            "keyColor": "34",  // = color4
+            "keyColor": "34",  
         },
         {
             "type": "kernel",
@@ -101,6 +101,11 @@
             "type": "disk",
             "key": " ",
             "keyColor": "34"
+        },
+        {
+            "type": "media",
+            "key": " ",
+            "keyColor": "34", 
         },
         {
             "type": "uptime",
