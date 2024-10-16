@@ -79,3 +79,6 @@ sudo ninja -C build install
 ### Dependencies
 
 Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)
+
+### Project
+*For one click installing & setup use my [Carch Project](https://github.com/harilvfs/carch)*
