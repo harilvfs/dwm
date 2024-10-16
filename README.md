@@ -28,14 +28,14 @@ sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev l
 
 <br>
 
-<strong>**Setup** </strong>
+<strong>**Installation** </strong>
 
 *For Installating necessary dependencies & stuffs run this command:*
 ```bash
 bash (<curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
 ```
 
-<strong>**Installation** </strong>
+<strong>**Setup** </strong>
 
 ```bash
 git clone https://github.com/harilvfs/dwm
