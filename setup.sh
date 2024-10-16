@@ -1,6 +1,6 @@
 install_arch() {
     sudo pacman -Syu --noconfirm
-sudo pacman -S --needed libx11 libxft libxinerama libxrandr libxrender xorg xorg-xinit xorg-xsetroot xorg-xrdb xorg-xinput xclip dmenu picom feh dunst lxappearance gcc make ttf-hack ttf-fira-code ttf-font-awesome alsa-utils pulseaudio pulseaudio-alsa pavucontrol brightnessctl maim scrot fastfetch rofi kitty alacritty firefox nerd-fonts-complete
+sudo pacman -S --needed libx11 libxft libxinerama libxrandr libxrender xorg xorg-xinit xorg-xsetroot xorg-xrdb xorg-xinput xclip dmenu picom feh dunst lxappearance gcc make ttf-hack ttf-fira-code ttf-font-awesome alsa-utils pulseaudio pulseaudio-alsa pavucontrol brightnessctl maim scrot fastfetch rofi kitty alacritty firefox nerd-fonts-complete pasystray network-manager-applet
 
 }
 
