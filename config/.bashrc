@@ -4,7 +4,9 @@ iatest=$(expr index "$-" i)
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 #######################################################
-
+if [ -f /usr/bin/fastfetch ]; then
+	fastfetch
+fi
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
