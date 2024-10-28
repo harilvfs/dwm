@@ -1,9 +1,9 @@
 theme = "catppuccin_macchiato"
 
 [editor]
-scroll-lines = 1
+scroll-lines = 10
 cursorline = true
-auto-save = false
+auto-save = true
 completion-trigger-len = 1
 true-color = true
 color-modes = true
