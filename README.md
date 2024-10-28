@@ -32,7 +32,7 @@ sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev l
 
 *For Installating necessary dependencies & stuffs run this command:*
 ```bash
-bash (<curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
+bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
 ```
 
 <strong>**Setup** </strong>
