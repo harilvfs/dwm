@@ -101,8 +101,8 @@ configure_backgrounds() {
     BG_DIR="$HOME/Downloads/backgrounds"
 
     if [ ! -d "~/Downloads" ]; then
-        mkdir ~/Pictures
-        echo "Pictures directory created in Home folder"
+        mkdir ~/Downloads
+        echo "Downloads directory created in Home folder"
     fi
 
     if [ ! -d "$BG_DIR" ]; then
