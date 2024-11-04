@@ -98,19 +98,19 @@ clone_config_folders() {
 }
 
 configure_backgrounds() {
-    BG_DIR="$HOME/Pictures/backgrounds"
+    BG_DIR="$HOME/Downloads/backgrounds"
 
-    if [ ! -d "~/Pictures" ]; then
+    if [ ! -d "~/Downloads" ]; then
         mkdir ~/Pictures
         echo "Pictures directory created in Home folder"
     fi
 
     if [ ! -d "$BG_DIR" ]; then
-        git clone https://github.com/ChrisTitusTech/nord-background.git ~/Pictures || {
+        https://github.com/harilvfs/wallpapers ~/Downloads || {
             echo "Failed to clone the repository"
             return 1
         }
-        mv ~/Pictures/nord-background ~/Pictures/backgrounds
+        mv ~/Downloads/nord-background ~/Downloads/backgrounds
         echo "Downloaded desktop backgrounds to $BG_DIR"
     else
         echo "Path $BG_DIR exists, skipping download of backgrounds"
