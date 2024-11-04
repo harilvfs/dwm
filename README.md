@@ -46,7 +46,6 @@ sudo make clean install
 **Add this to your** `~/.xinitrc`
 
 ```
-slstatus &
 exec dwm
 ```
 
