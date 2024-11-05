@@ -7,5 +7,4 @@
 <br>
 **Watch this video [Tmux Guide](https://youtu.be/DzNmUNvnB04?si=B15KBNP2KCjn0Yc0)**
 
-<br>
 <img src="https://github.com/harilvfs/assets/blob/main/tmux/tmux.png" />
