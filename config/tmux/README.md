@@ -4,4 +4,4 @@
 > Write tmux config in `~/.tmux.conf` or `$XDG_CONFIG_HOME/tmux/tmux.conf`.
 
 <br>
-<img src="https://github.com/harilvfs/assets/blob/main/tmux/tmux.png" width="100" />
+<img src="https://github.com/harilvfs/assets/blob/main/tmux/tmux.png" width="500" />
