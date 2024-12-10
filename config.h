@@ -43,6 +43,7 @@ static const char *const autostart[] = {
   "sh", "-c", "feh --randomize --bg-fill ~/Downloads/nord-background/*", NULL,
   "pasystray", NULL,
   "nm-applet", NULL,
+  "blueman-applet", NULL,
   "synergy", NULL,
   "slstatus", NULL,
   NULL /* terminate */
