@@ -1,11 +1,23 @@
-install_arch() {
-    sudo pacman -Syu --noconfirm
-sudo pacman -S --needed libx11 libxft libxinerama libxrandr libxrender xorg xorg-xinit xorg-xsetroot xorg-xrdb xorg-xinput xclip dmenu picom feh dunst lxappearance gcc make ttf-hack ttf-fira-code ttf-font-awesome alsa-utils pulseaudio pulseaudio-alsa pavucontrol brightnessctl maim scrot fastfetch rofi kitty alacritty firefox nerd-fonts-complete pasystray network-manager-applet
+#!/bin/bash
 
+RC='\033[0m'
+RED='\033[31m'
+YELLOW='\033[33m'
+CYAN='\033[36m'
+GREEN='\033[32m'
+
+install_arch() {
+sudo pacman -S --needed base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig ninja xorg-xinit xorg-server noto-fonts-emoji ttf-joypixels 
 }
 
 echo "Installing packages using pacman"
 install_arch
+
+DWM() {
+    cd "$HOME" && git clone https://github.com/harilvfs/dwm.git 
+    cd dwm/ 
+    sudo make clean install
+}
 
 install_nerd_font() {
     FONT_DIR="$HOME/.local/share/fonts"
@@ -55,32 +67,53 @@ install_nerd_font() {
 }
 
 picom_animations() {
-    mkdir -p ~/build
-    if [ ! -d ~/build/picom ]; then
-        git clone https://github.com/FT-Labs/picom.git ~/build/picom || {
-            echo "Failed to clone the repository"
+    mkdir -p "$HOME/.local/share/"
+    if [ ! -d "$HOME/.local/share/ftlabs-picom" ]; then
+        if ! git clone https://github.com/FT-Labs/picom.git "$HOME/.local/share/ftlabs-picom"; then
+            printf "%b\n" "${RED}Failed to clone the repository${RC}"
             return 1
-        }
+        fi
+    else
+        printf "%b\n" "${GREEN}Repository already exists, skipping clone${RC}"
     fi
 
-    cd ~/build/picom || { echo "Failed to change directory to picom"; return 1; }
+    cd "$HOME/.local/share/ftlabs-picom" || { printf "%b\n" "${RED}Failed to change directory to picom${RC}"; return 1; }
 
-    meson setup --buildtype=release build || {
-        echo "Meson setup failed"
+    if ! meson setup --buildtype=release build; then
+        printf "%b\n" "${RED}Meson setup failed${RC}"
         return 1
-    }
+    fi
 
-    ninja -C build || {
-        echo "Ninja build failed"
+    if ! ninja -C build; then
+        printf "%b\n" "${RED}Ninja build failed${RC}"
         return 1
-    }
+    fi
 
-    sudo ninja -C build install || {
-        echo "Failed to install the built binary"
+    if ! sudo ninja -C build install; then
+        printf "%b\n" "${RED}Failed to install the built binary${RC}"
         return 1
-    }
+    fi
 
-    echo "Picom animations installed successfully"
+    printf "%b\n" "${GREEN}Picom animations installed successfully${RC}"
+}
+
+picom_conf() {
+    local url="https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/picom/picom.conf"
+    local config_dir="$HOME/.config"
+    local destination="$config_dir/picom.conf"
+
+    mkdir -p "$config_dir"
+
+    echo "Downloading picom configuration file..."
+
+    if command -v wget > /dev/null 2>&1; then
+        wget -q -O "$destination" "$url" && echo "Picom configuration downloaded to $destination"
+    elif command -v curl > /dev/null 2>&1; then
+        curl -s -o "$destination" "$url" && echo "Picom configuration downloaded to $destination"
+    else
+        echo "Error: Neither wget nor curl is available on this system."
+        return 1
+    fi
 }
 
 clone_config_folders() {
@@ -88,38 +121,57 @@ clone_config_folders() {
 
     for dir in config/*/; do
         dir_name=$(basename "$dir")
+
         if [ -d "$dir" ]; then
             cp -r "$dir" ~/.config/
-            echo "Cloned $dir_name to ~/.config/"
+            printf "%b\n" "${GREEN}Cloned $dir_name to ~/.config/${RC}"
         else
-            echo "Directory $dir_name does not exist, skipping"
+            printf "%b\n" "${RED}Directory $dir_name does not exist, skipping${RC}"
         fi
     done
 }
 
 configure_backgrounds() {
-    BG_DIR="$HOME/Downloads/backgrounds"
+    BG_DIR="$HOME/Pictures/wallpapers"
 
-    if [ ! -d "~/Downloads" ]; then
-        mkdir ~/Downloads
-        echo "Downloads directory created in Home folder"
+    if [ ! -d "~/Pictures" ]; then
+        mkdir ~/Pictures
+        echo "Pictures directory created in Home folder"
     fi
 
     if [ ! -d "$BG_DIR" ]; then
-        https://github.com/harilvfs/wallpapers ~/Downloads || {
+        https://github.com/harilvfs/wallpapers ~/Pictures || {
             echo "Failed to clone the repository"
             return 1
         }
-        mv ~/Downloads/nord-background ~/Downloads/backgrounds
         echo "Downloaded desktop backgrounds to $BG_DIR"
     else
         echo "Path $BG_DIR exists, skipping download of backgrounds"
     fi
 }
 
-install_nerd_font
-clone_config_folders
-picom_animations
-configure_backgrounds
+install_slstatus() {
+    printf "Do you want to install slstatus? (y/N): " 
+    read -r response 
+    if [ "$response" = "y" ] || [ "$response" = "Y" ]; then
+        printf "%b\n" "${YELLOW}Installing slstatus${RC}"
+        cd "$HOME/dwm/slstatus" || { printf "%b\n" "${RED}Failed to change directory to slstatus${RC}"; return 1; }
+        if sudo make clean install; then
+            printf "%b\n" "${GREEN}slstatus installed successfully${RC}"
+        else
+            printf "%b\n" "${RED}Failed to install slstatus${RC}"
+            return 1
+        fi
+    else
+        printf "%b\n" "${GREEN}Skipping slstatus installation${RC}"
+    fi
+    cd "$HOME"
+}
 
-echo "All dependencies installed successfully."
+DWM
+install_nerd_font
+picom_animations
+picom_conf
+clone_config_folders
+configure_backgrounds
+install_slstatus
