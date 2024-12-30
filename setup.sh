@@ -7,7 +7,7 @@ CYAN='\033[36m'
 GREEN='\033[32m'
 
 install_arch() {
-sudo pacman -S --needed base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig ninja xorg-xinit xorg-server noto-fonts-emoji ttf-joypixels 
+sudo pacman -S --needed base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig ninja xorg-xinit xorg-server noto-fonts-emoji ttf-joypixels fish
 }
 
 echo "Installing packages using pacman"
