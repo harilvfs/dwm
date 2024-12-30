@@ -150,12 +150,38 @@ For the inbuild animation of picom, check out this ➤ [FT-LABS](https://github.
 
 To use the inbuilt animations provided by FT-Labs `picom`, follow the steps below:
 
+First Install Aur Helper (eg. paru or yay)
+
+<details>
+  <summary>Paru</summary>
+
 ```bash
-git clone https://github.com/FT-Labs/picom.git ~/build/picom
-cd ~/build/picom
-meson setup --buildtype=release build
-sudo ninja -C build install
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
 ```
+
+</details>
+
+<details>
+  <summary>Yay</summary>
+
+```bash
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+</details>
+
+#### Install Ftlab Picom Package
+
+```bash
+paru -S picom-ftlabs-git
+```
+
 ### Dependencies
 
 Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)
