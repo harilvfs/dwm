@@ -61,7 +61,7 @@ exec dwm
 
 ### Tmux
 
-- Install tmux
+#### Install tmux
 
 <details>
   <summary>Arch Linux</summary>
@@ -95,14 +95,23 @@ sudo zypper install tmux
 
 </details>
 
-- Install Tmux Plugin Manager 
+#### Install Tmux Plugin Manager
+
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-- Config
+#### Configuration
+
+- Create the configuration directory:
+
 ```bash
 mkdir ~/.config/tmux
+```
+
+- Download the tmux configuration file:
+
+```bash
 wget https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf ~/.config/tmux/
 ```
 
