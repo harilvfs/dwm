@@ -60,7 +60,7 @@ exec dwm
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
 ### Tmux
-- Install tmux
+#### Install tmux
 
 <details>
   <summary>Arch Linux</summary>
@@ -69,18 +69,24 @@ sudo pacman -S tmux
 ```
 
 </details>
+
+<details>
   <summary>Debian</summary>
 ```bash
 sudo apt install tmux
 ```
 
 </details>
+
+<details>
   <summary>Fedora</summary>
 ```bash
 sudo dnf install tmux
 ```
 
 </details>
+
+<details>
   <summary>openSUSE</summary>
 ```bash
 sudo zypper install tmux
