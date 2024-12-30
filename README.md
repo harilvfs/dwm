@@ -16,7 +16,7 @@
   <summary>Arch Linux</summary>
 
 ```bash
--S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja
+sudo pacman -S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja
 ```
 
 </details> <details> <summary>Debian/Ubuntu-based</summary>
