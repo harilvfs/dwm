@@ -59,6 +59,19 @@ exec dwm
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
+### Tmux
+- Install tmux
+[Arch Linux]
+
+```bash
+sudo pacman -S tmux
+```
+
+- Install Tpm Plugin Manager
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 ### Picom
 
 For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
