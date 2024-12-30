@@ -60,7 +60,8 @@ exec dwm
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
 ### Tmux
-#### Install tmux
+
+- Install tmux
 
 <details>
   <summary>Arch Linux</summary>
@@ -97,6 +98,12 @@ sudo zypper install tmux
 - Install Tmux Plugin Manager 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+- Config
+```bash
+mkdir ~/.config/tmux
+wget https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf ~/.config/tmux/
 ```
 
 ### Picom
