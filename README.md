@@ -73,16 +73,19 @@ sudo pacman -S tmux
 ```bash
 sudo apt install tmux
 ```
+
 </details>
   <summary>Fedora</summary>
 ```bash
 sudo dnf install tmux
 ```
+
 </details>
   <summary>openSUSE</summary>
 ```bash
 sudo zypper install tmux
 ```
+
 </details>
 
 - Install Tmux Plugin Manager 
