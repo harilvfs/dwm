@@ -115,6 +115,21 @@ mkdir ~/.config/tmux
 wget https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf ~/.config/tmux/
 ```
 
+- Install Config Plugins
+
+```bash
+cd ~/.tmux/plugin/tpm/scripts/
+chmod +x *.sh
+./install_plugins.sh
+```
+
+- Update Plugins
+
+```bash
+cd ~/.tmux/plugin/tpm/scripts/
+./update_plugin.sh
+```
+
 ### Picom
 
 For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
