@@ -28,7 +28,7 @@ sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev l
 
 <br>
 
-<strong>**Installation** </strong>
+## Installation
 
 *For Installating necessary dependencies & stuffs run this command:*
 ```bash
@@ -59,9 +59,9 @@ exec dwm
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
-### Tmux
+## Tmux
 
-#### Install tmux
+### Install tmux
 
 <details>
   <summary>Arch Linux</summary>
@@ -95,13 +95,13 @@ sudo zypper install tmux
 
 </details>
 
-#### Install Tmux Plugin Manager
+### Install Tmux Plugin Manager
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-#### Configuration
+### Configuration
 
 - Create the configuration directory:
 
@@ -130,13 +130,13 @@ cd ~/.tmux/plugin/tpm/scripts/
 ./update_plugin.sh
 ```
 
-### Picom
+## Picom
 
 For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
 
 For the inbuild animation of picom, check out this ➤ [FT-LABS](https://github.com/FT-Labs/picom)
 
-## Installation with Animations
+### Installation with Animations
 
 To use the inbuilt animations provided by FT-Labs `picom`, follow the steps below:
 
@@ -150,5 +150,5 @@ sudo ninja -C build install
 
 Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)
 
-### Project Overview
+## Project Overview
 For one click installing & setup use my [Carch Project](https://github.com/harilvfs/carch)
