@@ -182,6 +182,8 @@ makepkg -si
 paru -S picom-ftlabs-git
 ```
 
+**picom-ftlabs-git Package Maintainer [fazzi](https://gitlab.com/fazzi/)**
+
 ### Dependencies
 
 Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)
