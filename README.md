@@ -16,14 +16,20 @@
   <summary>Arch Linux</summary>
 
 ```bash
-sudo pacman -S --needed base-devel git libx11 libxcb libxinerama libxft imlib2 meson ninja
+-S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja
 ```
 
 </details> <details> <summary>Debian/Ubuntu-based</summary>
 
 ```bash
-sudo apt install build-essential git libx11-dev libx11-xcb-dev libxcb-res0-dev libxinerama-dev libxft-dev libimlib2-dev meson ninja-build
+sudo apt install -y build-essential libx11-dev libxinerama-dev libxft-dev libimlib2-dev libx11-xcb-dev libfontconfig1 libx11-6 libxft2 libxinerama1 libxcb-res0-dev git unzip flameshot lxappearance feh mate-polkit meson ninja-build
 ```
+</details> <details> <summary>Fedora</summary>
+
+```bash
+sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build
+```
+
 </details>
 
 <br>
