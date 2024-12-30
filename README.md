@@ -65,6 +65,7 @@ exec dwm
 
 <details>
   <summary>Arch Linux</summary>
+  
 ```bash
 sudo pacman -S tmux
 ```
@@ -73,6 +74,7 @@ sudo pacman -S tmux
 
 <details>
   <summary>Debian</summary>
+
 ```bash
 sudo apt install tmux
 ```
@@ -81,6 +83,7 @@ sudo apt install tmux
 
 <details>
   <summary>Fedora</summary>
+  
 ```bash
 sudo dnf install tmux
 ```
@@ -89,6 +92,7 @@ sudo dnf install tmux
 
 <details>
   <summary>openSUSE</summary>
+  
 ```bash
 sudo zypper install tmux
 ```
