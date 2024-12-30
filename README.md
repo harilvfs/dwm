@@ -41,18 +41,26 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
 ```
 
-<strong>**Setup** </strong>
+<strong>**Install** </strong>
 
 ```bash
-git clone https://github.com/harilvfs/dwm
-cd dwm/
+git clone https://github.com/harilvfs/dwm ~/
+cd ~/dwm
+sudo make clean install
+```
+
+<strong>Install slstatus</strong>
+
+```bash
+cd ~/dwm/slstatus
 sudo make clean install
 ```
 
 **Add this to your** `~/.xinitrc`
 
 ```
-exec dwm
+exec dwm &
+slstatus
 ```
 
 <br>
