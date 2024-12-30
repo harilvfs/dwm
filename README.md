@@ -61,13 +61,31 @@ exec dwm
 
 ### Tmux
 - Install tmux
-[Arch Linux]
 
+<details>
+  <summary>Arch Linux</summary>
 ```bash
 sudo pacman -S tmux
 ```
 
-- Install Tpm Plugin Manager
+</details>
+  <summary>Debian</summary>
+```bash
+sudo apt install tmux
+```
+</details>
+  <summary>Fedora</summary>
+```bash
+sudo dnf install tmux
+```
+</details>
+  <summary>openSUSE</summary>
+```bash
+sudo zypper install tmux
+```
+</details>
+
+- Install Tmux Plugin Manager 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
