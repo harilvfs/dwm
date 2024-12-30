@@ -182,7 +182,7 @@ makepkg -si
 paru -S picom-ftlabs-git
 ```
 
-**picom-ftlabs-git Package Maintainer [fazzi](https://gitlab.com/fazzi/)**
+picom-ftlabs-git Package Maintainer [fazzi](https://gitlab.com/fazzi/)
 
 ### Dependencies
 
