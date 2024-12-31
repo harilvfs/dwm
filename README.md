@@ -113,7 +113,7 @@ sudo zypper install tmux
 
 </details>
 
-### Install Tmux Plugin Manager [TPM]
+### Clone Tmux Plugin Manager [TPM]
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
