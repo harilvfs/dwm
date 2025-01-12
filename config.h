@@ -41,7 +41,7 @@ static const char *const autostart[] = {
   "~/.config/picom.conf", NULL,
   "picom", "-b", NULL,
   "sh", "-c", "feh --randomize --bg-fill ~/Pictures/wallpapers/*", NULL,
-  "pasystray", NULL,
+  "pystray", NULL,
   "nm-applet", NULL,
   "blueman-applet", NULL,
   "synergy", NULL,
