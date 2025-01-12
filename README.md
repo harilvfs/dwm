@@ -119,14 +119,6 @@ sudo zypper install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### Install TPM
-
-```bash
-cd ~/.tmux/plugins/tpm
-chmod +x tpm
-./tpm
-```
-
 ### Configuration
 
 - Create the configuration directory:
@@ -138,7 +130,7 @@ mkdir ~/.config/tmux
 - Download the tmux configuration file:
 
 ```bash
-wget https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf ~/.config/tmux/
+wget -O ~/.config/tmux/tmux.conf https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf
 ```
 
 - Install Config Plugins
@@ -147,6 +139,14 @@ wget https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/
 cd ~/.tmux/plugin/tpm/scripts/
 chmod +x *.sh
 ./install_plugins.sh
+```
+
+### Install TPM
+
+```bash
+cd ~/.tmux/plugins/tpm
+chmod +x tpm
+./tpm
 ```
 
 - Update Plugins
