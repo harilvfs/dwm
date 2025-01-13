@@ -90,8 +90,6 @@ Preconfigured package settings are included in this repository under the `config
 ## **Tmux**  
 `Tmux` is a terminal multiplexer that plays a crucial role in my workflow.  
 
-### Install tmux
-
 <details>
   <summary>Arch Linux</summary>
   
