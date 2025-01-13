@@ -41,8 +41,7 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 
 </details>
 
-<br>
-
+<p>This guide will help you set up everything to match my system workflow for this DWM configuration.</p>
 
 ## **Nerd Fonts**  
 Nerd Fonts are a base dependency to enhance font alignment in the `slstatus` bar and ensure proper text display throughout the system.  
