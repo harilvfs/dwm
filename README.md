@@ -6,12 +6,16 @@
 DWM is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code.  
 </div>
 
+<br>
+
 ![Terminal](https://github.com/harilvfs/assets/blob/main/dwm/dwm.png)
 
+<br>
+
 > [!NOTE]
-> This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus).
+> **This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus).**
 >
-> I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
+> **I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
 
 <br>
 
