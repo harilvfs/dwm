@@ -45,7 +45,7 @@ Nerd Fonts are essential for improving font rendering and alignment in the `slst
 ### **Preferred Font**  
 For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may use any Nerd Font of your choice.  
 
-- **Download**: [MesloLGS Nerd Font](https://www.nerdfonts.com/font-downloads)
+- **Download**: `MesloLGS Nerd Font` From [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
 
 - **Setup Instructions**:
   - Download the font to `~/.fonts` or `~/.local/share/fonts`.
