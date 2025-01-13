@@ -39,19 +39,20 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 
 </details>
 
-<p>**This guide will help you set up everything to match my system workflow for this DWM configuration.**</p>
-
 ## **Nerd Fonts**  
 Nerd Fonts are a base dependency to enhance font alignment in the `slstatus` bar and ensure proper text display throughout the system.  
 
 ### **Preferred Font**  
 For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may use any Nerd Font of your choice.  
 
-- **Download**: [MesloLGS Nerd Font](https://www.nerdfonts.com/font-downloads)  
+- **Download**: [MesloLGS Nerd Font](https://www.nerdfonts.com/font-downloads)
+
 - **Setup Instructions**:
   - Download the font to `~/.fonts` or `~/.local/share/fonts`.  
   - Run the following command to reload the fonts:  
-     <pre><code>fc-cache -vf</code></pre>
+    ```bash
+    fc-cache -vf
+    ```
 
 <br>
 
@@ -59,8 +60,10 @@ For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may 
 Wallpapers enhance the visual appeal of any setup. For this DWM configuration, wallpapers are expected to reside in the `~/Pictures/wallpapers` directory.  
 
 - **Wallpaper Repository**:  
-  - Clone my curated collection of beautiful wallpapers:  
-  <pre><code>git clone https://github.com/harilvfs/wallpapers ~/Pictures</code></pre>
+  Clone my curated collection of beautiful wallpapers:  
+  ```bash
+  git clone https://github.com/harilvfs/wallpapers ~/Pictures
+  ```
 
 <br>
 
@@ -68,125 +71,19 @@ Wallpapers enhance the visual appeal of any setup. For this DWM configuration, w
 Preconfigured package settings are included in this repository under the `config` folder.  
 
 - **Usage**:  
-  If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
+
+> [!NOTE]
+> If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
+  
   - Copy the configuration files to `~/.config`:  
-    <pre><code>cp -r config/* ~/.config/</code></pre>
+    ```bash
+    cp -r config/* ~/.config/
+    ```
 
 <br>
 
 ## **Tmux**  
 `Tmux` is a terminal multiplexer that plays a crucial role in my workflow.  
-- A detailed guide for setting up my tmux configuration will be added soon.  
-
-<br>
-
-## **Picom**  
-`Picom` is a compositor for X11 that provides effects like transparency and blur. While optional, it can enhance your setup visually.  
-
-- **Recommendation**:  
-  Use my `picom` config from the `config` folder for a similar setup.  
-- **Optional Transparency**:  
-  If you dislike transparency, you can skip this step.
-
-<br>
-
-## **Systray Icons**  
-The systray includes applets for network management, Bluetooth, and sound control.  
-
-- **Packages**:  
-  Install the necessary packages for your distribution:  
-  - **Arch Linux**:  
-    <pre><code>sudo pacman -S --needed --noconfirm network-manager-applet blueman-applet pasystray</code></pre>  
-  - **Fedora**:  
-    <pre><code>sudo dnf install network-manager-applet blueman-applet pasystray</code></pre>  
-  - For other distributions, refer to the respective package manager documentation.
-
-<br>
-
-## **SDDM Theme**  
-The current setup uses the **Astronaut Theme** for SDDM.  
-
-- **Setup Instructions**:  
-  Install and configure the theme using the official repository:  
-  <pre><code>git clone https://github.com/Keyitdev/sddm-astronaut-theme</code></pre>
-
-<br>
-
-## **GRUB Theme**  
-This step is optional for those who want to customize their bootloader.  
-
-- **Recommendation**:  
-  Check out Chris Titus Tech’s Linutil project for a seamless GRUB setup:  
-  [Linutil Project](https://github.com/ChrisTitusTech/linutil)
-
-<br>
-
-## **Installing DWM**  
-### **Using Setup Script**  
-A setup script is included in this repository for Arch-based distributions.  
-- **Usage**:  
-  Run the script after cloning the repo:  
-  <pre><code>./setup.sh</code></pre>  
-  **Note**: The script is optimized for newly installed Arch systems. If your system is heavily customized, manual installation is recommended.
-
-### **Manual Installation**  
-Manual installation ensures all steps are clearly understood and avoids potential issues with automated scripts. A detailed guide is included in the repository for manual setup.
-
-<br>
-
-## **Result**  
-This guide is designed to provide a comprehensive and reliable way to install and configure DWM across various distributions like Arch, Fedora, Debian, openSUSE, or Void Linux.  
-
-**Note**:  
-- Some distributions may require additional dependencies or research. For instance, Fedora might lack certain systray packages available in Arch.  
-- Feel free to explore your distribution’s community for guidance on missing dependencies.  
-
-<br>
-
-### **Feedback and Contributions**  
-If you encounter any issues or have suggestions, please open a pull request or issue in this repository.  
-
-
-## Installation
-
-*For Installating necessary dependencies & stuffs run this command:*
-```bash
-bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
-```
-
-<strong>**Install** </strong>
-
-```bash
-git clone https://github.com/harilvfs/dwm ~/
-cd ~/dwm
-sudo make clean install
-```
-
-<strong>Install slstatus</strong>
-
-```bash
-cd ~/dwm/slstatus
-sudo make clean install
-```
-
-**Add this to your** `~/.xinitrc`
-
-```
-exec dwm &
-slstatus
-```
-
-<br>
-
-> [!IMPORTANT]
-> After installation, remember to adjust some keybindings in `config.h` to fit your use case.
-
-<br>
-
-> [!NOTE]
-> Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
-
-## Tmux
 
 ### Install tmux
 
@@ -269,13 +166,17 @@ cd ~/.tmux/plugin/tpm/scripts/
 ./update_plugin.sh
 ```
 
+<br>
+
 ## Picom
 
 For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
 
 For the inbuild animation of picom, check out this ➤ [FT-LABS](https://github.com/FT-Labs/picom)
 
-### Installation with Animations
+### Installation with Animations [Arch]
+
+**Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)**
 
 To use the inbuilt animations provided by FT-Labs `picom`, follow the steps below:
 
@@ -311,11 +212,96 @@ makepkg -si
 paru -S picom-ftlabs-git
 ```
 
-picom-ftlabs-git Package Maintainer [fazzi](https://gitlab.com/fazzi/)
+**picom-ftlabs-git Package Maintainer [fazzi](https://gitlab.com/fazzi/)**
 
-### Dependencies
 
-Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)
 
-## Project Overview
-For one click installing & setup use my [Carch Project](https://github.com/harilvfs/carch)
+<br>
+
+## **Systray Icons**  
+The systray includes applets for network management, Bluetooth, and sound control.  
+
+- **Packages**:  
+  Install the necessary packages for your distribution:  
+  - **Arch Linux**:  
+    ```bash
+    sudo pacman -S --needed --noconfirm network-manager-applet blueman-applet pasystray
+    ```
+  - **Fedora**:  
+    ```bash
+    sudo dnf install network-manager-applet blueman-applet pasystray
+    ```  
+  - **For other distributions, refer to the respective package manager documentation.**
+
+<br>
+
+## **SDDM Theme**  
+The current setup uses the **Astronaut Theme** for SDDM.  
+
+**Install and configure the theme using the official repository: [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)**
+
+<br>
+
+## **GRUB Theme**  [OPTIONAL]
+This step is optional for those who want to customize their bootloader.  
+
+**check this bootloader theme repository of [ChrisTitusTech/Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)**
+
+<br>
+
+## Installation DWM
+
+*For Installating necessary dependencies & stuffs run this command:*
+```bash
+bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
+```
+
+> [!NOTE]
+> The script is optimized for newly installed Arch systems. If your system is heavily customized, manual way of installation is recommended.
+> 
+> Manual installation ensures all steps are clearly understood and avoids potential issues with automated scripts.
+
+<strong>**Install** </strong>
+
+```bash
+git clone https://github.com/harilvfs/dwm ~/
+cd ~/dwm
+sudo make clean install
+```
+
+<strong>Install slstatus</strong>
+
+```bash
+cd ~/dwm/slstatus
+sudo make clean install
+```
+
+**Add this to your** `~/.xinitrc`
+
+```
+exec dwm &
+slstatus
+```
+
+<br>
+
+> [!IMPORTANT]
+> After installation, remember to adjust some keybindings in `config.h` to fit your use case.
+
+<br>
+
+> [!NOTE]
+> Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
+
+## **Result**  
+This guide is designed to provide a comprehensive and reliable way to install and configure DWM across various distributions like `Arch`, `Fedora`, `Debian`, `openSUSE`, or `Void Linux`.  
+
+> [!NOTE]
+> Some distributions may require additional dependencies or research. 
+>
+> Feel free to explore your distribution’s community for guidance on missing dependencies.  
+
+<br>
+
+## **Feedback and Contributions**  
+If you encounter any issues or have suggestions, please open a pull request or issue in this repository.  
