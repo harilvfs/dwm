@@ -148,7 +148,7 @@ mkdir ~/.config/tmux
 wget -O ~/.config/tmux/tmux.conf https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf
 ```
 
-- Install Config Plugins
+- Install Plugins
 
 ```bash
 cd ~/.tmux/plugin/tpm/scripts/
