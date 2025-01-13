@@ -20,7 +20,7 @@ DWM is a lightweight and dynamic window manager based on X11. It is minimalistic
 ## Dependencies
 
 <details>
-  <summary>Arch Linux</summary>
+  <summary>Arch Linux</summary> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
 
 ```bash
 sudo pacman -S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja
