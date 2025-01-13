@@ -17,8 +17,6 @@ DWM is a lightweight and dynamic window manager based on X11. It is minimalistic
 >
 > **I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
 
-<br>
-
 ## Dependencies
 
 <details>
@@ -41,7 +39,7 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 
 </details>
 
-<p>This guide will help you set up everything to match my system workflow for this DWM configuration.</p>
+<p>**This guide will help you set up everything to match my system workflow for this DWM configuration.**</p>
 
 ## **Nerd Fonts**  
 Nerd Fonts are a base dependency to enhance font alignment in the `slstatus` bar and ensure proper text display throughout the system.  
