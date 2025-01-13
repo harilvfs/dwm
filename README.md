@@ -57,8 +57,6 @@ For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may 
     fc-cache -vf
     ```
 
-<br>
-
 ## **Wallpapers**  
 Wallpapers can greatly enhance the overall look of your setup. For this DWM configuration, the wallpapers should be stored in the `~/Pictures/wallpapers` directory.
 
@@ -68,8 +66,6 @@ Wallpapers can greatly enhance the overall look of your setup. For this DWM conf
   ```bash
   git clone https://github.com/harilvfs/wallpapers ~/Pictures
   ```
-
-<br>
 
 ## **Configuration Files**  
 Preconfigured package settings are included in this repository under the `config` folder.  
@@ -84,8 +80,6 @@ Preconfigured package settings are included in this repository under the `config
 
 > [!IMPORTANT]
 > If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
-
-<br>
 
 ## **Tmux**  
 `Tmux` is a terminal multiplexer that plays a crucial role in my workflow.  
@@ -169,8 +163,6 @@ cd ~/.tmux/plugin/tpm/scripts/
 ./update_plugin.sh
 ```
 
-<br>
-
 ## Picom
 Picom is a standalone compositor for Xorg, suitable for use with window managers that do not provide compositing.
 
@@ -195,21 +187,15 @@ The systray includes applets for `network management`, `Bluetooth`, and `sound c
     
   - **For other distributions, refer to the respective package manager documentation.**
 
-<br>
-
 ## **SDDM Theme**  
 The current setup uses the `Astronaut Theme` for SDDM.  
 
 - Install and configure the theme using the official repository: [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
-<br>
-
 ## **GRUB Theme**  [OPTIONAL]
 This step is optional for those who want to customize their bootloader.  
 
 - Check out the bootloader theme repository by ChrisTitusTech: [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
-
-<br>
 
 ## Installation DWM
 
@@ -246,8 +232,6 @@ exec dwm &
 slstatus
 ```
 
-<br>
-
 > [!IMPORTANT]
 > After installation, remember to adjust some keybindings in `config.h` to fit your use case.
 
@@ -263,8 +247,6 @@ This guide provides a clear and reliable method for installing and configuring D
 > Some distributions may require additional dependencies or configuration.
 >
 > Feel free to explore your distribution’s community for guidance on missing dependencies.  
-
-<br>
 
 ## **Feedback and Contributions**  
 If you encounter any issues or have suggestions, please open a pull request or issue in this repository.  
