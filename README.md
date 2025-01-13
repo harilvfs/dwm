@@ -2,6 +2,9 @@
   <img src="https://github.com/harilvfs/assets/blob/main/dwm/Dwm.svg.png" alt="Terminal" width="200">
 </p>
 
+## **About**  
+DWM is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code.  
+
 <strong>**This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus). I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
 
 <br>
@@ -10,7 +13,7 @@
 
 <br>
 
-<strong>**Dependencies** </strong>
+## Dependencies
 
 <details>
   <summary>Arch Linux</summary>
@@ -33,6 +36,113 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 </details>
 
 <br>
+
+
+## **Nerd Fonts**  
+Nerd Fonts are a base dependency to enhance font alignment in the `slstatus` bar and ensure proper text display throughout the system.  
+
+### **Preferred Font**  
+For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may use any Nerd Font of your choice.  
+
+- **Download**: [MesloLGS Nerd Font](https://www.nerdfonts.com/font-downloads)  
+- **Setup Instructions**:  
+  1. Download the font to `~/.fonts` or `~/.local/share/fonts`.  
+  2. Run the following command to reload the fonts:  
+     <pre><code>fc-cache -vf</code></pre>
+
+---
+
+## **Wallpapers**  
+Wallpapers enhance the visual appeal of any setup. For this DWM configuration, wallpapers are expected to reside in the `~/Pictures/wallpapers` directory.  
+
+- **Wallpaper Repository**:  
+  Clone my curated collection of beautiful wallpapers:  
+  <pre><code>git clone https://github.com/harilvfs/wallpapers ~/Pictures</code></pre>
+
+---
+
+## **Configuration Files**  
+Preconfigured package settings are included in this repository under the `config` folder.  
+
+- **Usage**:  
+  If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
+  - Copy the configuration files to `~/.config`:  
+    <pre><code>cp -r config/* ~/.config/</code></pre>
+
+---
+
+## **Tmux**  
+`Tmux` is a terminal multiplexer that plays a crucial role in my workflow.  
+- A detailed guide for setting up my tmux configuration will be added soon.  
+
+---
+
+## **Picom**  
+`Picom` is a compositor for X11 that provides effects like transparency and blur. While optional, it can enhance your setup visually.  
+
+- **Recommendation**:  
+  Use my `picom` config from the `config` folder for a similar setup.  
+- **Optional Transparency**:  
+  If you dislike transparency, you can skip this step.
+
+---
+
+## **Systray Icons**  
+The systray includes applets for network management, Bluetooth, and sound control.  
+
+- **Packages**:  
+  Install the necessary packages for your distribution:  
+  - **Arch Linux**:  
+    <pre><code>sudo pacman -S pystray</code></pre>  
+  - **Fedora**:  
+    <pre><code>sudo dnf install python3-psystray</code></pre>  
+  - For other distributions, refer to the respective package manager documentation.
+
+---
+
+## **SDDM Theme**  
+The current setup uses the **Astronaut Theme** for SDDM.  
+
+- **Setup Instructions**:  
+  Install and configure the theme using the official repository:  
+  <pre><code>git clone https://github.com/Keyitdev/sddm-astronaut-theme</code></pre>
+
+---
+
+## **GRUB Theme**  
+This step is optional for those who want to customize their bootloader.  
+
+- **Recommendation**:  
+  Check out Chris Titus Tech’s Linutil project for a seamless GRUB setup:  
+  [Linutil Project](https://github.com/ChrisTitusTech/linutil)
+
+---
+
+## **Installing DWM**  
+### **Using Setup Script**  
+A setup script is included in this repository for Arch-based distributions.  
+- **Usage**:  
+  Run the script after cloning the repo:  
+  <pre><code>./setup.sh</code></pre>  
+  **Note**: The script is optimized for newly installed Arch systems. If your system is heavily customized, manual installation is recommended.
+
+### **Manual Installation**  
+Manual installation ensures all steps are clearly understood and avoids potential issues with automated scripts. A detailed guide is included in the repository for manual setup.
+
+---
+
+## **Result**  
+This guide is designed to provide a comprehensive and reliable way to install and configure DWM across various distributions like Arch, Fedora, Debian, openSUSE, or Void Linux.  
+
+**Note**:  
+- Some distributions may require additional dependencies or research. For instance, Fedora might lack certain systray packages available in Arch.  
+- Feel free to explore your distribution’s community for guidance on missing dependencies.  
+
+---
+
+### **Feedback and Contributions**  
+If you encounter any issues or have suggestions, please open a pull request or issue in this repository.  
+
 
 ## Installation
 
