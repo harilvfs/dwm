@@ -40,7 +40,7 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 </details>
 
 ## **Nerd Fonts**  
-Nerd Fonts are a base dependency to enhance font alignment in the `slstatus` bar and ensure proper text display throughout the system.  
+Nerd Fonts are essential for improving font rendering and alignment in the `slstatus` bar, as well as ensuring consistent and accurate text display across the system. 
 
 ### **Preferred Font**  
 For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may use any Nerd Font of your choice.  
@@ -48,7 +48,8 @@ For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may 
 - **Download**: [MesloLGS Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 - **Setup Instructions**:
-  - Download the font to `~/.fonts` or `~/.local/share/fonts`.  
+  - Download the font to `~/.fonts` or `~/.local/share/fonts`.
+ 
   - Run the following command to reload the fonts:  
     ```bash
     fc-cache -vf
@@ -57,10 +58,11 @@ For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may 
 <br>
 
 ## **Wallpapers**  
-Wallpapers enhance the visual appeal of any setup. For this DWM configuration, wallpapers are expected to reside in the `~/Pictures/wallpapers` directory.  
+Wallpapers can greatly enhance the overall look of your setup. For this DWM configuration, the wallpapers should be stored in the `~/Pictures/wallpapers` directory.
 
-- **Wallpaper Repository**:  
-  Clone my curated collection of beautiful wallpapers:  
+- **Wallpaper Repository**:
+
+  To access a collection of curated wallpapers, clone the repository to your `~/Pictures` directory by running the following command: 
   ```bash
   git clone https://github.com/harilvfs/wallpapers ~/Pictures
   ```
@@ -70,15 +72,15 @@ Wallpapers enhance the visual appeal of any setup. For this DWM configuration, w
 ## **Configuration Files**  
 Preconfigured package settings are included in this repository under the `config` folder.  
 
-- **Usage**:  
+- **Usage**
 
-> [!NOTE]
-> If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
-  
   - Copy the configuration files to `~/.config`:  
     ```bash
     cp -r config/* ~/.config/
     ```
+
+> [!NOTE]
+> If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
 
 <br>
 
@@ -174,7 +176,7 @@ For transparency settings, check out this ➤ [Picom Config](https://raw.githubu
 
 For the inbuild animation of picom, check out this ➤ [FT-LABS](https://github.com/FT-Labs/picom)
 
-### Installation with Animations [Arch]
+### Installation with Animations [For Arch Linux]
 
 **Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)**
 
@@ -214,12 +216,10 @@ paru -S picom-ftlabs-git
 
 **picom-ftlabs-git Package Maintainer [fazzi](https://gitlab.com/fazzi/)**
 
-
-
 <br>
 
 ## **Systray Icons**  
-The systray includes applets for network management, Bluetooth, and sound control.  
+The systray includes applets for `network management`, `Bluetooth`, and `sound control`.  
 
 - **Packages**:  
   Install the necessary packages for your distribution:  
@@ -227,10 +227,12 @@ The systray includes applets for network management, Bluetooth, and sound contro
     ```bash
     sudo pacman -S --needed --noconfirm network-manager-applet blueman-applet pasystray
     ```
+    
   - **Fedora**:  
     ```bash
     sudo dnf install network-manager-applet blueman-applet pasystray
-    ```  
+    ```
+    
   - **For other distributions, refer to the respective package manager documentation.**
 
 <br>
@@ -261,7 +263,7 @@ bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/se
 > 
 > Manual installation ensures all steps are clearly understood and avoids potential issues with automated scripts.
 
-<strong>**Install** </strong>
+<strong>**Install**</strong>
 
 ```bash
 git clone https://github.com/harilvfs/dwm ~/
@@ -294,10 +296,10 @@ slstatus
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
 ## **Result**  
-This guide is designed to provide a comprehensive and reliable way to install and configure DWM across various distributions like `Arch`, `Fedora`, `Debian`, `openSUSE`, or `Void Linux`.  
+This guide provides a clear and reliable method for installing and configuring DWM on various distributions, including `Arch`, `Fedora`, `Debian`, `openSUSE`, and `Void Linux`.
 
 > [!NOTE]
-> Some distributions may require additional dependencies or research. 
+> Some distributions may require additional dependencies or configuration.
 >
 > Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
