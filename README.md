@@ -93,9 +93,9 @@ The systray includes applets for network management, Bluetooth, and sound contro
 - **Packages**:  
   Install the necessary packages for your distribution:  
   - **Arch Linux**:  
-    <pre><code>sudo pacman -S --needed --noconfirm network-manager-applet blueman-applet pystray</code></pre>  
+    <pre><code>sudo pacman -S --needed --noconfirm network-manager-applet blueman-applet pasystray</code></pre>  
   - **Fedora**:  
-    <pre><code>sudo dnf install network-manager-applet blueman-applet python3-psystray</code></pre>  
+    <pre><code>sudo dnf install network-manager-applet blueman-applet pasystray</code></pre>  
   - For other distributions, refer to the respective package manager documentation.
 
 <br>
