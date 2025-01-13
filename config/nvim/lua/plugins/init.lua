@@ -145,8 +145,16 @@ return {
   {
     "z0mbix/vim-shfmt",
     lazy=false,
-  }
+  },
 
+  {
+    "rachartier/tiny-glimmer.nvim",
+    lazy = false,
+    event = "TextYankPost",
+    opts = {
+        -- your configuration
+    },
+  }
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
