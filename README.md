@@ -76,12 +76,13 @@ Preconfigured package settings are included in this repository under the `config
 
 - **Usage**
 
-  - Copy the configuration files to `~/.config`:  
+  - Copy the configuration files to `~/.config`:
+
     ```bash
     cp -r config/* ~/.config/
     ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
 
 <br>
