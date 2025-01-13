@@ -45,21 +45,21 @@ Nerd Fonts are a base dependency to enhance font alignment in the `slstatus` bar
 For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may use any Nerd Font of your choice.  
 
 - **Download**: [MesloLGS Nerd Font](https://www.nerdfonts.com/font-downloads)  
-- **Setup Instructions**:  
-  1. Download the font to `~/.fonts` or `~/.local/share/fonts`.  
-  2. Run the following command to reload the fonts:  
+- **Setup Instructions**:
+  - Download the font to `~/.fonts` or `~/.local/share/fonts`.  
+  - Run the following command to reload the fonts:  
      <pre><code>fc-cache -vf</code></pre>
 
----
+<br>
 
 ## **Wallpapers**  
 Wallpapers enhance the visual appeal of any setup. For this DWM configuration, wallpapers are expected to reside in the `~/Pictures/wallpapers` directory.  
 
 - **Wallpaper Repository**:  
-  Clone my curated collection of beautiful wallpapers:  
+  - Clone my curated collection of beautiful wallpapers:  
   <pre><code>git clone https://github.com/harilvfs/wallpapers ~/Pictures</code></pre>
 
----
+<br>
 
 ## **Configuration Files**  
 Preconfigured package settings are included in this repository under the `config` folder.  
@@ -69,13 +69,13 @@ Preconfigured package settings are included in this repository under the `config
   - Copy the configuration files to `~/.config`:  
     <pre><code>cp -r config/* ~/.config/</code></pre>
 
----
+<br>
 
 ## **Tmux**  
 `Tmux` is a terminal multiplexer that plays a crucial role in my workflow.  
 - A detailed guide for setting up my tmux configuration will be added soon.  
 
----
+<br>
 
 ## **Picom**  
 `Picom` is a compositor for X11 that provides effects like transparency and blur. While optional, it can enhance your setup visually.  
@@ -85,7 +85,7 @@ Preconfigured package settings are included in this repository under the `config
 - **Optional Transparency**:  
   If you dislike transparency, you can skip this step.
 
----
+<br>
 
 ## **Systray Icons**  
 The systray includes applets for network management, Bluetooth, and sound control.  
@@ -93,12 +93,12 @@ The systray includes applets for network management, Bluetooth, and sound contro
 - **Packages**:  
   Install the necessary packages for your distribution:  
   - **Arch Linux**:  
-    <pre><code>sudo pacman -S pystray</code></pre>  
+    <pre><code>sudo pacman -S --needed --noconfirm network-manager-applet blueman-applet pystray</code></pre>  
   - **Fedora**:  
-    <pre><code>sudo dnf install python3-psystray</code></pre>  
+    <pre><code>sudo dnf install network-manager-applet blueman-applet python3-psystray</code></pre>  
   - For other distributions, refer to the respective package manager documentation.
 
----
+<br>
 
 ## **SDDM Theme**  
 The current setup uses the **Astronaut Theme** for SDDM.  
@@ -107,7 +107,7 @@ The current setup uses the **Astronaut Theme** for SDDM.
   Install and configure the theme using the official repository:  
   <pre><code>git clone https://github.com/Keyitdev/sddm-astronaut-theme</code></pre>
 
----
+<br>
 
 ## **GRUB Theme**  
 This step is optional for those who want to customize their bootloader.  
@@ -116,7 +116,7 @@ This step is optional for those who want to customize their bootloader.
   Check out Chris Titus Tech’s Linutil project for a seamless GRUB setup:  
   [Linutil Project](https://github.com/ChrisTitusTech/linutil)
 
----
+<br>
 
 ## **Installing DWM**  
 ### **Using Setup Script**  
@@ -129,7 +129,7 @@ A setup script is included in this repository for Arch-based distributions.
 ### **Manual Installation**  
 Manual installation ensures all steps are clearly understood and avoids potential issues with automated scripts. A detailed guide is included in the repository for manual setup.
 
----
+<br>
 
 ## **Result**  
 This guide is designed to provide a comprehensive and reliable way to install and configure DWM across various distributions like Arch, Fedora, Debian, openSUSE, or Void Linux.  
@@ -138,7 +138,7 @@ This guide is designed to provide a comprehensive and reliable way to install an
 - Some distributions may require additional dependencies or research. For instance, Fedora might lack certain systray packages available in Arch.  
 - Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
----
+<br>
 
 ### **Feedback and Contributions**  
 If you encounter any issues or have suggestions, please open a pull request or issue in this repository.  
