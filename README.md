@@ -172,52 +172,11 @@ cd ~/.tmux/plugin/tpm/scripts/
 <br>
 
 ## Picom
+Picom is a standalone compositor for Xorg, suitable for use with window managers that do not provide compositing.
 
-For transparency settings, check out this ➤ [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
+- For transparency settings, check out this Picom ➤ [Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
 
-For the inbuild animation of picom, check out this ➤ [FT-LABS](https://github.com/FT-Labs/picom)
-
-### Installation with Animations [For Arch Linux]
-
-**Assuming you already have all the usual building tools installed (e.g. gcc, python, meson, ninja, etc.)**
-
-To use the inbuilt animations provided by FT-Labs `picom`, follow the steps below:
-
-First Install Aur Helper (eg. paru or yay)
-
-<details>
-  <summary>Paru</summary>
-
-```bash
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-```
-
-</details>
-
-<details>
-  <summary>Yay</summary>
-
-```bash
-sudo pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-```
-
-</details>
-
-#### Install Ftlab Picom Package
-
-```bash
-paru -S picom-ftlabs-git
-```
-
-**picom-ftlabs-git Package Maintainer [fazzi](https://gitlab.com/fazzi/)**
-
-<br>
+- For the inbuild animation of picom, check out ➤ [FT-LABS](https://github.com/FT-Labs/picom) repository
 
 ## **Systray Icons**  
 The systray includes applets for `network management`, `Bluetooth`, and `sound control`.  
@@ -239,22 +198,23 @@ The systray includes applets for `network management`, `Bluetooth`, and `sound c
 <br>
 
 ## **SDDM Theme**  
-The current setup uses the **Astronaut Theme** for SDDM.  
+The current setup uses the `Astronaut Theme` for SDDM.  
 
-**Install and configure the theme using the official repository: [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)**
+- Install and configure the theme using the official repository: [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
 <br>
 
 ## **GRUB Theme**  [OPTIONAL]
 This step is optional for those who want to customize their bootloader.  
 
-**check this bootloader theme repository of [ChrisTitusTech/Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)**
+- Check out the bootloader theme repository by ChrisTitusTech: [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
 
 <br>
 
 ## Installation DWM
 
 *For Installating necessary dependencies & stuffs run this command:*
+
 ```bash
 bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
 ```
