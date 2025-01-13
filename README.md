@@ -2,8 +2,9 @@
   <img src="https://github.com/harilvfs/assets/blob/main/dwm/Dwm.svg.png" alt="Terminal" width="200">
 </p>
 
-## **About**  
+<div align="center">
 DWM is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code.  
+</div>
 
 > [!NOTE]
 > This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus).
