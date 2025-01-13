@@ -197,7 +197,7 @@ This step is optional for those who want to customize their bootloader.
 
 - Check out the bootloader theme repository by ChrisTitusTech: [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
 
-## Installation DWM
+## Installation
 
 *For Installating necessary dependencies & stuffs run this command:*
 
@@ -210,7 +210,7 @@ bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/se
 > 
 > Manual installation ensures all steps are clearly understood and avoids potential issues with automated scripts.
 
-<strong>**Install**</strong>
+<strong>**Install DWM**</strong>
 
 ```bash
 git clone https://github.com/harilvfs/dwm ~/
