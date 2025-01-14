@@ -3,7 +3,7 @@
 </p>
 
 <div align="center">
-DWM is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code.
+✨ **DWM** is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code. ✨
 </div>
 
 <br>
@@ -15,7 +15,7 @@ DWM is a lightweight and dynamic window manager based on X11. It is minimalistic
 > [!NOTE]
 > **This guide features DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus), tweaked to suit my personal workflow while remaining simple for anyone to use.**
 
-## Dependencies
+## 🚀 **Dependencies**
 
 ### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
@@ -47,7 +47,7 @@ sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 
 <br>
 
-## Nerd Fonts
+## 🔠 Nerd Fonts
 
 ### Why Nerd Fonts?  
 Nerd Fonts enhance font rendering and ensure proper alignment of icons in `slstatus`. For this setup, the **MesloLGS Nerd Font** is recommended.
@@ -60,7 +60,7 @@ Nerd Fonts enhance font rendering and ensure proper alignment of icons in `slsta
     fc-cache -vf
     ```
 
-## Wallpapers
+## 🎨 Wallpapers
 
 ### Directory Setup
 Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone a curated wallpaper collection:
@@ -69,7 +69,7 @@ Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone 
 git clone https://github.com/harilvfs/wallpapers ~/Pictures
 ```
 
-## **Configuration Files**  
+## ⚙️ **Configuration Files**  
 Preconfigured package settings are included in this repository under the `config` folder. These settings enhance the DWM experience and can be installed based on your workflow and distribution.  
 
 ### **Steps to Install Configurations**
@@ -178,7 +178,7 @@ Install Tmux for terminal multiplexing.
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### Configuration
+### ⚙️ Configuration
 
 #### Create the configuration directory:
 
@@ -215,14 +215,14 @@ cd ~/.tmux/plugin/tpm/scripts/
 ./update_plugin.sh
 ```
 
-## Picom Configuration
+## ⚡ Picom Configuration
 
 Picom provides window transparency and animations.  
 
 - **Config File**: [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf)
 - **Animations**: Check out [FT-LABS](https://github.com/FT-Labs/picom).
 
-## System Tray Icons
+## 🖥️ System Tray Icons
 
 Install system tray applets for network, Bluetooth, and sound management. 
 
@@ -257,16 +257,16 @@ Install system tray applets for network, Bluetooth, and sound management.
   sudo zypper install NetworkManager-applet blueman pasystray
   ```
 
-  - **For other distributions, refer to the respective package manager documentation.**
+> **Notes 📜**: **For other distributions, refer to the respective package manager documentation.**
 
-## SDDM Theme 
+## ✨ SDDM Theme 
 The setup uses the **Astronaut Theme** for SDDM.  
 
 - **Installation**:  
   Clone the theme repository and follow the instructions to install:  
   [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
-## GRUB Theme [OPTIONAL]  
+## 🌌 GRUB Theme [OPTIONAL]  
 Customize your bootloader appearance with GRUB themes.  
 
 - Explore themes from ChrisTitusTech's repository:  
@@ -274,7 +274,7 @@ Customize your bootloader appearance with GRUB themes.
 
 > **Note**: Ensure GRUB customization aligns with your workflow and is applied carefully to avoid bootloader issues.
 
-## Installation Script
+## 🛠 Installation Script
 
 For a simplified setup process, run the script:
 
@@ -317,10 +317,10 @@ slstatus
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
-## Result
+## 🎉 Result
 
 Enjoy your minimalist and customized DWM setup!
 
 > **Note**: Some distributions may require additional dependencies or configuration.Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
-### Feedback is appreciated. Open an issue or PR in the repository for any suggestions or enhancements.
+#### 💬 Feedback is appreciated. Open an issue or PR in the repository for any suggestions or enhancements.
