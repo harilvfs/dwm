@@ -3,7 +3,7 @@
 </p>
 
 <div align="center">
-DWM is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code.  
+DWM is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code.
 </div>
 
 <br>
@@ -13,31 +13,33 @@ DWM is a lightweight and dynamic window manager based on X11. It is minimalistic
 <br>
 
 > [!NOTE]
-> **This is a DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus).**
->
-> **I’ve tweaked and configured the patches to suit my personal workflow, but it’s simple enough for anyone to use.** </strong>
+> **This guide features DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus), tweaked to suit my personal workflow while remaining simple for anyone to use.**
 
 ## Dependencies
 
-- Arch Linux [ <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" /> ]
+### Arch Linux  
+> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
 
 ```bash
 sudo pacman -S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja gnome-keyring
 ```
 
-- Debian/Ubuntu-based [ <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" /> ]
+### Debian/Ubuntu  
+> <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
 
 ```bash
 sudo apt install -y build-essential libx11-dev libxinerama-dev libxft-dev libimlib2-dev libx11-xcb-dev libfontconfig1 libx11-6 libxft2 libxinerama1 libxcb-res0-dev git unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring
 ```
 
-- Fedora [ <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" /> ]
+### Fedora  
+> <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
 
 ```bash
 sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring
 ```
 
-- openSUSE [ <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" /> ]
+### openSUSE  
+> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
 
 ```bash
 sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring
@@ -45,116 +47,110 @@ sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 
 <br>
 
-## **Nerd Fonts**  
-Nerd Fonts are essential for improving font rendering and alignment in the `slstatus` bar, as well as ensuring consistent and accurate text display across the system. 
+## Nerd Fonts
 
-#### **Preferred Font**  
-For this DWM setup, the `MesloLGS Nerd Font` is preconfigured. However, you may use any Nerd Font of your choice.  
+### Why Nerd Fonts?  
+Nerd Fonts enhance font rendering and ensure proper alignment of icons in `slstatus`. For this setup, the **MesloLGS Nerd Font** is recommended.
 
-- **Download**: `MesloLGS Nerd Font` From [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
-
-- **Setup Instructions**:
-  - Download the font to `~/.fonts` or `~/.local/share/fonts`.
- 
-  - Run the following command to reload the fonts:  
+- **Download**: [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
+- **Installation**:
+  - Place the font files in `~/.fonts` or `~/.local/share/fonts`.
+  - Refresh font cache:
     ```bash
     fc-cache -vf
     ```
 
-## **Wallpapers**  
-Wallpapers can greatly enhance the overall look of your setup. For this DWM configuration, the wallpapers should be stored in the `~/Pictures/wallpapers` directory.
+## Wallpapers
 
-- **Wallpaper Repository**:
+### Directory Setup
+Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone a curated wallpaper collection:
 
-  To access a collection of curated wallpapers, clone the repository to your `~/Pictures` directory by running the following command: 
-  ```bash
-  git clone https://github.com/harilvfs/wallpapers ~/Pictures
-  ```
+```bash
+git clone https://github.com/harilvfs/wallpapers ~/Pictures
+```
 
 ## **Configuration Files**  
-Preconfigured package settings are included in this repository under the `config` folder.  
+Preconfigured package settings are included in this repository under the `config` folder. These settings enhance the DWM experience and can be installed based on your workflow and distribution.  
 
-this are the main packages that are in .config folder in the repo you have to install as your preference and uses workflow
+### **Steps to Install Configurations**
 
-- Arch linux
-  ```bash
-  sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship bash zsh
-  ```
-  **Install better discord as appimage or install via with aur helper paru or yay**
+1. Install the necessary packages for your distribution.
+2. Copy the preconfigured files to your `~/.config` directory.
 
-- Fedora
-  ```bash
-  sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi bash zsh
-  ```
-  **install starship with this command `curl -sS https://starship.rs/install.sh | sh`
-  
-  **install better discrord app image from source https://betterdiscord.app/**
+### **Package Installation by Distribution**  
 
-- Debian
-  ```bash
-  sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst picom bash zsh
-  ```
-  **Debian / Ubuntu: Download fastfetch-linux-<proper architecture>.deb from [Github](https://github.com/fastfetch-cli/fastfetch/releases/tag/2.34.1) release page and double-click it (for Ubuntu 20.04 or newer and Debian 11 or newer).**
-
-  **You need to install helix from source https://docs.helix-editor.com/install.html**
-  **install better discrord app image from source https://betterdiscord.app/**
-  **install starship with this command `curl -sS https://starship.rs/install.sh | sh`
-
-  - opensuse
-  ```bash
-  sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh
-  ```
-  **install better discrord app image from source https://betterdiscord.app/**
-
-- **Usage**
-
-  - Copy the configuration files to `~/.config`:
-
-    ```bash
-    cp -r config/* ~/.config/
-    ```
-
-> [!IMPORTANT]
-> If you don’t have your own preconfigured setup, it is recommended to use the provided configs for better alignment with the DWM patches.  
-
-## **Tmux**  
-`Tmux` is a terminal multiplexer that plays a crucial role in my workflow.  
-
-<details>
-  <summary>Arch Linux</summary>
-  
+#### **Arch Linux**  
 ```bash
-sudo pacman -S tmux
+sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship bash zsh
 ```
+- **BetterDiscord**: Install as an AppImage or via AUR using `paru` or `yay`.  
+  ```bash
+  yay -S betterdiscord-installer
+  ```
+  
+#### **Fedora**  
+```bash
+sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi bash zsh
+```
+- **Starship**: Install using the official script:
+  ```bash
+  curl -sS https://starship.rs/install.sh | sh
+  ```
+- **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
 
-</details>
+#### **Debian/Ubuntu**  
+```bash
+sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst picom bash zsh
+```
+- **Fastfetch**: Download the appropriate `.deb` package from [Fastfetch's release page](https://github.com/fastfetch-cli/fastfetch/releases) and install it:
+  ```bash
+  sudo dpkg -i fastfetch-linux-<architecture>.deb
+  ```
+- **Helix**: Install from source using the [Helix documentation](https://docs.helix-editor.com/install.html).
+- **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
+- **Starship**: Install using the official script:
+  ```bash
+  curl -sS https://starship.rs/install.sh | sh
+  ```
 
-<details>
-  <summary>Debian</summary>
+#### **openSUSE**  
+```bash
+sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh
+```
+- **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
+
+### **Using Preconfigured Files**  
+
+Once the required packages are installed, copy the preconfigured files to your `.config` directory:
 
 ```bash
-sudo apt install tmux
+cp -r config/* ~/.config/
 ```
 
-</details>
+> [!IMPORTANT]  
+> If you don’t have a preconfigured setup, it’s recommended to use the provided configurations for better compatibility with the DWM patches.
 
-<details>
-  <summary>Fedora</summary>
-  
-```bash
-sudo dnf install tmux
-```
+## Tmux Setup
 
-</details>
+Install Tmux for terminal multiplexing.  
 
-<details>
-  <summary>openSUSE</summary>
-  
-```bash
-sudo zypper install tmux
-```
-
-</details>
+### Installation Commands
+- **Arch Linux**:
+  ```bash
+  sudo pacman -S tmux
+  ```
+- **Debian/Ubuntu**:
+  ```bash
+  sudo apt install tmux
+  ```
+- **Fedora**:
+  ```bash
+  sudo dnf install tmux
+  ```
+- **openSUSE**:
+  ```bash
+  sudo zypper install tmux
+  ```
 
 ### Clone Tmux Plugin Manager [TPM]
 
@@ -164,19 +160,19 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### Configuration
 
-- Create the configuration directory:
+#### Create the configuration directory:
 
 ```bash
 mkdir ~/.config/tmux
 ```
 
-- Download the tmux configuration file:
+#### Download the tmux configuration file:
 
 ```bash
 wget -O ~/.config/tmux/tmux.conf https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf
 ```
 
-- Install Plugins
+#### Install Plugins
 
 ```bash
 cd ~/.tmux/plugin/tpm/scripts/
@@ -184,7 +180,7 @@ chmod +x *.sh
 ./install_plugins.sh
 ```
 
-### Install TPM
+#### Install TPM
 
 ```bash
 cd ~/.tmux/plugins/tpm
@@ -192,7 +188,7 @@ chmod +x tpm
 ./tpm
 ```
 
-- Update Plugins
+#### Update Plugins
 
 ```bash
 cd ~/.tmux/plugin/tpm/scripts/
