@@ -25,13 +25,13 @@ DWM is a lightweight and dynamic window manager based on X11. It is minimalistic
 sudo pacman -S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja gnome-keyrings
 ```
 
-- Debian/Ubuntu-based <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
+- Debian/Ubuntu-based [ <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" /> ]
 
 ```bash
 sudo apt install -y build-essential libx11-dev libxinerama-dev libxft-dev libimlib2-dev libx11-xcb-dev libfontconfig1 libx11-6 libxft2 libxinerama1 libxcb-res0-dev git unzip flameshot lxappearance feh mate-polkit meson ninja-build
 ```
 
-- Fedora <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
+- Fedora [ <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" /> ]
 
 ```bash
 sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyrings
