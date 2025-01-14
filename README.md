@@ -195,34 +195,35 @@ cd ~/.tmux/plugin/tpm/scripts/
 ./update_plugin.sh
 ```
 
-## Picom
-Picom is a standalone compositor for Xorg, suitable for use with window managers that do not provide compositing.
+## Picom Configuration
 
-- For transparency settings, check out this Picom ➤ [Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf).
+Picom provides window transparency and animations.  
 
-- For the inbuild animation of picom, check out ➤ [FT-LABS](https://github.com/FT-Labs/picom) repository
+- **Config File**: [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf)
+- **Animations**: Check out [FT-LABS](https://github.com/FT-Labs/picom).
 
-## **Systray Icons**  
-The systray includes applets for `network management`, `Bluetooth`, and `sound control`.  
+## System Tray Icons
+
+Install system tray applets for network, Bluetooth, and sound management. 
 
 - **Packages**:  
   Install the necessary packages for your distribution:  
-  - **Arch Linux**:  
+### Arch Linux
     ```bash
     sudo pacman -S --needed --noconfirm network-manager-applet blueman pasystray
     ```
     
-  - **Fedora**:  
+### Fedora
     ```bash
     sudo dnf install network-manager-applet blueman pasystray
     ```
     
-  - **Debian**:
+### Debian
     ```bash
     sudo apt install network-manager-applet blueman pasystray
     ```
 
-  - **openSUSE**:
+### openSUSE
     ```bash
     sudo zypper install NetworkManager-applet blueman pasystray
     
@@ -238,20 +239,20 @@ This step is optional for those who want to customize their bootloader.
 
 - Check out the bootloader theme repository by ChrisTitusTech: [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
 
-## Installation
+## Installation Script
 
-*For Installating necessary dependencies & stuffs run this command:*
+For a simplified setup process, run the script:
 
 ```bash
 bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
 ```
 
 > [!NOTE]
-> The script is optimized for newly installed Arch systems. If your system is heavily customized, manual way of installation is recommended.
-> 
-> Manual installation ensures all steps are clearly understood and avoids potential issues with automated scripts.
+> This script is optimized for Arch Linux. Manual installation is recommended for other distributions or customized setups.
 
-<strong>**Install DWM**</strong>
+## DWM Installation
+
+Clone and install DWM:
 
 ```bash
 git clone https://github.com/harilvfs/dwm ~/
@@ -281,13 +282,14 @@ slstatus
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
-## **Result**  
-This guide provides a clear and reliable method for installing and configuring DWM on various distributions, including `Arch`, `Fedora`, `Debian`, `openSUSE`, and `Void Linux`.
+## Result
+
+Enjoy your minimalist and customized DWM setup!
 
 > [!NOTE]
 > Some distributions may require additional dependencies or configuration.
 >
 > Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
-## **Feedback and Contributions**  
-If you encounter any issues or have suggestions, please open a pull request or issue in this repository.  
+> [!NOTE]
+> Feedback is appreciated. Open an issue or PR in the repository for any suggestions or enhancements.
