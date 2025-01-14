@@ -258,7 +258,7 @@ Install system tray applets for network, Bluetooth, and sound management.
   sudo zypper install NetworkManager-applet blueman pasystray
   ```
 
-> **Notes 📜** - **For other distributions, refer to the respective package manager documentation.**
+> **Notes 📜** : **For other distributions, refer to the respective package manager documentation.**
 
 ## ✨ SDDM Theme 
 The setup uses the **Astronaut Theme** for SDDM.  
@@ -277,7 +277,7 @@ Customize your bootloader appearance with GRUB themes.
 
 ## 🛠 Installation Script
 
-For a simplified setup process, run the script:
+**For a simplified setup process, run the script:**
 
 ```bash
 bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
@@ -288,7 +288,7 @@ bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/se
 
 ## 🔧 DWM Installation
 
-Clone and install DWM:
+**Clone and install DWM:**
 
 ```bash
 git clone https://github.com/harilvfs/dwm ~/
