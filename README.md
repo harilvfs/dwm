@@ -175,18 +175,22 @@ The systray includes applets for `network management`, `Bluetooth`, and `sound c
   Install the necessary packages for your distribution:  
   - **Arch Linux**:  
     ```bash
-    sudo pacman -S --needed --noconfirm network-manager-applet blueman-applet pasystray
+    sudo pacman -S --needed --noconfirm network-manager-applet blueman pasystray
     ```
     
   - **Fedora**:  
     ```bash
-    sudo dnf install network-manager-applet blueman-applet pasystray
+    sudo dnf install network-manager-applet blueman pasystray
     ```
     
   - **Debian**:
     ```bash
     sudo apt install network-manager-applet blueman pasystray
     ```
+
+  - **openSUSE**:
+    ```bash
+    sudo zypper install NetworkManager-applet blueman pasystray
     
   - **For other distributions, refer to the respective package manager documentation.**
 
