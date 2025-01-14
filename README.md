@@ -3,6 +3,7 @@
 </p>
 
 <div align="center">
+  
 **DWM** is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code. ✨
 </div>
 
