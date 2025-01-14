@@ -8,7 +8,18 @@
 </div>
 
 <div align="center">
-  <a href="#-dependencies"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+  <a href="#-dependencies"><kbd> <br> Dependencies <br> </kbd></a>&ensp;&ensp;
+  <a href="#-nerd-fonts"><kbd> <br> Fonts <br> </kbd></a>&ensp;&ensp;
+  <a href="#-wallpapers"><kbd> <br> Wallpapers <br> </kbd></a>&ensp;&ensp;
+  <a href="#-configuration-files"><kbd> <br> Configs <br> </kbd></a>&ensp;&ensp;
+  <a href="#tmux-setup"><kbd> <br> Tmux <br> </kbd></a>&ensp;&ensp;
+  <a href="#-picom-configuration"><kbd> <br> Picom <br> </kbd></a>&ensp;&ensp;
+  <a href="#-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
+  <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
+  <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
+  SDDM Theme 
+
+  System Tray Icons
 </div>
 
 <br>
@@ -74,7 +85,7 @@ Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone 
 git clone https://github.com/harilvfs/wallpapers ~/Pictures
 ```
 
-## ⚙️ **Configuration Files**  
+## ⚙️ Configuration Files  
 Preconfigured package settings are included in this repository under the `config` folder. These settings enhance the DWM experience and can be installed based on your workflow and distribution.  
 
 ### **Steps to Install Configurations**
