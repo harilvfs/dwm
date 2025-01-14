@@ -18,9 +18,8 @@
   <a href="#%EF%B8%8F-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
   <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
   <a href="#-grub-theme-optional"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
-  <a href="#-dwm-installation"><kbd> <br> DWM <br> </kbd></a>&ensp;&ensp;
-  <a href="#-result"><kbd> <br> Result <br> </kbd></a>
-
+  <a href="#-dwm-installation"><kbd> <br> DWM <br> </kbd></a>
+  
 </div><br><br>
 
 ![Terminal](https://github.com/harilvfs/assets/blob/main/dwm/dwm.png)
