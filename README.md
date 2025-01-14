@@ -16,10 +16,8 @@
   <a href="#-picom-configuration"><kbd> <br> Picom <br> </kbd></a>&ensp;&ensp;
   <a href="#%EF%B8%8F-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
   <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
-  <a href="#-sddm-theme"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
-  SDDM Theme 
+  <a href="#-grub-theme-optional"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
 
-  System Tray Icons
 </div>
 
 <br>
