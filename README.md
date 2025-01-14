@@ -143,19 +143,31 @@ cp -r config/* ~/.config/
 Install Tmux for terminal multiplexing.  
 
 ### Installation Commands
-- **Arch Linux**:
+
+#### Arch Linux  
+> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
+
   ```bash
   sudo pacman -S tmux
   ```
-- **Debian/Ubuntu**:
+  
+#### Debian/Ubuntu  
+> <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
+
   ```bash
   sudo apt install tmux
   ```
-- **Fedora**:
+  
+#### Fedora  
+> <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
+
   ```bash
   sudo dnf install tmux
   ```
-- **openSUSE**:
+  
+#### openSUSE  
+> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
+
   ```bash
   sudo zypper install tmux
   ```
@@ -215,7 +227,8 @@ Picom provides window transparency and animations.
 Install system tray applets for network, Bluetooth, and sound management. 
 
 - **Packages**:  
-  Install the necessary packages for your distribution:  
+  Install the necessary packages for your distribution:
+  
 ### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
 
@@ -254,7 +267,7 @@ The setup uses the **Astronaut Theme** for SDDM.
   [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
 ## GRUB Theme [OPTIONAL]  
-Customize your bootloader appearance with optional GRUB themes.  
+Customize your bootloader appearance with GRUB themes.  
 
 - Explore themes from ChrisTitusTech's repository:  
   [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
