@@ -14,9 +14,9 @@
   <a href="#%EF%B8%8F-configuration-files"><kbd> <br> Configs <br> </kbd></a>&ensp;&ensp;
   <a href="#tmux-setup"><kbd> <br> Tmux <br> </kbd></a>&ensp;&ensp;
   <a href="#-picom-configuration"><kbd> <br> Picom <br> </kbd></a>&ensp;&ensp;
-  <a href="#-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
+  <a href="#%EF%B8%8F-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
   <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
-  <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
+  <a href="#-sddm-theme"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
   SDDM Theme 
 
   System Tray Icons
