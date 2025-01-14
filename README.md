@@ -74,6 +74,38 @@ Wallpapers can greatly enhance the overall look of your setup. For this DWM conf
 ## **Configuration Files**  
 Preconfigured package settings are included in this repository under the `config` folder.  
 
+this are the main packages that are in .config folder in the repo you have to install as your preference and uses workflow
+
+- Arch linux
+  ```bash
+  sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship
+  ```
+  **Install better discord as appimage or install via with aur helper paru or yay**
+
+- Fedora
+  ```bash
+  sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi
+  ```
+  **install starship with this command `curl -sS https://starship.rs/install.sh | sh`
+  
+  **install better discrord app image from source https://betterdiscord.app/**
+
+- Debian
+  ```bash
+  sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst picom 
+  ```
+  **Debian / Ubuntu: Download fastfetch-linux-<proper architecture>.deb from [Github](https://github.com/fastfetch-cli/fastfetch/releases/tag/2.34.1) release page and double-click it (for Ubuntu 20.04 or newer and Debian 11 or newer).**
+
+  **You need to install helix from source https://docs.helix-editor.com/install.html**
+  **install better discrord app image from source https://betterdiscord.app/**
+  **install starship with this command `curl -sS https://starship.rs/install.sh | sh`
+
+  - opensuse
+  ```bash
+  sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship
+  ```
+  **install better discrord app image from source https://betterdiscord.app/**
+
 - **Usage**
 
   - Copy the configuration files to `~/.config`:
