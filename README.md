@@ -9,6 +9,7 @@
 
 <div align="center">
   <a href="#🚀-Dependencies"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+</div>
 
 <br>
 
