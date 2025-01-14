@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <a href="#🚀-Dependencies"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+  <a href="#-dependencies"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
 </div>
 
 <br>
