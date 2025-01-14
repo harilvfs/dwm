@@ -323,5 +323,4 @@ Enjoy your minimalist and customized DWM setup!
 
 > **Note**: Some distributions may require additional dependencies or configuration.Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
-> [!NOTE]
-> Feedback is appreciated. Open an issue or PR in the repository for any suggestions or enhancements.
+### Feedback is appreciated. Open an issue or PR in the repository for any suggestions or enhancements.
