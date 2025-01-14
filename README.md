@@ -8,7 +8,6 @@
 
 <br>
 
-<div align="center">
   <a href="#-dependencies"><kbd> <br> Dependencies <br> </kbd></a>&ensp;&ensp;
   <a href="#-nerd-fonts"><kbd> <br> Fonts <br> </kbd></a>&ensp;&ensp;
   <a href="#-wallpapers"><kbd> <br> Wallpapers <br> </kbd></a>&ensp;&ensp;
