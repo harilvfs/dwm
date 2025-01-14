@@ -7,6 +7,9 @@
 **DWM** is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code. ✨
 </div>
 
+<div align="center">
+  <a href="#🚀-Dependencies"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+
 <br>
 
 ![Terminal](https://github.com/harilvfs/assets/blob/main/dwm/dwm.png)
@@ -16,7 +19,7 @@
 > [!NOTE]
 > **This guide features DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus), tweaked to suit my personal workflow while remaining simple for anyone to use.**
 
-## 🚀 **Dependencies**
+## 🚀 Dependencies
 
 ### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
