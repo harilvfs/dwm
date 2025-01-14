@@ -258,7 +258,7 @@ Install system tray applets for network, Bluetooth, and sound management.
   sudo zypper install NetworkManager-applet blueman pasystray
   ```
 
-> **Notes 📜**: **For other distributions, refer to the respective package manager documentation.**
+> **Notes 📜** - **For other distributions, refer to the respective package manager documentation.**
 
 ## ✨ SDDM Theme 
 The setup uses the **Astronaut Theme** for SDDM.  
@@ -286,7 +286,7 @@ bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/se
 > [!NOTE]
 > This script is optimized for Arch Linux. Manual installation is recommended for other distributions or customized setups.
 
-## DWM Installation
+## 🔧 DWM Installation
 
 Clone and install DWM:
 
