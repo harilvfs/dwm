@@ -179,7 +179,7 @@ Install Tmux for terminal multiplexing.
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### ⚙️ Configuration
+### Configuration
 
 #### Create the configuration directory:
 
