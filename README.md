@@ -11,7 +11,7 @@
   <a href="#-dependencies"><kbd> <br> Dependencies <br> </kbd></a>&ensp;&ensp;
   <a href="#-nerd-fonts"><kbd> <br> Fonts <br> </kbd></a>&ensp;&ensp;
   <a href="#-wallpapers"><kbd> <br> Wallpapers <br> </kbd></a>&ensp;&ensp;
-  <a href="#-configuration-files"><kbd> <br> Configs <br> </kbd></a>&ensp;&ensp;
+  <a href="#%EF%B8%8F-configuration-files"><kbd> <br> Configs <br> </kbd></a>&ensp;&ensp;
   <a href="#tmux-setup"><kbd> <br> Tmux <br> </kbd></a>&ensp;&ensp;
   <a href="#-picom-configuration"><kbd> <br> Picom <br> </kbd></a>&ensp;&ensp;
   <a href="#-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
