@@ -5,7 +5,8 @@
 <div align="center">
   
 **DWM** is a lightweight and dynamic window manager based on X11. It is minimalistic, efficient, and designed to be customized by editing its source code. ✨
-</div>
+
+<br>
 
 <div align="center">
   <a href="#-dependencies"><kbd> <br> Dependencies <br> </kbd></a>&ensp;&ensp;
@@ -17,12 +18,10 @@
   <a href="#%EF%B8%8F-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
   <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
   <a href="#-grub-theme-optional"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
-  <a href="#-dwm-installation"><kbd> <br> DWM <br> </kbd></a>&ensp;&ensp;
-  <a href="#-result"><kbd> <br> Result <br> </kbd> </a>
+  <a href="#-dwm-installation"><kbd> <br> DWM <br> </kbd></a>&ensp;&ensp;
+  <a href="#-result"><kbd> <br> Result <br> </kbd></a>
 
-</div>
-
-<br>
+</div><br><br>
 
 ![Terminal](https://github.com/harilvfs/assets/blob/main/dwm/dwm.png)
 
