@@ -78,13 +78,13 @@ this are the main packages that are in .config folder in the repo you have to in
 
 - Arch linux
   ```bash
-  sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship
+  sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship bash zsh
   ```
   **Install better discord as appimage or install via with aur helper paru or yay**
 
 - Fedora
   ```bash
-  sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi
+  sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi bash zsh
   ```
   **install starship with this command `curl -sS https://starship.rs/install.sh | sh`
   
@@ -92,7 +92,7 @@ this are the main packages that are in .config folder in the repo you have to in
 
 - Debian
   ```bash
-  sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst picom 
+  sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst picom bash zsh
   ```
   **Debian / Ubuntu: Download fastfetch-linux-<proper architecture>.deb from [Github](https://github.com/fastfetch-cli/fastfetch/releases/tag/2.34.1) release page and double-click it (for Ubuntu 20.04 or newer and Debian 11 or newer).**
 
@@ -102,7 +102,7 @@ this are the main packages that are in .config folder in the repo you have to in
 
   - opensuse
   ```bash
-  sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship
+  sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh
   ```
   **install better discrord app image from source https://betterdiscord.app/**
 
