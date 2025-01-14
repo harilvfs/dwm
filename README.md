@@ -74,12 +74,14 @@ Preconfigured package settings are included in this repository under the `config
 
 ### **Steps to Install Configurations**
 
-1. Install the necessary packages for your distribution.
-2. Copy the preconfigured files to your `~/.config` directory.
+- Install the necessary packages for your distribution.
+- Copy the preconfigured files to your `~/.config` directory.
 
 ### **Package Installation by Distribution**  
 
-#### **Arch Linux**  
+#### Arch Linux  
+> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
+ 
 ```bash
 sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship bash zsh
 ```
@@ -88,7 +90,9 @@ sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish
   yay -S betterdiscord-installer
   ```
   
-#### **Fedora**  
+#### Fedora  
+> <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
+
 ```bash
 sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi bash zsh
 ```
@@ -98,7 +102,9 @@ sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom
   ```
 - **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
 
-#### **Debian/Ubuntu**  
+#### Debian/Ubuntu  
+> <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
+ 
 ```bash
 sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst picom bash zsh
 ```
@@ -113,7 +119,9 @@ sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst pic
   curl -sS https://starship.rs/install.sh | sh
   ```
 
-#### **openSUSE**  
+#### openSUSE  
+> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
+
 ```bash
 sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh
 ```
@@ -208,36 +216,49 @@ Install system tray applets for network, Bluetooth, and sound management.
 
 - **Packages**:  
   Install the necessary packages for your distribution:  
-### Arch Linux
+### Arch Linux  
+> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
+
     ```bash
     sudo pacman -S --needed --noconfirm network-manager-applet blueman pasystray
     ```
     
-### Fedora
+### Fedora  
+> <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
+
     ```bash
     sudo dnf install network-manager-applet blueman pasystray
     ```
     
-### Debian
+### Debian/Ubuntu  
+> <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
+
     ```bash
     sudo apt install network-manager-applet blueman pasystray
     ```
 
-### openSUSE
+### openSUSE  
+> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
+
     ```bash
     sudo zypper install NetworkManager-applet blueman pasystray
     
   - **For other distributions, refer to the respective package manager documentation.**
 
-## **SDDM Theme**  
-The current setup uses the `Astronaut Theme` for SDDM.  
+## SDDM Theme 
+The setup uses the **Astronaut Theme** for SDDM.  
 
-- Install and configure the theme using the official repository: [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
+- **Installation**:  
+  Clone the theme repository and follow the instructions to install:  
+  [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
-## **GRUB Theme**  [OPTIONAL]
-This step is optional for those who want to customize their bootloader.  
+## GRUB Theme [OPTIONAL]  
+Customize your bootloader appearance with optional GRUB themes.  
 
-- Check out the bootloader theme repository by ChrisTitusTech: [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
+- Explore themes from ChrisTitusTech's repository:  
+  [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
+
+> **Note**: Ensure GRUB customization aligns with your workflow and is applied carefully to avoid bootloader issues.
 
 ## Installation Script
 
