@@ -183,6 +183,11 @@ The systray includes applets for `network management`, `Bluetooth`, and `sound c
     sudo dnf install network-manager-applet blueman-applet pasystray
     ```
     
+  - **Debian**:
+    ```bash
+    sudo apt install network-manager-applet blueman pasystray
+    ```
+    
   - **For other distributions, refer to the respective package manager documentation.**
 
 ## **SDDM Theme**  
