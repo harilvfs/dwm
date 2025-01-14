@@ -219,30 +219,31 @@ Install system tray applets for network, Bluetooth, and sound management.
 ### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
 
-    ```bash
-    sudo pacman -S --needed --noconfirm network-manager-applet blueman pasystray
-    ```
+  ```bash
+  sudo pacman -S --needed --noconfirm network-manager-applet blueman pasystray
+  ```
     
 ### Fedora  
 > <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
 
-    ```bash
-    sudo dnf install network-manager-applet blueman pasystray
-    ```
+  ```bash
+  sudo dnf install network-manager-applet blueman pasystray
+  ```
     
 ### Debian/Ubuntu  
 > <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
 
-    ```bash
-    sudo apt install network-manager-applet blueman pasystray
-    ```
+  ```bash
+  sudo apt install network-manager-applet blueman pasystray
+  ```
 
 ### openSUSE  
 > <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
 
-    ```bash
-    sudo zypper install NetworkManager-applet blueman pasystray
-    
+  ```bash
+  sudo zypper install NetworkManager-applet blueman pasystray
+  ```
+
   - **For other distributions, refer to the respective package manager documentation.**
 
 ## SDDM Theme 
