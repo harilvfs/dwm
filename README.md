@@ -8,21 +8,6 @@
 </div>
 
 <div align="center">
-  <a href="#-dependencies"><kbd>Dependencies</kbd></a>&ensp;&ensp;
-  <a href="#-nerd-fonts"><kbd>Fonts</kbd></a>&ensp;&ensp;
-  <a href="#-wallpapers"><kbd>Wallpapers</kbd></a>&ensp;&ensp;
-  <a href="#-configuration-files"><kbd>Configs</kbd></a>&ensp;&ensp;
-  <a href="#tmux-setup"><kbd>Tmux</kbd></a>&ensp;&ensp;
-  <a href="#-picom-configuration"><kbd>Picom</kbd></a>&ensp;&ensp;
-  <a href="#-system-tray-icons"><kbd>Systray</kbd></a>&ensp;&ensp;
-  <a href="#-sddm-theme"><kbd>SDDM</kbd></a>&ensp;&ensp;
-  <a href="#-grub-theme-optional"><kbd>Grub</kbd></a>&ensp;&ensp;
-  <a href="#-dwm-installation"><kbd>DWM</kbd></a>&ensp;&ensp;
-  <a href="#-result"><kbd>Result</kbd></a>&ensp;&ensp;
-</div>
-
-
-<div align="center">
   <a href="#-dependencies"><kbd> <br> Dependencies <br> </kbd></a>&ensp;&ensp;
   <a href="#-nerd-fonts"><kbd> <br> Fonts <br> </kbd></a>&ensp;&ensp;
   <a href="#-wallpapers"><kbd> <br> Wallpapers <br> </kbd></a>&ensp;&ensp;
