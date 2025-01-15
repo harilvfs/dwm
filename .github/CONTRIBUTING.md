@@ -1,20 +1,20 @@
-# Contributing to DWM Repository
+# Contributing
 
-Welcome to the DWM repository! 🎉 We appreciate your interest in contributing. Below, you’ll find guidelines and best practices to help streamline the contribution process and maintain the project's quality.
+Welcome! 🎉 We appreciate your interest in contributing. Below, you’ll find guidelines and best practices to help streamline the contribution process and maintain the project's quality.
 
 ## Table of Contents
 - [How to Contribute](#how-to-contribute)
 - [Contributions You Can Make](#contributions-you-can-make)
-  - [1. Configuration Files](#1-configuration-files)
-  - [2. Patches](#2-patches)
-  - [3. Documentation](#3-documentation)
-  - [4. Visual Enhancements](#4-visual-enhancements)
+  - [Configuration Files](#1-configuration-files)
+  - [Patches](#2-patches)
+  - [Documentation](#3-documentation)
+  - [Visual Enhancements](#4-visual-enhancements)
 - [Code Style and Guidelines](#code-style-and-guidelines)
 - [Getting Started](#getting-started)
-  - [1. Fork and Clone the Repository](#1-fork-and-clone-the-repository)
-  - [2. Create a Feature Branch](#2-create-a-feature-branch)
-  - [3. Submit a Pull Request](#3-submit-a-pull-request)
-  - [4. Using GitHub Desktop](#4-using-github-desktop)
+  - [Fork and Clone the Repository](#1-fork-and-clone-the-repository)
+  - [Create a Feature Branch](#2-create-a-feature-branch)
+  - [Submit a Pull Request](#3-submit-a-pull-request)
+  - [Using GitHub Desktop](#4-using-github-desktop)
 - [Communication](#communication)
 
 ## How to Contribute
@@ -24,27 +24,27 @@ Welcome to the DWM repository! 🎉 We appreciate your interest in contributing.
 
 ## Contributions You Can Make
 
-### 1. Configuration Files
+### Configuration Files
 Enhance or create configurations for different packages, ensuring a seamless and better experience:
 - **Kitty**: Custom color schemes, shortcuts, or advanced configurations.
 - **Neovim**: Lua-based configs, plugin setups, or themes.
 - **Other Tools**: Configurations for utilities like `zsh`, `tmux`, or `alacritty`.
 - **DWM Config Files**: Tweak `config.h`, key bindings, layouts, and settings for better usability.
 
-### 2. Patches
+### Patches
 Develop, update, or test DWM patches for features like:
 - Gap management
 - Rounded corners
 - Bar improvements
 - Any innovative idea you have!
 
-### 3. Documentation
+### Documentation
 Help keep our documentation top-notch by:
 - Updating the `README.md`.
 - Writing detailed guides for installation and usage.
 - Adding comments to explain tricky parts of the code.
 
-### 4. Visual Enhancements
+### Visual Enhancements
 Ensure contributors have an aesthetically pleasing environment by:
 - Suggesting themes or wallpapers.
 - Creating visual previews of the configurations and patches.
