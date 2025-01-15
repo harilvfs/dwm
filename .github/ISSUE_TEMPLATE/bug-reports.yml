@@ -1,0 +1,51 @@
+name: Bug Report for the DWM Config
+description: Report a bug or issue with the DWM config, patches, or setup scripts.
+title: "[Bug]: "
+labels: ["bug"]
+assignees: [""]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us improve the DWM config! Please provide as much detail as possible.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: |
+
+        Please describe the issue. What did you expect to happen, and what actually happened?
+      placeholder: When I did X, Y happened, but I expected Z.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce?
+      description: |
+
+        Provide the steps or commands to reproduce the issue. Include any relevant configurations or scripts.
+      placeholder: Step-by-step instructions to reproduce the issue.
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: On which environment are you using the DWM config?
+      multiple: false
+      options:
+        - Arch Linux
+        - Arch-based Distro
+        - Debian
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/harilvfs/dwm/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+

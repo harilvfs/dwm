@@ -1,0 +1,57 @@
+name: Feature Request for the DWM Config
+description: Suggest a feature or enhancement for the DWM configuration or related scripts.
+title: "[Feature Request]: "
+labels: ["enhancement"]
+assignees: [""]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to submit a feature request! Please note that submitting a request does not guarantee implementation.
+  - type: textarea
+    id: feature
+    attributes:
+      label: Which feature would you like to see?
+      placeholder: What improvement or enhancement would you like to suggest?
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Why is this feature important?
+      placeholder: Explain how this feature would improve the DWM config or related scripts.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: If you have an idea of how this feature could be implemented, describe it here.
+      placeholder: Provide details of the solution or improvement you'd like to see.
+    validations:
+      required: false
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      description: Select the area(s) this feature would improve or enhance.
+      options:
+        - label: DWM Configurations
+          required: false
+        - label: Patches
+          required: false
+        - label: Setup Scripts
+          required: false
+        - label: Documentation
+          required: false
+  - type: checkboxes
+    id: financing
+    attributes:
+      label: Support or Contribution
+      description: |
+
+        You are welcome to submit your feature request! While most enhancements are community-driven, you can also support or contribute to accelerate implementation.
+      options:
+        - label: "[I am willing to contribute or support this feature](https://github.com/your-repo/dwm-config)"
+          required: false
+
