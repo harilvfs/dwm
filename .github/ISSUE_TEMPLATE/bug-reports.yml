@@ -1,4 +1,4 @@
-name: Bug Report for the DWM Config
+name: Bug Report
 description: Report a bug or issue with the DWM config, patches, or setup scripts.
 title: "[Bug]: "
 labels: ["bug"]
@@ -37,6 +37,8 @@ body:
         - Arch Linux
         - Arch-based Distro
         - Debian
+        - Fedora
+        - openSUSE
         - Other
     validations:
       required: true
