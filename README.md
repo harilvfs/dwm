@@ -17,7 +17,8 @@
   <a href="#%EF%B8%8F-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
   <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
   <a href="#-grub-theme-optional"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
-  <a href="#-dwm-installation"><kbd> <br> DWM <br> </kbd></a>
+  <a href="#-dwm-installation"><kbd> <br> DWM <br> </kbd></a>&ensp;&ensp;
+  <a href="#-dwm-installation"><kbd> <br> Contributing <br> </kbd></a>
   
 </div><br><br>
 
@@ -336,22 +337,21 @@ Enjoy your minimalist and customized DWM setup!
 
 > **Note**: Some distributions may require additional dependencies or configuration.Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
-## Contributing 🛠️  
+## 🛠️ Contributing   
 
 For more detailed contribution guidelines, please check our [CONTRIBUTING.md](https://github.com/harilvfs/dwm/blob/main/.github/CONTRIBUTING.md).
 
-## Code of Conduct 🤝 
+## 🤝 Code of Conduct  
 
 We aim for a welcoming environment for all contributors. Please read our **[Code of Conduct](https://github.com/harilvfs/dwm/blob/main/.github/CODE_OF_CONDUCT.md)** for a better experience.
 
-## Contact 📬
+## 📬 Contact 
 For questions or suggestions, feel free to reach out via:
 
 - 📧 Email: **harilvfs@chalisehari.com.np**
 
-## Contributors 🌟
-<img src="https://github.com/harilvfs/assets/blob/main/carch/contributors.png" width="50" />
-
+## 🌟 Contributors 
 Thank you to all contributors! Your efforts and input are truly invaluable. 💖
+
 [![Contributors](https://contrib.rocks/image?repo=harilvfs/dwm)](https://github.com/harilvfs/dwm/graphs/contributors)
 
