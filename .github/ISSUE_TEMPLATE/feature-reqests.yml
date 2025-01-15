@@ -38,6 +38,8 @@ body:
       options:
         - label: DWM Configurations
           required: false
+        - label: Configs
+          required: false
         - label: Patches
           required: false
         - label: Setup Scripts
