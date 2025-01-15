@@ -1,0 +1,59 @@
+name: Custom Template for DWM Config
+description: Submit a custom issue, request, or idea related to the DWM config or scripts.
+title: "[Custom]: Short description of the issue or request"
+labels: ["custom"]
+assignees: [""]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a custom issue or request! Please provide as much detail as possible.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of the issue, request, or idea.
+      placeholder: Describe the issue, feature request, or idea in detail.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce (if applicable)
+      description: Provide steps or context to reproduce the issue or better explain the request.
+      placeholder: List the steps to reproduce the issue or describe the context for the request.
+    validations:
+      required: false
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior (if applicable)
+      description: What behavior did you expect? Provide a clear explanation.
+      placeholder: Explain the correct or intended behavior, if applicable.
+    validations:
+      required: false
+  - type: textarea
+    id: observed-behavior
+    attributes:
+      label: Observed Behavior (if applicable)
+      description: Describe how the DWM config or related scripts currently behave.
+      placeholder: Provide details on any issues or unexpected behavior encountered.
+    validations:
+      required: false
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution (if applicable)
+      description: If you have a specific solution or idea in mind, describe it here.
+      placeholder: Share a potential solution or approach, if applicable.
+    validations:
+      required: false
+  - type: input
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Add any other relevant details, context, or links related to the issue or request.
+      placeholder: Include recent changes, related discussions, or anything else helpful.
+    validations:
+      required: false
+
