@@ -1,4 +1,4 @@
-name: Custom Template for DWM Config
+name: Custom 
 description: Submit a custom issue, request, or idea related to the DWM config or scripts.
 title: "[Custom]: Short description of the issue or request"
 labels: ["custom"]
