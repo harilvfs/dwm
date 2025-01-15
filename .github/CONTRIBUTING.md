@@ -2,8 +2,6 @@
 
 Welcome to the DWM repository! 🎉 We appreciate your interest in contributing. Below, you’ll find guidelines and best practices to help streamline the contribution process and maintain the project's quality.
 
----
-
 ## Table of Contents
 - [How to Contribute](#how-to-contribute)
 - [Contributions You Can Make](#contributions-you-can-make)
@@ -19,14 +17,10 @@ Welcome to the DWM repository! 🎉 We appreciate your interest in contributing.
   - [4. Using GitHub Desktop](#4-using-github-desktop)
 - [Communication](#communication)
 
----
-
 ## How to Contribute
 1. **Identify what to improve**: Check the issues section for tasks, or suggest your own ideas.
 2. **Create an issue**: If you want to contribute something new, please create an issue first for discussion.
 3. **Follow best practices**: Maintain code quality, adhere to coding standards, and document your changes properly.
-
----
 
 ## Contributions You Can Make
 
@@ -55,8 +49,6 @@ Ensure contributors have an aesthetically pleasing environment by:
 - Suggesting themes or wallpapers.
 - Creating visual previews of the configurations and patches.
 
----
-
 ## Code Style and Guidelines
 1. **C Code**:
    - Indentation: 4 spaces, no tabs.
@@ -71,8 +63,6 @@ Ensure contributors have an aesthetically pleasing environment by:
    - Write clean, maintainable code.
    - Ensure commits are atomic and well-documented.
    - Test thoroughly before submission.
-
----
 
 ## Getting Started
 
@@ -117,8 +107,6 @@ If you prefer a graphical interface, you can use GitHub Desktop to contribute:
 5. **Open a pull request**:
    - In GitHub Desktop, click `Branch` > `View on GitHub` to open the repository in your browser.
    - Follow the steps to create a pull request.
-
----
 
 ## Communication
 If you have any questions, feel free to:
