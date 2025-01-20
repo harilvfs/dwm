@@ -218,7 +218,7 @@ wget -O ~/.config/tmux/tmux.conf https://raw.githubusercontent.com/harilvfs/dwm/
 
 ```bash
 cd ~/.tmux/plugin/tpm/scripts/
-chmod +x *.sh
+chmod +x install_plugins.sh
 ./install_plugins.sh
 ```
 
@@ -234,6 +234,7 @@ chmod +x tpm
 
 ```bash
 cd ~/.tmux/plugin/tpm/scripts/
+chmod +x update_plugin.sh
 ./update_plugin.sh
 ```
 
