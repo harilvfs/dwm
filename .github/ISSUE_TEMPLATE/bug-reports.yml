@@ -39,20 +39,17 @@ body:
         - Debian
         - Fedora
         - openSUSE
-        - Other
+        - Other (please specify below)
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: specify-environment
     attributes:
-      label: Specify the environment
+      label: Specify the environment (if "Other" selected)
       description: |
 
-        If you selected "Other," please specify the environment you're using.
+        If you selected "Other (please specify below)," describe your environment here.
       placeholder: e.g., Void Linux, Gentoo, etc.
-    conditions:
-      - field: environment
-        value: Other
   - type: checkboxes
     id: terms
     attributes:
