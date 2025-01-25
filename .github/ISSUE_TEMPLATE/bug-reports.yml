@@ -34,7 +34,6 @@ body:
       label: On which environment are you using the DWM config?
       multiple: false
       options:
-        - Please select an environment
         - Arch Linux
         - Arch-based Distro
         - Debian
