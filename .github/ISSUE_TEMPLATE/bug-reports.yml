@@ -42,6 +42,19 @@ body:
         - Other
     validations:
       required: true
+  - type: input
+    id: specify-environment
+    attributes:
+      label: Specify the environment
+      description: |
+
+        If you selected "Other," please specify the environment you're using.
+      placeholder: e.g., Void Linux, Gentoo, etc.
+    validations:
+      required: false
+    condition:
+      field: environment
+      value: "Other"
   - type: checkboxes
     id: terms
     attributes:
