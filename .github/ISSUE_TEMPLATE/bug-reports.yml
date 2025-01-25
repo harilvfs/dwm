@@ -42,6 +42,7 @@ body:
         - Other
     validations:
       required: true
+    default: Arch Linux
   - type: input
     id: specify-environment
     attributes:
