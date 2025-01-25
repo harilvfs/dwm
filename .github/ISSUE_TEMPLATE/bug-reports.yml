@@ -42,7 +42,7 @@ body:
         - Other (please specify below)
     validations:
       required: true
-  - type: textarea
+  - type: input 
     id: specify-environment
     attributes:
       label: Specify the environment (if "Other" selected)
