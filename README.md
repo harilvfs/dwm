@@ -74,8 +74,16 @@ sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 ### Why Nerd Fonts?  
 Nerd Fonts enhance font rendering and ensure proper alignment of icons in `slstatus`. For this setup, the **MesloLGS Nerd Font** is recommended.
 
-- **Download**: [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
 - **Installation**:
+
+#### Arch Linux  
+> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
+```bash
+sudo pacman -S ttf-meslo-nerd noto-fonts-emoji ttf-joypixels
+```
+
+#### Other Distributions 
+  - **Download**: [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
   - Place the font files in `~/.fonts` or `~/.local/share/fonts`.
   - Refresh font cache:
     ```bash
