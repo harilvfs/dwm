@@ -34,6 +34,7 @@ body:
       label: On which environment are you using the DWM config?
       multiple: false
       options:
+        - Please select an environment
         - Arch Linux
         - Arch-based Distro
         - Debian
@@ -42,7 +43,6 @@ body:
         - Other
     validations:
       required: true
-    default: Arch Linux
   - type: input
     id: specify-environment
     attributes:
@@ -51,6 +51,9 @@ body:
 
         If you selected "Other," please specify the environment you're using.
       placeholder: e.g., Void Linux, Gentoo, etc.
+    conditions:
+      - field: environment
+        value: Other
   - type: checkboxes
     id: terms
     attributes:
