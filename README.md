@@ -83,7 +83,7 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd noto-fonts-emoji ttf-joypixel
 ```
 
 #### Other Distributions 
-  - **Download**: [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
+  - **Download** from: [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
   - Place the font files in `~/.fonts` or `~/.local/share/fonts`.
   - Refresh font cache:
     ```bash
