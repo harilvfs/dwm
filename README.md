@@ -364,7 +364,8 @@ sudo systemctl stop sddm
 sudo pacman -Rns sddm
 ```
 
-> **🛑 Warning:** This will remove SDDM completely. You will now need to log in via **TTY** and start `dwm` manually.
+> [!Warning]
+> This will remove SDDM completely. You will now need to log in via **TTY** and start `dwm` manually.
 
 #### 📌 Step 2: Install Required Dependencies  
 
@@ -374,7 +375,8 @@ Before proceeding, ensure you have the required packages installed:
 sudo pacman -S xorg-server xorg-xinit dmenu
 ```
 
-> **💡 Tip:** `dmenu` is commonly used for launching apps in `dwm`, but you can also use `rofi` as an alternative. Install either to avoid issues.
+> [!Tip]
+> `dmenu` is commonly used for launching apps in `dwm`, but you can also use `rofi` as an alternative. Install either to avoid issues.
 
 
 #### 📝 Step 3: Configure `.xinitrc` for DWM  
@@ -385,7 +387,8 @@ Create or edit `~/.xinitrc`:
 vim ~/.xinitrc
 ```
 
-> **📌 Note:** You can also use `nano` as an alternative text editor. 
+> [!Note]
+> You can also use `nano` as an alternative text editor. 
 
 Add this:  
 
@@ -400,7 +403,8 @@ Then, **make it executable**:
 chmod +x ~/.xinitrc
 ```
 
-> **📌 Note:** If using a display manager, `.xsession` should also contain `exec dwm`.
+> [!Note]
+> If using a display manager, `.xsession` should also contain `exec dwm`.
 
 
 #### ▶ Step 4: Start DWM Manually  
@@ -411,7 +415,8 @@ Now, after logging into TTY (`Ctrl + Alt + F3`), start `dwm` with:
 startx
 ```
 
-> **💡 Tip:** If `startx` fails, check logs using:  
+> [!Tip]
+> If `startx` fails, check logs using:  
 > ```
 > cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
 > ```
@@ -425,7 +430,8 @@ sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 sudo vim /etc/systemd/system/getty@tty1.service.d/autologin.conf
 ```
 
-> **📌 Note:** You can also use `nano` as an alternative text editor. 
+> [!Note]
+> You can also use `nano` as an alternative text editor. 
 
 Add the following:  
 
@@ -443,7 +449,8 @@ Then, reload systemd:
 sudo systemctl daemon-reexec
 ```
 
-> **🛑 Warning:** Auto-login bypasses password authentication. Anyone with access to your machine can log in.
+> [!Warning]
+> Auto-login bypasses password authentication. Anyone with access to your machine can log in.
 
 #### 💻 Step 6: Start DWM Automatically on Login  
 
@@ -452,7 +459,9 @@ Edit `~/.bash_profile` `~/.bashrc` (or `~/.zprofile` `~/.zshrc` if using Zsh):
 ```bash
 vim ~/.bash_profile
 ```
-> **📌 Note:** You can also use `nano` as an alternative text editor. 
+
+> [!Note]
+> You can also use `nano` as an alternative text editor. 
 
 Add this at the bottom:  
 
@@ -462,7 +471,8 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 fi
 ```
 
-> **💡 Tip:** This ensures `dwm` starts automatically **only on TTY1**.
+> [!Tip]
+> This ensures `dwm` starts automatically **only on TTY1**.
 
 #### 🔐 Step 7: Add Security with `slock`  
 
@@ -497,7 +507,8 @@ Then reload systemd:
 sudo systemctl daemon-reexec
 ```
 
-> **📌 Note:** This will **restore normal login behavior** and require a password.
+> [!Note]
+> This will **restore normal login behavior** and require a password.
 
 #### 🔄 Step 9: Reboot & Test  
 
@@ -512,7 +523,7 @@ Now, after reboot:
 ✅ **Run `startx` to launch `dwm`**.  
 ✅ **Auto-login or security settings (if enabled) should work**.
 
-### 🎯 **Final Thoughts**  
+#### 🎯 **Final Thoughts**  
 By following this, you have successfully:  
 ✅ **Removed SDDM** and switched to **TTY login**.  
 ✅ **Configured `.xinitrc` to launch `dwm` manually or automatically**.  
