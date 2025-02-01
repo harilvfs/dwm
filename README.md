@@ -333,11 +333,10 @@ cd ~/dwm/slstatus
 sudo make clean install
 ```
 
-**Add this to your** `~/.xinitrc`
+**Add this to your** `~/.xinitrc` & `~/.xsession`
 
 ```
-exec dwm &
-slstatus
+exec dwm
 ```
 
 > [!IMPORTANT]
@@ -353,6 +352,175 @@ slstatus
 Enjoy your minimalist and customized DWM setup!
 
 > **Note**: Some distributions may require additional dependencies or configuration.Feel free to explore your distribution’s community for guidance on missing dependencies.  
+
+## 📜 TTY Login Setup for DWM (Removing SDDM & Auto-Login) [Optional]
+
+This guide explains how to **remove SDDM**, set up **TTY login for DWM**, configure `.xinitrc/.xsession`, install dependencies, and add security using `slock`.  
+
+### 🚀 Step 1: Remove SDDM & Enable TTY Login
+
+To completely remove `sddm` and use **TTY login for `dwm`**, run:  
+
+```bash
+sudo systemctl disable sddm
+sudo systemctl stop sddm
+sudo pacman -Rns sddm
+```
+
+> **🛑 Warning:** This will remove SDDM completely. You will now need to log in via **TTY** and start `dwm` manually.
+
+### 📌 Step 2: Install Required Dependencies  
+
+Before proceeding, ensure you have the required packages installed:  
+
+```bash
+sudo pacman -S xorg-server xorg-xinit dmenu
+```
+
+> **💡 Tip:** `dmenu` is commonly used for launching apps in `dwm`, but you can also use `rofi` as an alternative. Install either to avoid issues.
+
+
+### 📝 Step 3: Configure `.xinitrc` for DWM  
+
+Create or edit `~/.xinitrc`:  
+
+```bash
+vim ~/.xinitrc
+```
+
+> **📌 Note:** You can also use `nano` as an alternative text editor. 
+
+Add this:  
+
+```sh
+#!/bin/sh
+exec dwm
+```
+
+Then, **make it executable**:  
+
+```
+chmod +x ~/.xinitrc
+```
+
+> **📌 Note:** If using a display manager, `.xsession` should also contain `exec dwm`.
+
+
+## ▶ Step 4: Start DWM Manually  
+
+Now, after logging into TTY (`Ctrl + Alt + F3`), start `dwm` with:  
+
+```
+startx
+```
+
+> **💡 Tip:** If `startx` fails, check logs using:  
+> ```
+> cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
+> ```
+
+### 🔒 Step 5: (Optional) Enable Auto-Login in TTY  
+
+If you want to **automatically log in to TTY** (no password required), create a systemd override:  
+
+```bash
+sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+sudo vim /etc/systemd/system/getty@tty1.service.d/autologin.conf
+```
+
+> **📌 Note:** You can also use `nano` as an alternative text editor. 
+
+Add the following:  
+
+```conf
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin your_username --noclear %I 38400 linux
+```
+
+Replace `your_username` with your actual username.  
+
+Then, reload systemd:  
+
+```bash
+sudo systemctl daemon-reexec
+```
+
+> **🛑 Warning:** Auto-login bypasses password authentication. Anyone with access to your machine can log in.
+
+## 💻 Step 6: Start DWM Automatically on Login  
+
+Edit `~/.bash_profile` `~/.bashrc` (or `~/.zprofile` `~/.zshrc` if using Zsh):  
+
+```bash
+vim ~/.bash_profile
+```
+> **📌 Note:** You can also use `nano` as an alternative text editor. 
+
+Add this at the bottom:  
+
+```bash
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec startx
+fi
+```
+
+> **💡 Tip:** This ensures `dwm` starts automatically **only on TTY1**.
+
+## 🔐 Step 7: Add Security with `slock`  
+
+To **lock the screen** after inactivity or manually, install `slock`:  
+
+```bash
+sudo pacman -S slock xautolock
+```
+
+Edit `~/.xinitrc` to auto-lock after 5 minutes:  
+
+```bash
+xautolock -time 5 -locker slock &
+```
+
+> **🔑 To manually lock the screen**, press `Mod+u` or run:  
+> ```bash
+> slock
+> ```
+
+## 🗑 Step 8: Remove Auto-Login (If Needed)  
+
+If you enabled auto-login but want to **remove it**, delete the config file:  
+
+```bash
+sudo rm -rf /etc/systemd/system/getty@tty1.service.d
+```
+
+Then reload systemd:  
+
+```bash
+sudo systemctl daemon-reexec
+```
+
+> **📌 Note:** This will **restore normal login behavior** and require a password.
+
+## 🔄 Step 9: Reboot & Test  
+
+Restart your system to apply changes:  
+
+```
+sudo reboot
+```
+
+Now, after reboot:  
+✅ **Log in via TTY** (no display manager).  
+✅ **Run `startx` to launch `dwm`**.  
+✅ **Auto-login or security settings (if enabled) should work**.
+
+### 🎯 **Final Thoughts**  
+By following this, you have successfully:  
+✅ **Removed SDDM** and switched to **TTY login**.  
+✅ **Configured `.xinitrc` to launch `dwm` manually or automatically**.  
+✅ **Enabled/Disabled auto-login as needed**.  
+✅ **Added security with `slock`** (if required).  
 
 ## 🛠️ Contributing   
 
