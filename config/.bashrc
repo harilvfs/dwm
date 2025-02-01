@@ -655,8 +655,9 @@ if [ -z "$TMUX" ]; then
    tmux attach -d || tmux new
 fi
 
-nerdfetch
-
 alias termdown="termdown --title Countdown --time-format %H:%M:%S --text \"T i m e i s u p\""
 
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec startx
+fi
 
