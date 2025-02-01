@@ -18,7 +18,7 @@
   <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
   <a href="#-grub-theme-optional"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
   <a href="#-dwm-installation"><kbd> <br> DWM <br> </kbd></a>&ensp;&ensp;
-  <a href="#-tty-login-for-dwm-remove-sddm--auto-login-optional"><kbd> <br> TTY <br> </kbd></a>&ensp;&ensp;
+  <a href="#-tty-login-for-dwm-remove-sddm--auto-login-optional"><kbd> <br> TTY <br> </kbd></a>&ensp;&ensp;
   <a href="#%EF%B8%8F-contributing"><kbd> <br> Contributing <br> </kbd></a>
   
 </div><br><br>
