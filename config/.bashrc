@@ -657,7 +657,7 @@ fi
 
 alias termdown="termdown --title Countdown --time-format %H:%M:%S --text \"T i m e i s u p\""
 
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
-fi
+#if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#    exec startx
+#fi
 
