@@ -661,3 +661,6 @@ alias termdown="termdown --title Countdown --time-format %H:%M:%S --text \"T i m
 #    exec startx
 #fi
 
+# Display Pokemon
+pokemon-colorscripts --no-title -r 1,3,6
+
