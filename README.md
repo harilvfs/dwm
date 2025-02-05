@@ -226,24 +226,24 @@ wget -O ~/.config/tmux/tmux.conf https://raw.githubusercontent.com/harilvfs/dwm/
 #### Install Plugins
 
 ```bash
-cd ~/.tmux/plugin/tpm/scripts/
-chmod +x install_plugins.sh
+cd ~/.tmux/plugin/tpm/scripts/ &&
+chmod +x install_plugins.sh &&
 ./install_plugins.sh
 ```
 
 #### Install TPM
 
 ```bash
-cd ~/.tmux/plugins/tpm
-chmod +x tpm
+cd ~/.tmux/plugins/tpm &&
+chmod +x tpm &&
 ./tpm
 ```
 
 #### Update Plugins
 
 ```bash
-cd ~/.tmux/plugin/tpm/scripts/
-chmod +x update_plugin.sh
+cd ~/.tmux/plugin/tpm/scripts/ &&
+chmod +x update_plugin.sh &&
 ./update_plugin.sh
 ```
 
