@@ -94,7 +94,7 @@ alias mkdir='mkdir -p'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Display Pokemon
-#pokemon-colorscripts --no-title -r 1,3,6
+pokemon-colorscripts --no-title -r 1,3,6
 
 eval "$(zoxide init zsh)"
 
@@ -102,7 +102,7 @@ eval "$(zoxide init zsh)"
 #   tmux attach -d || tmux new
 #fi
 
-nerdfetch
+#nerdfetch
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
