@@ -98,15 +98,15 @@ alias mkdir='mkdir -p'
 
 eval "$(zoxide init zsh)"
 
-if [ -z "$TMUX" ]; then
-   tmux attach -d || tmux new
-fi
+#if [ -z "$TMUX" ]; then
+#   tmux attach -d || tmux new
+#fi
 
 nerdfetch
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 #    exec startx

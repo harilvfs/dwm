@@ -651,9 +651,9 @@ export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bi
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
-if [ -z "$TMUX" ]; then
-   tmux attach -d || tmux new
-fi
+#if [ -z "$TMUX" ]; then
+#   tmux attach -d || tmux new
+#fi
 
 alias termdown="termdown --title Countdown --time-format %H:%M:%S --text \"T i m e i s u p\""
 
