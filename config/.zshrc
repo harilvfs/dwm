@@ -2,7 +2,7 @@
 ZSH=/usr/share/oh-my-zsh/
 
 # Powerlevel10k theme path
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # List of plugins used
 #plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
