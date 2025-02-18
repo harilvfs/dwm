@@ -133,7 +133,7 @@ sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom
   ```
 - **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
 
-> - **Ghostty**: Download Ghostty Terminal 
+> **Ghostty**: Download Ghostty Terminal 
 > ```bash
 > dnf copr enable pgdev/ghostty
 > dnf install ghostty
@@ -155,6 +155,13 @@ sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst pic
   ```bash
   curl -sS https://starship.rs/install.sh | sh
   ```
+> **Ghostty**: Download Ghostty Terminal
+> ```bash
+> echo 'deb http://download.opensuse.org/repositories/home:/clayrisser:/bookworm/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:clayrisser:bookworm.list
+> curl -fsSL https://download.opensuse.org/repositories/home:clayrisser:bookworm/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_clayrisser_bookworm.gpg > /dev/null
+> sudo apt update
+> sudo apt install ghostty
+> ```
 
 #### openSUSE  
 > <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
