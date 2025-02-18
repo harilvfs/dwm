@@ -114,7 +114,7 @@ Preconfigured package settings are included in this repository under the `config
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
  
 ```bash
-sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship bash zsh
+sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship bash zsh ghostty
 ```
 - **BetterDiscord**: Install as an AppImage or via AUR using `paru` or `yay`.  
   ```bash
@@ -132,6 +132,12 @@ sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom
   curl -sS https://starship.rs/install.sh | sh
   ```
 - **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
+
+> - **Ghostty**: Download Ghostty Terminal 
+> ```bash
+> dnf copr enable pgdev/ghostty
+> dnf install ghostty
+>```
 
 #### Debian/Ubuntu  
 > <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
