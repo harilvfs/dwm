@@ -160,7 +160,7 @@ sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst pic
 > <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
 
 ```bash
-sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh
+sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh ghostty
 ```
 - **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
 
