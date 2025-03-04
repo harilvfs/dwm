@@ -323,6 +323,17 @@ Customize your bootloader appearance with GRUB themes.
 
 **For a simplified setup process, run the script:**
 
+> [!NOTE]  
+> Before running this script, make sure `gum`, `figlet`, and `curl` are installed.  
+> **For Arch-based distros:**  
+> ```sh
+> sudo pacman -S gum figlet curl --noconfirm
+> ```  
+> **For Fedora-based distros:**  
+> ```sh
+> sudo dnf install gum figlet curl -y
+> ```  
+
 ```bash
 bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
 ```
