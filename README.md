@@ -341,7 +341,7 @@ bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/se
 > [!NOTE]
 > This script is optimized for Arch Linux. Manual installation is recommended for other distributions or customized setups.
 
-## 🔧 DWM Installation
+## 🔧 Manually 
 
 **Clone and install DWM:**
 
