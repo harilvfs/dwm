@@ -341,6 +341,8 @@ bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/se
 > [!NOTE]
 > This script is optimized for Arch Linux. Manual installation is recommended for other distributions or customized setups.
 
+---
+
 ## 🔧 Manually 
 
 **Clone and install DWM:**
@@ -550,12 +552,7 @@ Now, after reboot:
 ✅ **Run `startx` to launch `dwm`**.  
 ✅ **Auto-login or security settings (if enabled) should work**.
 
-#### 🎯 **Final Thoughts**  
-By following this, you have successfully:  
-✅ **Removed SDDM** and switched to **TTY login**.  
-✅ **Configured `.xinitrc` to launch `dwm` manually or automatically**.  
-✅ **Enabled/Disabled auto-login as needed**.  
-✅ **Added security with `slock`** (if required).  
+---
 
 ## 🛠️ Contributing   
 
