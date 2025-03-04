@@ -375,6 +375,8 @@ exec dwm
 > [!Note]
 > Some distributions may require additional dependencies or configuration.Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
+---
+
 ### 📜 TTY Login for DWM (Remove SDDM & Auto-Login) [Optional]
 
 This guide explains how to **`remove SDDM`**, set up **`TTY login for DWM`**, configure `.xinitrc/.xsession`, install dependencies, and add security using `slock`.  
