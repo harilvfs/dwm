@@ -327,11 +327,11 @@ Customize your bootloader appearance with GRUB themes.
 > Before running this script, make sure `gum`, `figlet`, and `curl` are installed.  
 > **For Arch-based distros:**  
 > ```sh
-> sudo pacman -S gum figlet curl --noconfirm
+> sudo pacman -S fzf figlet curl --noconfirm
 > ```  
 > **For Fedora-based distros:**  
 > ```sh
-> sudo dnf install gum figlet curl -y
+> sudo dnf install fzf figlet curl -y
 > ```  
 
 ```bash
