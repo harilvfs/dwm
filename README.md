@@ -335,7 +335,7 @@ Customize your bootloader appearance with GRUB themes.
 > ```  
 
 ```bash
-bash <(curl -L https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/setup.sh)
+bash <(curl -L https://chalisehari.com.np/dwm)
 ```
 
 > [!NOTE]
