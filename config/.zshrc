@@ -115,3 +115,9 @@ eval "$(zoxide init zsh)"
 #    exec startx
 #fi
 
+# fzf
+fzf_cd() {
+  local dir
+  dir=$(find . -maxdepth 3 -type d | fzf) && cd "$dir"
+}
+alias cdf="fzf_cd"

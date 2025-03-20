@@ -668,3 +668,9 @@ alias termdown="termdown --title Countdown --time-format %H:%M:%S --text \"T i m
 # Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
 
+# fzf
+fzf_cd() {
+  local dir
+  dir=$(find . -maxdepth 3 -type d | fzf) && cd "$dir"
+}
+alias cdf="fzf_cd"
