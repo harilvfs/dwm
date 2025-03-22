@@ -324,7 +324,8 @@ Customize your bootloader appearance with GRUB themes.
 **For a simplified setup process, run the script:**
 
 > [!NOTE]  
-> Before running this script, make sure `gum`, `figlet`, and `curl` are installed.  
+> Before running this script, make sure `fzf`, `figlet`, and `curl` are installed.  
+>
 > **For Arch-based distros:**  
 > ```sh
 > sudo pacman -S fzf figlet curl --noconfirm
@@ -333,6 +334,8 @@ Customize your bootloader appearance with GRUB themes.
 > ```sh
 > sudo dnf install fzf figlet curl -y
 > ```  
+
+**After that, run this command in your terminal.**
 
 ```bash
 bash <(curl -L https://chalisehari.com.np/dwm)
