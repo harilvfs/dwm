@@ -4,6 +4,8 @@ exec tail -n +3 $0
 # menu entries you want to add after this comment.  Be careful not to change
 # the 'exec tail' line above.
 
+## Your directory for time snapshots may be different. Verify it first before proceeding, and ensure you have specified the correct drive for your root. 
+
 menuentry "Timeshift Recovery (2025-02-11)" {
     set root=(hd0,3)
     linux /timeshift/snapshots/2025-02-11_23-33-09/boot/vmlinuz-linux-zen root=/dev/sda3 rw
