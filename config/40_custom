@@ -4,6 +4,9 @@ exec tail -n +3 $0
 # menu entries you want to add after this comment.  Be careful not to change
 # the 'exec tail' line above.
 
+
+# Your directory for time snapshots may be different. Verify it first before proceeding, and ensure you have specified the correct drive for your root. 
+
 menuentry "Timeshift Recovery (2025-04-02)" {
     set root=(hd0,3)
     linux /timeshift/snapshots/2025-04-02_22-20-49/localhost/boot/vmlinuz-linux-cachyos root=UUID=7284b62c-7830-4163-aad7-1bac5b4054b5 rw
