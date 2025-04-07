@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Quickly sets up the Dwm window manager with a single-click script, using my customized configuration.
 
 clear
 
@@ -8,6 +10,7 @@ YELLOW='\033[33m'
 CYAN='\033[36m'
 GREEN='\033[32m'
 BLUE='\033[34m'
+RESET="\033[0m"
 
 print_message() {
     local color="$1"
@@ -16,7 +19,12 @@ print_message() {
 }
 
 echo -e "${BLUE}"
-figlet -f slant "DWM"
+if command -v figlet &>/dev/null; then
+    figlet -f slant "Dwm"
+else
+    echo "========== Dwm Setup =========="
+fi
+echo -e "${RESET}"
 
 fzf_confirm() {
     local prompt="$1"
@@ -31,32 +39,14 @@ fzf_confirm() {
 }
 
 detect_distro() {
-    if [ -f /etc/os-release ]; then
-        source /etc/os-release
-        case "$ID" in
-            arch)
-                distro="arch"
-                print_message "$GREEN" "Detected distribution: Arch Linux"
-                ;;
-            fedora)
-                distro="fedora"
-                print_message "$YELLOW" "Detected distribution: Fedora"
-                ;;
-            *)
-                if [[ "$ID_LIKE" == *"arch"* ]]; then
-                    distro="arch"
-                    print_message "$GREEN" "Detected Arch-based distribution"
-                elif [[ "$ID_LIKE" == *"fedora"* ]]; then
-                    distro="fedora"
-                    print_message "$YELLOW" "Detected Fedora-based distribution"
-                else
-                    print_message "$RED" "Unsupported distribution. Exiting..."
-                    exit 1
-                fi
-                ;;
-        esac
+    if command -v pacman &>/dev/null; then
+        distro="arch"
+        print_message "$GREEN" "Detected distribution: Arch Linux"
+    elif command -v dnf &>/dev/null; then
+        distro="fedora"
+        print_message "$YELLOW" "Detected distribution: Fedora"
     else
-        print_message "$RED" "Cannot determine OS. Exiting..."
+        print_message "$RED" "Unsupported distribution. Exiting..."
         exit 1
     fi
 }
@@ -165,7 +155,7 @@ install_nerd_font() {
     fi
 
     print_message "$CYAN" "Installing Meslo Nerd Font..."
-    if grep -q Fedora /etc/os-release; then
+    if command -v dnf &>/dev/null; then
         wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip || exit 1
         unzip /tmp/Meslo.zip -d /tmp/Meslo || exit 1
         mv /tmp/Meslo/* "$FONT_DIR" || exit 1
@@ -243,6 +233,80 @@ configure_wallpapers() {
     print_message "$GREEN" "Wallpapers downloaded."
 }
 
+setup_xinitrc() {
+    local XINITRC="$HOME/.xinitrc"
+    
+    if [ -f "$XINITRC" ]; then
+        if fzf_confirm "Existing .xinitrc detected. Do you want to replace it?"; then
+            mv "$XINITRC" "$XINITRC.bak"
+        else
+            return
+        fi
+    fi
+    
+    print_message "$CYAN" ":: Creating .xinitrc file for DWM..."
+    cat > "$XINITRC" << 'EOF'
+#!/bin/sh
+exec dwm
+EOF
+    
+    chmod +x "$XINITRC"
+    print_message "$GREEN" ".xinitrc configured successfully!"
+}
+
+setup_tty_login() {
+    if fzf_confirm "Do you want to use DWM from TTY using startx?"; then
+        setup_xinitrc
+        
+        if fzf_confirm "Do you want to enable automatic login to TTY? (Not recommended for security reasons)"; then
+            local username=$(whoami)
+            print_message "$CYAN" ":: Setting up autologin for user: $username"
+            
+            sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
+            
+            sudo tee /etc/systemd/system/getty@tty1.service.d/autologin.conf > /dev/null << EOF
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin $username --noclear %I 38400 linux
+EOF
+            
+            sudo systemctl daemon-reexec
+            print_message "$GREEN" "Autologin configured for TTY1."
+        fi
+    fi
+}
+
+check_display_manager() {
+    local dm_found=false
+    local dm_name=""
+    
+    for dm in sddm gdm lightdm lxdm xdm slim; do
+        if systemctl is-enabled $dm.service &>/dev/null; then
+            dm_found=true
+            dm_name=$dm
+            break
+        fi
+    done
+    
+    if $dm_found; then
+        print_message "$YELLOW" "Display manager $dm_name is detected."
+        if fzf_confirm "When using DWM from TTY, a display manager is not needed. Do you want to remove $dm_name?"; then
+            if [ "$distro" == "arch" ]; then
+                sudo systemctl disable $dm_name.service
+                sudo systemctl stop $dm_name.service
+                sudo pacman -Rns $dm_name
+            elif [ "$distro" == "fedora" ]; then
+                sudo systemctl disable $dm_name.service
+                sudo systemctl stop $dm_name.service
+                sudo dnf remove -y $dm_name
+            fi
+            print_message "$GREEN" "Display manager $dm_name has been removed."
+        fi
+    else
+        print_message "$GREEN" "No display manager detected. You can start DWM using 'startx' from TTY."
+    fi
+}
+
 detect_distro
 confirm_setup
 install_packages
@@ -251,7 +315,8 @@ install_slstatus
 install_nerd_font
 install_picom
 configure_wallpapers
+setup_tty_login
+check_display_manager
 print_message "$GREEN" "DWM setup completed successfully!"
 print_message "$YELLOW" "Notice: I am not including dotfiles in this script to avoid conflicts and potential data loss. If you need dotfiles, check out my repo:"
 print_message "$CYAN" "https://github.com/harilvfs/dwm/blob/main/config"
-
