@@ -26,10 +26,24 @@ else
 fi
 echo -e "${RESET}"
 
+FZF_COMMON="--layout=reverse \
+            --border=bold \
+            --border=rounded \
+            --margin=5% \
+            --color=dark \
+            --info=inline \
+            --header-first \
+            --bind change:top"
+
 fzf_confirm() {
     local prompt="$1"
     local options=("Yes" "No")
-    local selected=$(printf "%s\n" "${options[@]}" | fzf --prompt="$prompt " --height=10 --layout=reverse --border)
+    local selected=$(printf "%s\n" "${options[@]}" | fzf ${FZF_COMMON} \
+                                                     --height=40% \
+                                                     --prompt="$prompt " \
+                                                     --header="Confirm" \
+                                                     --pointer="➤" \
+                                                     --color='fg:white,fg+:green,bg+:black,pointer:green')
     
     if [[ "$selected" == "Yes" ]]; then
         return 0
@@ -47,16 +61,6 @@ detect_distro() {
         print_message "$YELLOW" "Detected distribution: Fedora"
     else
         print_message "$RED" "Unsupported distribution. Exiting..."
-        exit 1
-    fi
-}
-
-confirm_setup() {
-    print_message "$CYAN" "Welcome to the DWM setup script."
-    print_message "$CYAN" "This script will install and configure DWM along with necessary dependencies."
-
-    if ! fzf_confirm "Do you want to continue with this setup?"; then
-        print_message "$RED" "Setup aborted by the user. Exiting..."
         exit 1
     fi
 }
@@ -308,7 +312,6 @@ check_display_manager() {
 }
 
 detect_distro
-confirm_setup
 install_packages
 install_dwm
 install_slstatus
