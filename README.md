@@ -511,7 +511,7 @@ fi
 To **lock the screen** after inactivity or manually, install `slock`:  
 
 ```bash
-sudo pacman -S slock xautolock
+sudo pacman -S slock
 ```
 
 Edit `~/.xinitrc` to auto-lock after 5 minutes:  
