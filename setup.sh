@@ -68,13 +68,20 @@ detect_distro() {
 install_packages() {
     if [ "$distro" == "arch" ]; then
         print_message "$CYAN" ":: Installing required packages using pacman..."
-        sudo pacman -S --needed git base-devel libx11 libxinerama libxft ttf-cascadia-mono-nerd ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono imlib2 libxcb git unzip lxappearance feh mate-polkit meson ninja xorg-xinit xorg-server network-manager-applet blueman pasystray bluez-utils thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock || {
+        sudo pacman -S --needed git base-devel libx11 libxinerama libxft gnome-keyring ttf-cascadia-mono-nerd ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono imlib2 libxcb git unzip lxappearance feh mate-polkit meson ninja xorg-xinit xorg-server network-manager-applet blueman pasystray bluez-utils thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt || {
             print_message "$RED" "Failed to install some packages."
             exit 1
         }
     elif [ "$distro" == "fedora" ]; then
         print_message "$CYAN" ":: Installing required packages using dnf..."
-        sudo dnf install -y git libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip lxappearance feh mate-polkit meson ninja-build gnome-keyring jetbrains-mono-fonts-all google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock || {
+        
+        print_message "$CYAN" ":: Enabling solopasha/hyprland COPR repository..."
+        sudo dnf copr enable -y solopasha/hyprland || {
+            print_message "$RED" "Failed to enable solopasha/hyprland COPR repository."
+            exit 1
+        }
+        
+        sudo dnf install -y git libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel gnome-keyring unzip lxappearance feh mate-polkit meson ninja-build gnome-keyring jetbrains-mono-fonts-all google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt || {
             print_message "$RED" "Failed to install some packages."
             exit 1
         }
@@ -233,8 +240,13 @@ configure_wallpapers() {
         fi
     fi
     
-    git clone https://github.com/harilvfs/wallpapers "$BG_DIR" || exit 1
-    print_message "$GREEN" "Wallpapers downloaded."
+    if fzf_confirm "Do you want to download wallpapers? (Note: The wallpaper collection is large in size but recommended)"; then
+        print_message "$CYAN" ":: Downloading wallpapers..."
+        git clone https://github.com/harilvfs/wallpapers "$BG_DIR" || exit 1
+        print_message "$GREEN" "Wallpapers downloaded successfully."
+    else
+        print_message "$YELLOW" "Skipping wallpaper download."
+    fi
 }
 
 setup_xinitrc() {
@@ -284,7 +296,7 @@ check_display_manager() {
     local dm_found=false
     local dm_name=""
     
-    for dm in sddm gdm lightdm lxdm xdm slim; do
+    for dm in sddm gdm lightdm lxdm xdm slim greetd; do
         if systemctl is-enabled $dm.service &>/dev/null; then
             dm_found=true
             dm_name=$dm
@@ -318,6 +330,7 @@ install_slstatus
 install_nerd_font
 install_picom
 configure_wallpapers
+setup_xinitrc
 setup_tty_login
 check_display_manager
 print_message "$GREEN" "DWM setup completed successfully!"
