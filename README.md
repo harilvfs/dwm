@@ -324,15 +324,16 @@ Customize your bootloader appearance with GRUB themes.
 **For a simplified setup process, run the script:**
 
 > [!NOTE]  
-> Before running this script, make sure `fzf`, `figlet`, and `curl` are installed.  
+> Before running this script, make sure `fzf` and `curl` are installed.  
 >
 > **For Arch-based distros:**  
 > ```sh
-> sudo pacman -S fzf figlet curl --noconfirm
+> sudo pacman -S fzf curl --noconfirm
 > ```  
+>
 > **For Fedora-based distros:**  
 > ```sh
-> sudo dnf install fzf figlet curl -y
+> sudo dnf install fzf curl -y
 > ```  
 
 **After that, run this command in your terminal.**
