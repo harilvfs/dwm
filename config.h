@@ -113,10 +113,10 @@ static Key keys[] = {
     { MODKEY,                       XK_u,          spawn,                  SHCMD ("slock")}, // open thunar file manager
     { MODKEY,                       XK_w,          spawn,                  SHCMD ("looking-glass-client -F")}, // start Looking glass
     { MODKEY|ShiftMask,             XK_w,          spawn,                  SHCMD ("feh --randomize --bg-fill ~/Pictures/wallpapers/*")}, // start Looking glass
-    { MODKEY|ShiftMask,                       XK_i,          spawn,                  SHCMD ("brightnessctl s +10%")}, // increase backlight brightness
-    { MODKEY|ShiftMask,                       XK_t,          spawn,                  SHCMD ("brightnessctl s 10%-")}, // decrease backlight brightness
-    { MODKEY|ShiftMask,                       XK_i,          spawn,                  SHCMD ("brightnessctl s +10%")}, // increase backlight brightness
-    { MODKEY|ShiftMask,                            XK_t,          spawn,                  SHCMD ("brightnessctl s 10%-")}, // decrease backlight brightness
+    { MODKEY|ShiftMask,             XK_i,          spawn,                  SHCMD ("brightnessctl s +10%")}, // increase backlight brightness
+    { MODKEY|ShiftMask,             XK_t,          spawn,                  SHCMD ("brightnessctl s 10%-")}, // decrease backlight brightness
+    { MODKEY|ShiftMask,             XK_i,          spawn,                  SHCMD ("brightnessctl s +10%")}, // increase backlight brightness
+    { MODKEY|ShiftMask,             XK_t,          spawn,                  SHCMD ("brightnessctl s 10%-")}, // decrease backlight brightness
     { 0,                            0x1008ff11,    spawn,                  SHCMD ("amixer sset Master 5%- unmute")}, // unmute volume
     { 0,                            0x1008ff12,    spawn,                  SHCMD ("amixer sset Master $(amixer get Master | grep -q '\\[on\\]' && echo 'mute' || echo 'unmute')")}, // toggle mute/unmute
     { 0,                            0x1008ff13,    spawn,                  SHCMD ("amixer sset Master 5%+ unmute")}, // unmute volume
