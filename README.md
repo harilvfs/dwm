@@ -346,7 +346,7 @@ bash <(curl -L https://chalisehari.com.np/dwm)
 
 This guide walks you through removing SDDM, enabling TTY login, auto-starting `dwm`, and setting up optional auto-login and screen locking. 
 
-### 1. Remove SDDM
+### Remove SDDM
 
 ```bash
 sudo systemctl disable sddm
@@ -356,7 +356,7 @@ sudo pacman -Rns sddm
 
 >  You’ll now log in through a TTY (e.g. Ctrl + Alt + F3).
 
-#### 2. Install Essentials 
+#### Install Essentials 
 
 ```bash
 sudo pacman -S xorg-server xorg-xinit dmenu
@@ -364,7 +364,7 @@ sudo pacman -S xorg-server xorg-xinit dmenu
 
 > `dmenu` is used in `dwm` for launching apps. You can swap it with `rofi` if you prefer.
 
-### 3. Set Up `.xinitrc`
+### Set Up `.xinitrc`
 
 Create or edit `~/.xinitrc`:  
 
@@ -388,7 +388,7 @@ chmod +x ~/.xinitrc
 > [!Note]
 > If using a display manager, `.xsession` should also contain `exec dwm`.
 
-### Step 4: Start DWM Manually  
+### Start DWM Manually  
 
 After logging into TTY: 
 
@@ -400,6 +400,22 @@ If it fails:
 
 ```bash
 cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
+```
+
+### Auto-Start `dwm` on Login [ optional ]
+
+Edit `~/.bashrc` (or `~/.zshrc` for Zsh):
+
+```bash
+vim ~/.bashrc
+```
+
+Add this at the bottom:  
+
+```bash
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec startx
+fi
 ```
 
 ---
@@ -428,22 +444,6 @@ sudo systemctl daemon-reexec
 ```
 
 > Auto-login skips the password — only use on trusted machines.
-
-### Auto-Start `dwm` on Login
-
-Edit `~/.bashrc` (or `~/.zshrc` for Zsh):
-
-```bash
-vim ~/.bashrc
-```
-
-Add this at the bottom:  
-
-```bash
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
-fi
-```
 
 #### (Optional) Add Screen Lock
 
