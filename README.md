@@ -38,30 +38,32 @@
 > [!NOTE]
 > **This guide features DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus), tweaked to suit my personal workflow while remaining simple for anyone to use.**
 
-## 🚀 Dependencies
+## Setup Manually
 
-### Arch Linux  
+### Install Dependencies
+
+#### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
 
 ```bash
 sudo pacman -S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja gnome-keyring thunar trash-cli
 ```
 
-### Debian/Ubuntu  
+#### Debian/Ubuntu  
 > <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
 
 ```bash
 sudo apt install -y build-essential libx11-dev libxinerama-dev libxft-dev libimlib2-dev libx11-xcb-dev libfontconfig1 libx11-6 libxft2 libxinerama1 libxcb-res0-dev git unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring thunar trash-cli
 ```
 
-### Fedora  
+#### Fedora  
 > <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
 
 ```bash
 sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring thunar trash-cli
 ```
 
-### openSUSE  
+#### openSUSE  
 > <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
 
 ```bash
@@ -70,12 +72,10 @@ sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 
 <br>
 
-## 🔠 Nerd Fonts
+### 🔠 Nerd Fonts
 
 ### Why Nerd Fonts?  
 Nerd Fonts enhance font rendering and ensure proper alignment of icons in `slstatus`. For this setup, the **MesloLGS Nerd Font** is recommended.
-
-### ✨ Installation
 
 #### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
@@ -91,7 +91,7 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd noto-fonts-emoji ttf-joypixel
     fc-cache -vf
     ```
 
-## 🎨 Wallpapers
+### 🎨 Wallpapers
 
 ### Directory Setup
 Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone a curated wallpaper collection:
@@ -100,15 +100,15 @@ Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone 
 git clone https://github.com/harilvfs/wallpapers ~/Pictures
 ```
 
-## ⚙️ Configuration Files  
+### ⚙️ Configuration Files  
 Preconfigured package settings are included in this repository under the `config` folder. These settings enhance the DWM experience and can be installed based on your workflow and distribution.  
 
-### **Steps to Install Configurations**
+#### **Steps to Install Configurations**
 
 - Install the necessary packages for your distribution.
 - Copy the preconfigured files to your `~/.config` directory.
 
-### **Package Installation by Distribution**  
+#### **Package Installation by Distribution**  
 
 #### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
@@ -182,84 +182,6 @@ cp -r config/* ~/.config/
 > [!IMPORTANT]  
 > If you don’t have a preconfigured setup, it’s recommended to use the provided configurations for better compatibility with the DWM patches.
 
-## Tmux Setup
-
-Install Tmux for terminal multiplexing.  
-
-### Installation Commands
-
-#### Arch Linux  
-> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
-
-  ```bash
-  sudo pacman -S tmux
-  ```
-  
-#### Debian/Ubuntu  
-> <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
-
-  ```bash
-  sudo apt install tmux
-  ```
-  
-#### Fedora  
-> <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
-
-  ```bash
-  sudo dnf install tmux
-  ```
-  
-#### openSUSE  
-> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
-
-  ```bash
-  sudo zypper install tmux
-  ```
-
-### Clone Tmux Plugin Manager [TPM]
-
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-### Configuration
-
-#### Create the configuration directory:
-
-```bash
-mkdir ~/.config/tmux
-```
-
-#### Download the tmux configuration file:
-
-```bash
-wget -O ~/.config/tmux/tmux.conf https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf
-```
-
-#### Install Plugins
-
-```bash
-cd ~/.tmux/plugin/tpm/scripts/ &&
-chmod +x install_plugins.sh &&
-./install_plugins.sh
-```
-
-#### Install TPM
-
-```bash
-cd ~/.tmux/plugins/tpm &&
-chmod +x tpm &&
-./tpm
-```
-
-#### Update Plugins
-
-```bash
-cd ~/.tmux/plugin/tpm/scripts/ &&
-chmod +x update_plugin.sh &&
-./update_plugin.sh
-```
-
 ## ⚡ Picom Configuration
 
 Picom provides window transparency and animations.  
@@ -319,37 +241,56 @@ Customize your bootloader appearance with GRUB themes.
 
 > **Note**: Ensure GRUB customization aligns with your workflow and is applied carefully to avoid bootloader issues.
 
-## 🛠 Installation Script
+## Tmux
+Incase if you want tmux or if you are already familiar with tmux then follow this step to setup: 
 
-**For a simplified setup process, run the script:**
+Assuming you have tmux installed in your system.
 
-> [!NOTE]  
-> Before running this script, make sure `fzf` and `curl` are installed.  
->
-> **For Arch-based distros:**  
-> ```sh
-> sudo pacman -S fzf curl --noconfirm
-> ```  
->
-> **For Fedora-based distros:**  
-> ```sh
-> sudo dnf install fzf curl -y
-> ```  
-
-**After that, run this command in your terminal.**
+### Clone Tmux Plugin Manager [TPM]
 
 ```bash
-bash <(curl -L https://chalisehari.com.np/dwm)
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-> [!NOTE]
-> This script is made for Arch & Fedora Based* Distros. Manual installation is recommended for other distributions or customized setups.
+### Configuration
 
----
+#### Create the configuration directory:
 
-## 🔧 Manually 
+```bash
+mkdir ~/.config/tmux
+```
 
-**Clone and install DWM:**
+#### Download the tmux configuration file:
+
+```bash
+wget -O ~/.config/tmux/tmux.conf https://raw.githubusercontent.com/harilvfs/dwm/refs/heads/main/config/tmux/tmux.conf
+```
+
+#### Install Plugins
+
+```bash
+cd ~/.tmux/plugin/tpm/scripts/ &&
+chmod +x install_plugins.sh &&
+./install_plugins.sh
+```
+
+#### Install TPM
+
+```bash
+cd ~/.tmux/plugins/tpm &&
+chmod +x tpm &&
+./tpm
+```
+
+#### Update Plugins [ Optional ]
+
+```bash
+cd ~/.tmux/plugin/tpm/scripts/ &&
+chmod +x update_plugin.sh &&
+./update_plugin.sh
+```
+
+## Clone and install DWM
 
 ```bash
 git clone https://github.com/harilvfs/dwm ~/
@@ -378,13 +319,41 @@ exec dwm
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
+## 🛠 Installation Script
+
+**For a one click setup process, run the script:**
+
+> [!NOTE]  
+> Before running this script, make sure `fzf` and `curl` are installed.  
+>
+> **For Arch-based distros:**  
+> ```sh
+> sudo pacman -S fzf curl --noconfirm
+> ```  
+>
+> **For Fedora-based distros:**  
+> ```sh
+> sudo dnf install fzf curl -y
+> ```  
+
+**After that, run this command in your terminal.**
+
+```bash
+bash <(curl -L https://chalisehari.com.np/dwm)
+```
+
+> [!NOTE]
+> Btw Remember this script is only for Arch & Fedora Based* Distros. Manual installation is recommended for other distributions or customized setups.
+
 ---
 
-## 🖥️ TTY Login Setup for DWM (No SDDM)
+If you want to be a chad guy than follow this : just joking this is optional
+
+### TTY Login Setup for DWM (No SDDM)
 
 This guide walks you through removing SDDM, enabling TTY login, auto-starting `dwm`, and setting up optional auto-login and screen locking. 
 
-### 🚫 1. Remove SDDM
+#### 1. Remove SDDM
 
 ```bash
 sudo systemctl disable sddm
@@ -392,9 +361,9 @@ sudo systemctl stop sddm
 sudo pacman -Rns sddm
 ```
 
-> ⚠️ You’ll now log in through a TTY (e.g. Ctrl + Alt + F3).
+>  You’ll now log in through a TTY (e.g. Ctrl + Alt + F3).
 
-### 📦 2. Install Essentials 
+#### 2. Install Essentials 
 
 ```bash
 sudo pacman -S xorg-server xorg-xinit dmenu
@@ -402,7 +371,7 @@ sudo pacman -S xorg-server xorg-xinit dmenu
 
 > `dmenu` is used in `dwm` for launching apps. You can swap it with `rofi` if you prefer.
 
-### ⚙️ 3. Set Up `.xinitrc`
+#### 3. Set Up `.xinitrc`
 
 Create or edit `~/.xinitrc`:  
 
@@ -426,7 +395,7 @@ chmod +x ~/.xinitrc
 > [!Note]
 > If using a display manager, `.xsession` should also contain `exec dwm`.
 
-### ▶ Step 4: Start DWM Manually  
+#### Step 4: Start DWM Manually  
 
 After logging into TTY: 
 
@@ -442,7 +411,7 @@ cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
 
 ---
 
-### 🔐 5. (Optional) Enable TTY Auto-Login
+### 5. (Optional) Enable TTY Auto-Login
 
 Create override config:
 
@@ -465,9 +434,9 @@ Replace `your_username`. Then reload:
 sudo systemctl daemon-reexec
 ```
 
-> ⚠️ Auto-login skips the password — only use on trusted machines.
+> Auto-login skips the password — only use on trusted machines.
 
-## 🔄 6. Auto-Start `dwm` on Login
+#### 6. Auto-Start `dwm` on Login
 
 Edit `~/.bashrc` (or `~/.zshrc` for Zsh):
 
@@ -483,7 +452,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 fi
 ```
 
-### 🔒 7. (Optional) Add Screen Lock
+#### 7. (Optional) Add Screen Lock
 
 Install `slock`:
 
@@ -497,12 +466,12 @@ To lock after 5 minutes, add to `.xinitrc` **before** `exec dwm`:
 xautolock -time 5 -locker slock &
 ```
 
-> 🔑 Manually lock with:
+> Manually lock with this command or if you already have install my dwm then press `mod+u` [ mod refers to window key ( eww window ) ] :
 > ```bash
 > slock
 > ```
 
-### 🧹 8. Remove Auto-Login (If Needed)
+#### 8. Remove Auto-Login (If Needed)
 
 Delete config:
 
@@ -516,7 +485,7 @@ Then reload systemd:
 sudo systemctl daemon-reexec
 ```
 
-### 🔁 9. Reboot & Test
+#### 9. Reboot & Test
 
 Restart your system to apply changes:  
 
