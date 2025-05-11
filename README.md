@@ -8,17 +8,7 @@
 
 <br>
 
-  <a href="#-dependencies"><kbd> <br> Dependencies <br> </kbd></a>&ensp;&ensp;
-  <a href="#-nerd-fonts"><kbd> <br> Fonts <br> </kbd></a>&ensp;&ensp;
-  <a href="#-wallpapers"><kbd> <br> Wallpapers <br> </kbd></a>&ensp;&ensp;
-  <a href="#%EF%B8%8F-configuration-files"><kbd> <br> Configs <br> </kbd></a>&ensp;&ensp;
-  <a href="#tmux-setup"><kbd> <br> Tmux <br> </kbd></a>&ensp;&ensp;
-  <a href="#-picom-configuration"><kbd> <br> Picom <br> </kbd></a>&ensp;&ensp;
-  <a href="#%EF%B8%8F-system-tray-icons"><kbd> <br> Systray <br> </kbd></a>&ensp;&ensp;
-  <a href="#-sddm-theme"><kbd> <br> SDDM <br> </kbd></a>&ensp;&ensp;
-  <a href="#-grub-theme-optional"><kbd> <br> Grub <br> </kbd></a>&ensp;&ensp;
-  <a href="#-installation-script"><kbd> <br> Install <br> </kbd></a>&ensp;&ensp;
-  <a href="#%EF%B8%8F-tty-login-setup-for-dwm-no-sddm"><kbd> <br> TTY <br> </kbd></a>&ensp;&ensp;
+  <a href="#-installation-script"><kbd> <br> Install Script <br> </kbd></a>&ensp;&ensp;
   <a href="#%EF%B8%8F-contributing"><kbd> <br> Contributing <br> </kbd></a>
   
 </div><br><br>
@@ -38,7 +28,7 @@
 > [!NOTE]
 > **This guide features DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus), tweaked to suit my personal workflow while remaining simple for anyone to use.**
 
-** I recommend to use manual way to setup and install dwm. But if you perfer a easy way then, Check Installation Script Guide [here]() **
+**I recommend to use manual way to setup and install dwm. But if you perfer a easy way then, Check Installation Script Guide [here](#-installation-script)**
 
 ## Setup Manually
 
