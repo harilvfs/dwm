@@ -340,13 +340,13 @@ bash <(curl -L https://chalisehari.com.np/dwm)
 
 ---
 
-If you want to be a chad guy than follow this : just joking this is optional
+**If you want to be a chad guy than follow this : just joking this is optional**
 
-### TTY Login Setup for DWM (No SDDM)
+## TTY Login Setup for DWM (No SDDM)
 
 This guide walks you through removing SDDM, enabling TTY login, auto-starting `dwm`, and setting up optional auto-login and screen locking. 
 
-#### 1. Remove SDDM
+### 1. Remove SDDM
 
 ```bash
 sudo systemctl disable sddm
@@ -364,7 +364,7 @@ sudo pacman -S xorg-server xorg-xinit dmenu
 
 > `dmenu` is used in `dwm` for launching apps. You can swap it with `rofi` if you prefer.
 
-#### 3. Set Up `.xinitrc`
+### 3. Set Up `.xinitrc`
 
 Create or edit `~/.xinitrc`:  
 
@@ -388,7 +388,7 @@ chmod +x ~/.xinitrc
 > [!Note]
 > If using a display manager, `.xsession` should also contain `exec dwm`.
 
-#### Step 4: Start DWM Manually  
+### Step 4: Start DWM Manually  
 
 After logging into TTY: 
 
@@ -404,7 +404,7 @@ cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
 
 ---
 
-### 5. (Optional) Enable TTY Auto-Login
+## (Optional) Enable TTY Auto-Login
 
 Create override config:
 
@@ -429,7 +429,7 @@ sudo systemctl daemon-reexec
 
 > Auto-login skips the password — only use on trusted machines.
 
-#### 6. Auto-Start `dwm` on Login
+### Auto-Start `dwm` on Login
 
 Edit `~/.bashrc` (or `~/.zshrc` for Zsh):
 
@@ -445,7 +445,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 fi
 ```
 
-#### 7. (Optional) Add Screen Lock
+#### (Optional) Add Screen Lock
 
 Install `slock`:
 
@@ -464,7 +464,7 @@ xautolock -time 5 -locker slock &
 > slock
 > ```
 
-#### 8. Remove Auto-Login (If Needed)
+#### Remove Auto-Login (If Needed)
 
 Delete config:
 
@@ -478,7 +478,7 @@ Then reload systemd:
 sudo systemctl daemon-reexec
 ```
 
-#### 9. Reboot & Test
+#### Reboot & Test
 
 Restart your system to apply changes:  
 
