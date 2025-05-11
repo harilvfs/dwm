@@ -38,6 +38,8 @@
 > [!NOTE]
 > **This guide features DWM patches from [Chris Titus Tech](https://github.com/ChrisTitusTech/dwm-titus), tweaked to suit my personal workflow while remaining simple for anyone to use.**
 
+** I recommend to use manual way to setup and install dwm. But if you perfer a easy way then, Check Installation Script Guide [here]() **
+
 ## Setup Manually
 
 ### Arch Linux  
