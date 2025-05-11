@@ -469,10 +469,10 @@ sudo systemctl daemon-reexec
 
 ## 🔄 6. Auto-Start `dwm` on Login
 
-Edit `~/.bash` (or `~/.zsh` for Zsh):
+Edit `~/.bashrc` (or `~/.zshrc` for Zsh):
 
 ```bash
-vim ~/.bash
+vim ~/.bashrc
 ```
 
 Add this at the bottom:  
