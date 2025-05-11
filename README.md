@@ -8,7 +8,9 @@
 
 <br>
 
+  <a href="#setup-manually"><kbd> <br> Manual Setup [ Including All ] <br> </kbd></a>&ensp;&ensp;
   <a href="#-installation-script"><kbd> <br> Install Script <br> </kbd></a>&ensp;&ensp;
+  <a href="#tty-login-setup-for-dwm-no-sddm"><kbd> <br> TTY Stuffs <br> </kbd></a>&ensp;&ensp;
   <a href="#%EF%B8%8F-contributing"><kbd> <br> Contributing <br> </kbd></a>
   
 </div><br><br>
