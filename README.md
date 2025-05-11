@@ -343,7 +343,7 @@ bash <(curl -L https://chalisehari.com.np/dwm)
 ```
 
 > [!NOTE]
-> This script is optimized for Arch Linux. Manual installation is recommended for other distributions or customized setups.
+> This script is made for Arch & Fedora Based* Distros. Manual installation is recommended for other distributions or customized setups.
 
 ---
 
@@ -377,9 +377,6 @@ exec dwm
 
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
-
-> [!Note]
-> Some distributions may require additional dependencies or configuration.Feel free to explore your distribution’s community for guidance on missing dependencies.  
 
 ---
 
