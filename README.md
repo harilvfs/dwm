@@ -40,30 +40,28 @@
 
 ## Setup Manually
 
-### Install Dependencies
-
-#### Arch Linux  
+### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
 
 ```bash
 sudo pacman -S --needed --noconfirm base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot lxappearance feh mate-polkit meson libev uthash libconfig meson ninja gnome-keyring thunar trash-cli
 ```
 
-#### Debian/Ubuntu  
+### Debian/Ubuntu  
 > <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
 
 ```bash
 sudo apt install -y build-essential libx11-dev libxinerama-dev libxft-dev libimlib2-dev libx11-xcb-dev libfontconfig1 libx11-6 libxft2 libxinerama1 libxcb-res0-dev git unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring thunar trash-cli
 ```
 
-#### Fedora  
+### Fedora  
 > <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
 
 ```bash
 sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring thunar trash-cli
 ```
 
-#### openSUSE  
+### openSUSE  
 > <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
 
 ```bash
@@ -72,18 +70,18 @@ sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 
 <br>
 
-### 🔠 Nerd Fonts
+## 🔠 Nerd Fonts
 
 ### Why Nerd Fonts?  
 Nerd Fonts enhance font rendering and ensure proper alignment of icons in `slstatus`. For this setup, the **MesloLGS Nerd Font** is recommended.
 
-#### Arch Linux  
+### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
 ```bash
 sudo pacman -S --needed --noconfirm ttf-meslo-nerd noto-fonts-emoji ttf-joypixels ttf-cascadia-mono-nerd ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono
 ```
 
-#### Other Distributions 
+### Other Distributions 
   - **Download** from: [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
   - Place the font files in `~/.fonts` or `~/.local/share/fonts`.
   - Refresh font cache:
@@ -91,7 +89,7 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd noto-fonts-emoji ttf-joypixel
     fc-cache -vf
     ```
 
-### 🎨 Wallpapers
+## 🎨 Wallpapers
 
 ### Directory Setup
 Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone a curated wallpaper collection:
@@ -100,15 +98,16 @@ Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone 
 git clone https://github.com/harilvfs/wallpapers ~/Pictures
 ```
 
-### ⚙️ Configuration Files  
+## ⚙️ Configuration Files  
+
 Preconfigured package settings are included in this repository under the `config` folder. These settings enhance the DWM experience and can be installed based on your workflow and distribution.  
 
-#### **Steps to Install Configurations**
+### **Steps to Install Configurations**
 
 - Install the necessary packages for your distribution.
 - Copy the preconfigured files to your `~/.config` directory.
 
-#### **Package Installation by Distribution**  
+### **Package Installation by Distribution**  
 
 #### Arch Linux  
 > <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
@@ -182,14 +181,14 @@ cp -r config/* ~/.config/
 > [!IMPORTANT]  
 > If you don’t have a preconfigured setup, it’s recommended to use the provided configurations for better compatibility with the DWM patches.
 
-## ⚡ Picom Configuration
+## Picom Configuration
 
 Picom provides window transparency and animations.  
 
 - **Config File**: [Picom Config](https://raw.githubusercontent.com/harilvfs/i3wmdotfiles/main/picom/picom.conf)
 - **Animations**: Check out [FT-LABS](https://github.com/FT-Labs/picom).
 
-## 🖥️ System Tray Icons
+## System Tray Icons
 
 Install system tray applets for network, Bluetooth, and sound management. 
 
@@ -224,16 +223,16 @@ Install system tray applets for network, Bluetooth, and sound management.
   sudo zypper install NetworkManager-applet blueman pasystray
   ```
 
-> **Notes 📜** : **For other distributions, refer to the respective package manager documentation.**
+> **Notes** : **For other distributions, refer to the respective package manager documentation.**
 
-## ✨ SDDM Theme 
+## SDDM Theme 
 The setup uses the **Astronaut Theme** for SDDM.  
 
 - **Installation**:  
   Clone the theme repository and follow the instructions to install:  
   [Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
-## 🌌 GRUB Theme [OPTIONAL]  
+## GRUB Theme [OPTIONAL]  
 Customize your bootloader appearance with GRUB themes.  
 
 - Explore themes from ChrisTitusTech's repository:  
