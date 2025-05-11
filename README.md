@@ -342,9 +342,7 @@ bash <(curl -L https://chalisehari.com.np/dwm)
 
 **If you want to be a chad guy than follow this : just joking this is optional**
 
-## TTY Login Setup for DWM (No SDDM)
-
-This guide walks you through removing SDDM, enabling TTY login, auto-starting `dwm`, and setting up optional auto-login and screen locking. 
+## TTY Login Setup for DWM (No SDDM) [ Optional ]
 
 ### Remove SDDM
 
@@ -353,16 +351,6 @@ sudo systemctl disable sddm
 sudo systemctl stop sddm
 sudo pacman -Rns sddm
 ```
-
->  You’ll now log in through a TTY (e.g. Ctrl + Alt + F3).
-
-#### Install Essentials 
-
-```bash
-sudo pacman -S xorg-server xorg-xinit dmenu
-```
-
-> `dmenu` is used in `dwm` for launching apps. You can swap it with `rofi` if you prefer.
 
 ### Set Up `.xinitrc`
 
@@ -385,9 +373,6 @@ Then, **make it executable**:
 chmod +x ~/.xinitrc
 ```
 
-> [!Note]
-> If using a display manager, `.xsession` should also contain `exec dwm`.
-
 ### Start DWM Manually  
 
 After logging into TTY: 
@@ -402,7 +387,7 @@ If it fails:
 cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
 ```
 
-*or if you want auto start dwm then:*
+*or if you want auto start dwm on tty then:*
 
 ### Auto-Start `dwm` on Login [ optional ]
 
