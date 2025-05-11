@@ -10,7 +10,7 @@
 
   <a href="#setup-manually"><kbd> <br> Manual Setup [ Including All ] <br> </kbd></a>&ensp;&ensp;
   <a href="#-installation-script"><kbd> <br> Install Script <br> </kbd></a>&ensp;&ensp;
-  <a href="#tty-login-setup-for-dwm-no-sddm"><kbd> <br> TTY Stuffs <br> </kbd></a>&ensp;&ensp;
+  <a href="#tty-login-setup-for-dwm-no-sddm"><kbd> <br> TTY Stuffs [ Optional ] <br> </kbd></a>&ensp;&ensp;
   <a href="#%EF%B8%8F-contributing"><kbd> <br> Contributing <br> </kbd></a>
   
 </div><br><br>
@@ -402,7 +402,7 @@ If it fails:
 cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
 ```
 
-**or if you wat auto start dwm then:**
+*or if you want auto start dwm then:*
 
 ### Auto-Start `dwm` on Login [ optional ]
 
