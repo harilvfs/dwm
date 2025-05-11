@@ -402,6 +402,8 @@ If it fails:
 cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
 ```
 
+**or if you wat auto start dwm then:**
+
 ### Auto-Start `dwm` on Login [ optional ]
 
 Edit `~/.bashrc` (or `~/.zshrc` for Zsh):
@@ -445,7 +447,7 @@ sudo systemctl daemon-reexec
 
 > Auto-login skips the password — only use on trusted machines.
 
-#### (Optional) Add Screen Lock
+### (Optional) Add Screen Lock
 
 Install `slock`:
 
@@ -464,7 +466,7 @@ xautolock -time 5 -locker slock &
 > slock
 > ```
 
-#### Remove Auto-Login (If Needed)
+### Remove Auto-Login (If Needed)
 
 Delete config:
 
@@ -478,7 +480,7 @@ Then reload systemd:
 sudo systemctl daemon-reexec
 ```
 
-#### Reboot & Test
+### Reboot & Test
 
 Restart your system to apply changes:  
 
