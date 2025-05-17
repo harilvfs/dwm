@@ -29,4 +29,3 @@ EOF
 grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "Updated GRUB with latest Timeshift snapshot: $LATEST_SNAPSHOT"
-
