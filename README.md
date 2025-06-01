@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/harilvfs/assets/blob/main/dwm/Dwm.svg.png" alt="Terminal" width="200">
+  <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/dwm/Dwm.png" alt="Terminal" width="200">
 </p>
 
 <div align="center">
