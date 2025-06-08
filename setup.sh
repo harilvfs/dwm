@@ -58,16 +58,22 @@ detect_distro() {
 install_packages() {
     if [ "$distro" == "arch" ]; then
         print_message "$CYAN" ":: Installing required packages using pacman..."
-        sudo pacman -S --needed git base-devel libx11 libxinerama libxft gnome-keyring ttf-cascadia-mono-nerd ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono imlib2 libxcb git unzip lxappearance feh mate-polkit meson ninja xorg-xinit xorg-server network-manager-applet blueman pasystray bluez-utils thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt ffmpeg ffmpegthumbnailer yazi || {
+        sudo pacman -S --needed git base-devel libx11 libxinerama libxft gnome-keyring ttf-cascadia-mono-nerd \
+        ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono imlib2 libxcb git unzip lxappearance \
+        feh mate-polkit meson ninja xorg-xinit xorg-server network-manager-applet blueman pasystray bluez-utils \
+        thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum \
+        gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt ffmpeg ffmpegthumbnailer yazi || {
             print_message "$RED" "Failed to install some packages."
             exit 1
         }
+
     elif [ "$distro" == "fedora" ]; then
         print_message "$CYAN" ":: Installing required packages using dnf..."
 
-        print_message "$CYAN" ":: Enabling solopasha/hyprland COPR repository..."
-        sudo dnf copr enable -y solopasha/hyprland || {
-            print_message "$RED" "Failed to enable solopasha/hyprland COPR repository."
+        print_message "$CYAN" ":: Enabling RPM Fusion repositories..."
+        sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-42.noarch.rpm \
+                            https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm || {
+            print_message "$RED" "Failed to enable RPM Fusion repositories."
             exit 1
         }
 
@@ -77,7 +83,11 @@ install_packages() {
             exit 1
         }
 
-        sudo dnf install -y git libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel gnome-keyring unzip lxappearance feh mate-polkit meson ninja-build gnome-keyring jetbrains-mono-fonts-all google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt ffmpeg ffmpegthumbnailer yazi || {
+        sudo dnf install -y git libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel \
+        gnome-keyring unzip lxappearance feh mate-polkit meson ninja-build gnome-keyring jetbrains-mono-fonts-all \
+        google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot \
+        trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer \
+        pavucontrol pavucontrol-qt ffmpeg-devel ffmpegthumbnailer yazi || {
             print_message "$RED" "Failed to install some packages."
             exit 1
         }
@@ -319,6 +329,44 @@ check_display_manager() {
     fi
 }
 
+setup_numlock() {
+    echo -e "${GREEN}Setting up NumLock on login...${ENDCOLOR}"
+
+    sudo tee "/usr/local/bin/numlock" > /dev/null <<'EOF'
+#!/bin/bash
+for tty in /dev/tty{1..6}; do
+    /usr/bin/setleds -D +num < "$tty"
+done
+EOF
+    sudo chmod +x /usr/local/bin/numlock
+
+    sudo tee "/etc/systemd/system/numlock.service" > /dev/null <<'EOF'
+[Unit]
+Description=Enable NumLock on startup
+[Service]
+ExecStart=/usr/local/bin/numlock
+StandardInput=tty
+RemainAfterExit=yes
+[Install]
+WantedBy=multi-user.target
+EOF
+
+    if fzf_confirm "Enable NumLock on boot?"; then
+        sudo systemctl enable numlock.service
+        echo -e "${GREEN}NumLock will be enabled on boot.${ENDCOLOR}"
+    else
+        echo -e "${GREEN}NumLock setup skipped.${ENDCOLOR}"
+    fi
+}
+
+if ! command -v fzf &> /dev/null; then
+    echo -e "${RED}${BOLD}Error: fzf is not installed${NC}"
+    echo -e "${YELLOW}Please install fzf before running this script:${NC}"
+    echo -e "${CYAN}  • Fedora: ${NC}sudo dnf install fzf"
+    echo -e "${CYAN}  • Arch Linux: ${NC}sudo pacman -S fzf"
+    exit 1
+fi
+
 detect_distro
 install_packages
 install_dwm
@@ -329,6 +377,7 @@ configure_wallpapers
 setup_xinitrc
 setup_tty_login
 check_display_manager
+setup_numlock
 print_message "$GREEN" "DWM setup completed successfully!"
 print_message "$YELLOW" "Notice: I am not including dotfiles in this script to avoid conflicts and potential data loss. If you need dotfiles, check out my repo:"
 print_message "$CYAN" "https://github.com/harilvfs/dwm/blob/main/config"
