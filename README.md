@@ -9,9 +9,8 @@
 <br>
 
   <a href="#setup-manually"><kbd> <br> Manual Setup [ Including All ] <br> </kbd></a>&ensp;&ensp;
-  <a href="#-installation-script"><kbd> <br> Install Script <br> </kbd></a>&ensp;&ensp;
-  <a href="#tty-login-setup-for-dwm-no-sddm--optional-"><kbd> <br> TTY Stuffs [ Optional ] <br> </kbd></a>&ensp;&ensp;
-  <a href="#%EF%B8%8F-contributing"><kbd> <br> Contributing <br> </kbd></a>
+  <a href="#-installation-script"><kbd> <br> Setup Script <br> </kbd></a>&ensp;&ensp;
+  <a href="https://github.com/harilvfs/dwm/tree/main/.github"><kbd> <br> TTY Stuffs [ Optional ] <br> </kbd></a>
   
 </div><br><br>
 
@@ -312,6 +311,8 @@ exec dwm
 > [!NOTE]
 > Default keybinding for terminal is `mod + x` and for rofi is `mod + r`.
 
+---
+
 ## 🛠 Installation Script
 
 **For a one click setup process, run the script:**
@@ -337,165 +338,3 @@ bash <(curl -L https://chalisehari.com.np/dwm)
 
 > [!NOTE]
 > Btw Remember this script is only for Arch & Fedora Based* Distros. Manual installation is recommended for other distributions or customized setups.
-
----
-
-**If you want to be a chad guy than follow this : just joking this is optional**
-
-## TTY Login Setup for DWM (No SDDM) [ Optional ]
-
-### Remove SDDM
-
-```bash
-sudo systemctl disable sddm
-sudo systemctl stop sddm
-sudo pacman -Rns sddm
-```
-
-### Set Up `.xinitrc`
-
-Create or edit `~/.xinitrc`:  
-
-```bash
-vim ~/.xinitrc
-```
-
-Add this:  
-
-```sh
-#!/bin/sh
-exec dwm
-```
-
-Then, **make it executable**:  
-
-```bash
-chmod +x ~/.xinitrc
-```
-
-### Start DWM Manually  
-
-After logging into TTY: 
-
-```bash
-startx
-```
-
-If it fails:
-
-```bash
-cat ~/.local/share/xorg/Xorg.0.log | grep "(EE)"
-```
-
-*or if you want auto start dwm on tty then:*
-
-### Auto-Start `dwm` on Login [ optional ]
-
-Edit `~/.bashrc` (or `~/.zshrc` for Zsh):
-
-```bash
-vim ~/.bashrc
-```
-
-Add this at the bottom:  
-
-```bash
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
-fi
-```
-
----
-
-## (Optional) Enable TTY Auto-Login
-
-Create override config:
-
-```bash
-sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
-sudo vim /etc/systemd/system/getty@tty1.service.d/autologin.conf
-```
-
-Add the following:  
-
-```bash
-[Service]
-ExecStart=
-ExecStart=-/sbin/agetty --autologin your_username --noclear %I 38400 linux
-```
-
-Replace `your_username`. Then reload:
-
-```bash
-sudo systemctl daemon-reexec
-```
-
-> Auto-login skips the password — only use on trusted machines.
-
-### (Optional) Add Screen Lock
-
-Install `slock`:
-
-```bash
-sudo pacman -S slock
-```
-
-To lock after 5 minutes, add to `.xinitrc` **before** `exec dwm`:
-
-```bash
-xautolock -time 5 -locker slock &
-```
-
-> Manually lock with this command or if you already have install my dwm then press `mod+u` [ mod refers to window key ( eww window ) ] :
-> ```bash
-> slock
-> ```
-
-### Remove Auto-Login (If Needed)
-
-Delete config:
-
-```bash
-sudo rm -rf /etc/systemd/system/getty@tty1.service.d
-```
-
-Then reload systemd:  
-
-```bash
-sudo systemctl daemon-reexec
-```
-
-### Reboot & Test
-
-Restart your system to apply changes:  
-
-```
-sudo reboot
-```
-
-After reboot:
-
-✅ Login via TTY  
-✅ `startx` launches `dwm`  
-✅ Auto-login and lock work if enabled
-
----
-
-## 🛠️ Contributing   
-
-For more detailed contribution guidelines, please check our [CONTRIBUTING.md](https://github.com/harilvfs/dwm/blob/main/.github/CONTRIBUTING.md).
-
-## 🤝 Code of Conduct  
-
-We aim for a welcoming environment for all contributors. Please read our **[Code of Conduct](https://github.com/harilvfs/dwm/blob/main/.github/CODE_OF_CONDUCT.md)** for a better experience.
-
-## 📬 Contact 
-For questions or suggestions, feel free to reach out via:
-
-- 📧 Email: **harilvfs@chalisehari.com.np**
-
-## 🌟 Contributors 
-Thank you to all contributors! Your efforts and input are truly invaluable. 💖
-
-[![Contributors](https://contrib.rocks/image?repo=harilvfs/dwm)](https://github.com/harilvfs/dwm/graphs/contributors)
-
