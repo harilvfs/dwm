@@ -10,8 +10,7 @@
 
   <a href="#setup-manually"><kbd> <br> Manual Setup [ Including All ] <br> </kbd></a>&ensp;&ensp;
   <a href="#-installation-script"><kbd> <br> Install Script <br> </kbd></a>&ensp;&ensp;
-  <a href="https://github.com/harilvfs/dwm/tree/main/.github"><kbd> <br> TTY Stuffs [ Optional ] <br> </kbd></a>&ensp;&ensp;
-  <a href="#%EF%B8%8F-contributing"><kbd> <br> Contributing <br> </kbd></a>
+  <a href="https://github.com/harilvfs/dwm/tree/main/.github"><kbd> <br> TTY Stuffs [ Optional ] <br> </kbd></a>
   
 </div><br><br>
 
