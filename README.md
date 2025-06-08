@@ -9,7 +9,7 @@
 <br>
 
   <a href="#setup-manually"><kbd> <br> Manual Setup [ Including All ] <br> </kbd></a>&ensp;&ensp;
-  <a href="#-installation-script"><kbd> <br> Install Script <br> </kbd></a>&ensp;&ensp;
+  <a href="#-installation-script"><kbd> <br> Setup Script <br> </kbd></a>&ensp;&ensp;
   <a href="https://github.com/harilvfs/dwm/tree/main/.github"><kbd> <br> TTY Stuffs [ Optional ] <br> </kbd></a>
   
 </div><br><br>
