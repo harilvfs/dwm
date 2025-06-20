@@ -48,13 +48,6 @@ function yayf
   yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S
 end
 
-function cdf
-    set dir (find . -maxdepth 3 -type d | fzf)
-    if test -n "$dir"
-        cd "$dir"
-    end
-end
-
 function lazyg
     git add .
     git commit -m "$argv"
