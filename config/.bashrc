@@ -72,6 +72,7 @@ alias vim='nvim'
 alias c='clear'
 alias aa='startx'
 alias hx='helix'
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S" # from christitus
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -669,13 +670,6 @@ alias termdown="termdown --title Countdown --time-format %H:%M:%S --text \"T i m
 
 # Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
-
-# fzf
-fzf_cd() {
-  local dir
-  dir=$(find . -maxdepth 3 -type d | fzf) && cd "$dir"
-}
-alias cdf="fzf_cd"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 

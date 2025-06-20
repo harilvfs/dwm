@@ -75,6 +75,7 @@ alias vim='nvim' # neovim
 alias aa='startx' # startx
 alias rm='trash -v' # trash cli
 alias hx='helix' # helix
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S" # from christitus
 
 # Directory navigation shortcuts
 alias ..='cd ..'
@@ -114,13 +115,6 @@ eval "$(zoxide init zsh)"
 #if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 #    exec startx
 #fi
-
-# fzf
-fzf_cd() {
-  local dir
-  dir=$(find . -maxdepth 3 -type d | fzf) && cd "$dir"
-}
-alias cdf="fzf_cd"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 [ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
