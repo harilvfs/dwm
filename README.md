@@ -55,7 +55,7 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 ```
 
 ### openSUSE  
-> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
+> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/suse/opensuse.png" width="20" />
 
 ```bash
 sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring thunar trash-cli
@@ -156,7 +156,7 @@ sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst pic
 > ```
 
 #### openSUSE  
-> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
+> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/suse/opensuse.png" width="20" />
 
 ```bash
 sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh ghostty
@@ -210,7 +210,7 @@ Install system tray applets for network, Bluetooth, and sound management.
   ```
 
 ### openSUSE  
-> <img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/opensuse-512.png" width="20" />
+> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/suse/opensuse.png" width="20" />
 
   ```bash
   sudo zypper install NetworkManager-applet blueman pasystray
