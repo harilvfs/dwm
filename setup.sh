@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# Quickly sets up the Dwm window manager with a single-click script, using my customized configuration.
-
 clear
 
 RC='\033[0m'
@@ -43,12 +41,15 @@ fzf_confirm() {
 }
 
 detect_distro() {
-    if command -v pacman &>/dev/null; then
+    if command -v pacman &> /dev/null; then
         distro="arch"
         print_message "$GREEN" "Detected distribution: Arch Linux"
-    elif command -v dnf &>/dev/null; then
+    elif command -v dnf &> /dev/null; then
         distro="fedora"
         print_message "$YELLOW" "Detected distribution: Fedora"
+    elif command -v zypper &> /dev/null; then
+        distro="opensuse"
+        print_message "$YELLOW" "Detected distribution: opensuse"
     else
         print_message "$RED" "Unsupported distribution. Exiting..."
         exit 1
@@ -57,13 +58,21 @@ detect_distro() {
 
 install_packages() {
     if [ "$distro" == "arch" ]; then
-        print_message "$CYAN" ":: Installing required packages using pacman..."
+        check_aur_helper
+        print_message "$CYAN" ":: Installing required packages using pacman and AUR..."
+
         sudo pacman -S --needed git base-devel libx11 libxinerama libxft gnome-keyring ttf-cascadia-mono-nerd \
-        ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono imlib2 libxcb git unzip lxappearance \
-        feh mate-polkit meson ninja xorg-xinit xorg-server network-manager-applet blueman pasystray bluez-utils \
-        thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum \
-        gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt ffmpeg ffmpegthumbnailer yazi || {
-            print_message "$RED" "Failed to install some packages."
+            ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono imlib2 libxcb git unzip lxappearance \
+            feh mate-polkit meson ninja xorg-xinit xorg-server network-manager-applet blueman pasystray bluez-utils \
+            thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum \
+            gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt ffmpeg ffmpegthumbnailer yazi || {
+            print_message "$RED" "Failed to install some packages via pacman."
+            exit 1
+        }
+
+        print_message "$CYAN" ":: Installing xautolock from AUR..."
+        $aur_helper -S --noconfirm xautolock || {
+            print_message "$RED" "Failed to install xautolock from AUR."
             exit 1
         }
 
@@ -84,22 +93,38 @@ install_packages() {
         }
 
         sudo dnf install -y git libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel \
-        gnome-keyring unzip lxappearance feh mate-polkit meson ninja-build gnome-keyring jetbrains-mono-fonts-all \
-        google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot \
-        trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer \
-        pavucontrol pavucontrol-qt ffmpeg-devel ffmpegthumbnailer yazi || {
-            print_message "$RED" "Failed to install some packages."
+            gnome-keyring unzip lxappearance feh mate-polkit meson ninja-build jetbrains-mono-fonts-all \
+            google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot \
+            trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer \
+            pavucontrol pavucontrol-qt ffmpeg-devel ffmpegthumbnailer yazi xautolock || {
+            print_message "$RED" "Failed to install some packages via dnf."
             exit 1
         }
+
+    elif [ "$distro" == "opensuse" ]; then
+        print_message "$CYAN" ":: Installing required packages using zypper..."
+
+        sudo zypper install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel \
+            gnome-keyring unzip lxappearance feh mate-polkit meson ninja jetbrains-mono-fonts \
+            google-noto-fonts noto-coloremoji-fonts NetworkManager-applet blueman pasystray thunar flameshot \
+            trash-cli tumbler mtp-tools fzf vim neovim i3lock nwg-look swappy kvantum-manager libgtk-3-0 libgtk-4-1 qt5ct qt6ct man man-pages pamixer \
+            pavucontrol pavucontrol-qt ffmpeg-7 ffmpegthumbnailer yazi xautolock || {
+            print_message "${RED}" "Failed to install some packages via zypper."
+            exit 1
+
+        }
+
+        print_message "$YELLOW" "NOTE: openSUSE uses i3lock instead of slock (slock is not available in official repositories)."
+        print_message "$YELLOW" "To manually lock your screen, run: i3lock"
     fi
 }
 
 check_aur_helper() {
-    if command -v paru &>/dev/null; then
+    if command -v paru &> /dev/null; then
         print_message "$GREEN" "AUR helper paru is already installed."
         aur_helper="paru"
         return 0
-    elif command -v yay &>/dev/null; then
+    elif command -v yay &> /dev/null; then
         print_message "$GREEN" "AUR helper yay is already installed."
         aur_helper="yay"
         return 0
@@ -172,12 +197,21 @@ install_nerd_font() {
     fi
 
     print_message "$CYAN" "Installing Meslo Nerd Font..."
-    if command -v dnf &>/dev/null; then
+
+    if command -v pacman &> /dev/null; then
+        sudo pacman -S --needed ttf-meslo-nerd || exit 1
+
+    elif command -v dnf &> /dev/null; then
         wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip || exit 1
         unzip /tmp/Meslo.zip -d /tmp/Meslo || exit 1
         mv /tmp/Meslo/* "$FONT_DIR" || exit 1
+
+    elif command -v zypper &> /dev/null; then
+        sudo zypper install -y meslo-lg-fonts || exit 1
+
     else
-        sudo pacman -S --needed ttf-meslo-nerd || exit 1
+        print_message "$RED" "Unsupported package manager. Please install Meslo Nerd Font manually."
+        return 1
     fi
 
     fc-cache -vf || exit 1
@@ -190,22 +224,30 @@ install_picom() {
 
         print_message "$CYAN" ":: Installing Picom with $aur_helper..."
         $aur_helper -S --noconfirm picom-ftlabs-git || {
-            print_message "$RED" "Failed to install Picom."
-            print_message "$YELLOW" "Trying alternative installation method..."
-
-            local temp_dir=$(mktemp -d)
-            cd "$temp_dir" || exit 1
-            git clone https://github.com/FT-Labs/picom.git
-            cd picom || exit 1
-            meson setup --buildtype=release build
-            ninja -C build
-            sudo ninja -C build install
-            cd "$HOME" || exit
-            rm -rf "$temp_dir"
+            print_message "$RED" "Failed to install Picom via $aur_helper. Please install manually."
+            exit 1
         }
+
     elif [ "$distro" == "fedora" ]; then
         print_message "$CYAN" ":: Installing Picom manually on Fedora..."
-        sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel libepoxy-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel xcb-util-devel
+        sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel \
+            libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel \
+            libepoxy-devel meson pcre2-devel pixman-devel uthash-devel \
+            xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel xcb-util-devel
+
+        git clone https://github.com/FT-Labs/picom.git "$HOME/picom"
+        cd "$HOME/picom" || exit 1
+        meson setup --buildtype=release build
+        ninja -C build
+        sudo cp build/src/picom /usr/bin/
+
+    elif [ "$distro" == "opensuse" ]; then
+        print_message "$CYAN" ":: Installing Picom manually on openSUSE..."
+        sudo zypper install -y dbus-1-devel gcc git libconfig-devel libdrm-devel libev-devel \
+            libX11-devel libXext-devel libxcb-devel Mesa-libGL-devel Mesa-libEGL1 \
+            libepoxy-devel meson pcre2-devel libpixman-1-0-devel pkgconf uthash-devel cmake libev-devel \
+            xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel xcb-util-devel
+
         git clone https://github.com/FT-Labs/picom.git "$HOME/picom"
         cd "$HOME/picom" || exit 1
         meson setup --buildtype=release build
@@ -267,10 +309,36 @@ setup_xinitrc() {
     fi
 
     print_message "$CYAN" ":: Creating .xinitrc file for DWM..."
-    cat > "$XINITRC" << 'EOF'
+
+    if [ "$distro" == "opensuse" ]; then
+        cat > "$XINITRC" << 'EOF'
 #!/bin/sh
+
+pgrep dunst > /dev/null || /usr/bin/dunst &
+
+xautolock \
+  -time 10 \
+  -locker i3lock \
+  -notify 10 \
+  -notifier "/usr/bin/notify-send '🔒 Locking soon' 'The screen will lock in 10 seconds...'" &
+
 exec dwm
 EOF
+    else
+        cat > "$XINITRC" << 'EOF'
+#!/bin/sh
+
+pgrep dunst > /dev/null || /usr/bin/dunst &
+
+xautolock \
+  -time 10 \
+  -locker slock \
+  -notify 10 \
+  -notifier "/usr/bin/notify-send '🔒 Locking soon' 'The screen will lock in 10 seconds...'" &
+
+exec dwm
+EOF
+    fi
 
     chmod +x "$XINITRC"
     print_message "$GREEN" ".xinitrc configured successfully!"
@@ -303,7 +371,7 @@ check_display_manager() {
     local dm_name=""
 
     for dm in sddm gdm lightdm lxdm xdm slim greetd; do
-        if systemctl is-enabled $dm.service &>/dev/null; then
+        if systemctl is-enabled $dm.service &> /dev/null; then
             dm_found=true
             dm_name=$dm
             break
@@ -332,7 +400,7 @@ check_display_manager() {
 setup_numlock() {
     echo -e "${GREEN}Setting up NumLock on login...${ENDCOLOR}"
 
-    sudo tee "/usr/local/bin/numlock" > /dev/null <<'EOF'
+    sudo tee "/usr/local/bin/numlock" > /dev/null << 'EOF'
 #!/bin/bash
 for tty in /dev/tty{1..6}; do
     /usr/bin/setleds -D +num < "$tty"
@@ -340,7 +408,7 @@ done
 EOF
     sudo chmod +x /usr/local/bin/numlock
 
-    sudo tee "/etc/systemd/system/numlock.service" > /dev/null <<'EOF'
+    sudo tee "/etc/systemd/system/numlock.service" > /dev/null << 'EOF'
 [Unit]
 Description=Enable NumLock on startup
 [Service]
