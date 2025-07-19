@@ -329,6 +329,11 @@ exec dwm
 > ```sh
 > sudo dnf install fzf curl -y
 > ```  
+>
+> **For openSUSE:**  
+> ```sh
+> sudo zypper install -y fzf curl
+> ```
 
 **After that, run this command in your terminal.**
 
@@ -337,4 +342,4 @@ bash <(curl -L https://chalisehari.com.np/dwm)
 ```
 
 > [!NOTE]
-> Btw Remember this script is only for Arch & Fedora Based* Distros. Manual installation is recommended for other distributions or customized setups.
+> Btw remember this script is only for Arch, Fedora & openSUSE-based distros. Manual installation is recommended for other distributions or customized setups.
