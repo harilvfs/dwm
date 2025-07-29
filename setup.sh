@@ -14,30 +14,15 @@ print_message() {
     printf "%b%s%b\n" "$color" "$message" "$RC"
 }
 
-FZF_COMMON="--layout=reverse \
-            --border=bold \
-            --border=rounded \
-            --margin=5% \
-            --color=dark \
-            --info=inline \
-            --header-first \
-            --bind change:top"
-
-fzf_confirm() {
-    local prompt="$1"
-    local options=("Yes" "No")
-    local selected=$(printf "%s\n" "${options[@]}" | fzf ${FZF_COMMON} \
-                                                     --height=40% \
-                                                     --prompt="$prompt " \
-                                                     --header="Confirm" \
-                                                     --pointer="➤" \
-                                                     --color='fg:white,fg+:green,bg+:black,pointer:green')
-
-    if [[ "$selected" == "Yes" ]]; then
-        return 0
-    else
-        return 1
-    fi
+confirm() {
+    while true; do
+        read -p "$(printf "%b%s%b" "$CYAN" "$1 [y/N]: " "$RC")" answer
+        case ${answer,,} in
+            y | yes) return 0 ;;
+            n | no | "") return 1 ;;
+            *) print_message "$YELLOW" "Please answer with y/yes or n/no." ;;
+        esac
+    done
 }
 
 detect_distro() {
@@ -64,7 +49,7 @@ install_packages() {
         sudo pacman -S --needed git base-devel libx11 libxinerama libxft gnome-keyring ttf-cascadia-mono-nerd \
             ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-jetbrains-mono imlib2 libxcb git unzip lxappearance \
             feh mate-polkit meson ninja xorg-xinit xorg-server network-manager-applet blueman pasystray bluez-utils \
-            thunar flameshot trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum \
+            thunar flameshot trash-cli tumbler fzf gvfs-mtp vim neovim slock nwg-look swappy kvantum \
             gtk3 gtk4 qt5ct qt6ct man man-db pamixer pavucontrol pavucontrol-qt ffmpeg ffmpegthumbnailer yazi || {
             print_message "$RED" "Failed to install some packages via pacman."
             exit 1
@@ -95,7 +80,7 @@ install_packages() {
         sudo dnf install -y git libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel \
             gnome-keyring unzip lxappearance feh mate-polkit meson ninja-build jetbrains-mono-fonts-all \
             google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot \
-            trash-cli tumbler gvfs-mtp fzf vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer \
+            trash-cli tumbler fzf gvfs-mtp vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer \
             pavucontrol pavucontrol-qt ffmpeg-devel ffmpegthumbnailer yazi xautolock || {
             print_message "$RED" "Failed to install some packages via dnf."
             exit 1
@@ -111,7 +96,6 @@ install_packages() {
             pavucontrol pavucontrol-qt ffmpeg-7 ffmpegthumbnailer yazi xautolock || {
             print_message "${RED}" "Failed to install some packages via zypper."
             exit 1
-
         }
 
         print_message "$YELLOW" "NOTE: openSUSE uses i3lock instead of slock (slock is not available in official repositories)."
@@ -160,7 +144,7 @@ check_aur_helper() {
 
 install_dwm() {
     if [ -d "$HOME/dwm" ]; then
-        if fzf_confirm "DWM directory already exists. Do you want to overwrite it?"; then
+        if confirm "DWM directory already exists. Do you want to overwrite it?"; then
             rm -rf "$HOME/dwm"
         else
             print_message "$YELLOW" "Skipping DWM installation."
@@ -177,7 +161,7 @@ install_dwm() {
 
 install_slstatus() {
     print_message "$CYAN" ":: Installing slstatus..."
-    if fzf_confirm "Do you want to install slstatus (recommended)?"; then
+    if confirm "Do you want to install slstatus (recommended)?"; then
         cd "$HOME/dwm/slstatus" || exit 1
         sudo make clean install || exit 1
         print_message "$GREEN" "slstatus installed successfully!"
@@ -265,7 +249,7 @@ configure_picom() {
 
     mkdir -p "$CONFIG_DIR"
     if [ -f "$DESTINATION" ]; then
-        if fzf_confirm "Existing picom.conf detected. Do you want to replace it?"; then
+        if confirm "Existing picom.conf detected. Do you want to replace it?"; then
             mv "$DESTINATION" "$DESTINATION.bak"
         else
             return
@@ -281,14 +265,14 @@ configure_wallpapers() {
     mkdir -p "$HOME/Pictures"
 
     if [ -d "$BG_DIR" ]; then
-        if fzf_confirm "Wallpapers directory already exists. Do you want to overwrite?"; then
+        if confirm "Wallpapers directory already exists. Do you want to overwrite?"; then
             rm -rf "$BG_DIR"
         else
             return
         fi
     fi
 
-    if fzf_confirm "Do you want to download wallpapers? (Note: The wallpaper collection is large in size but recommended)"; then
+    if confirm "Do you want to download wallpapers? (Note: The wallpaper collection is large in size but recommended)"; then
         print_message "$CYAN" ":: Downloading wallpapers..."
         git clone https://github.com/harilvfs/wallpapers "$BG_DIR" || exit 1
         print_message "$GREEN" "Wallpapers downloaded successfully."
@@ -301,7 +285,7 @@ setup_xinitrc() {
     local XINITRC="$HOME/.xinitrc"
 
     if [ -f "$XINITRC" ]; then
-        if fzf_confirm "Existing .xinitrc detected. Do you want to replace it?"; then
+        if confirm "Existing .xinitrc detected. Do you want to replace it?"; then
             mv "$XINITRC" "$XINITRC.bak"
         else
             return
@@ -345,10 +329,10 @@ EOF
 }
 
 setup_tty_login() {
-    if fzf_confirm "Do you want to use DWM from TTY using startx?"; then
+    if confirm "Do you want to use DWM from TTY using startx?"; then
         setup_xinitrc
 
-        if fzf_confirm "Do you want to enable automatic login to TTY? (Not recommended for security reasons)"; then
+        if confirm "Do you want to enable automatic login to TTY? (Not recommended for security reasons)"; then
             local username=$(whoami)
             print_message "$CYAN" ":: Setting up autologin for user: $username"
 
@@ -380,7 +364,7 @@ check_display_manager() {
 
     if $dm_found; then
         print_message "$YELLOW" "Display manager $dm_name is detected."
-        if fzf_confirm "When using DWM from TTY, a display manager is not needed. Do you want to remove $dm_name?"; then
+        if confirm "When using DWM from TTY, a display manager is not needed. Do you want to remove $dm_name?"; then
             if [ "$distro" == "arch" ]; then
                 sudo systemctl disable $dm_name.service
                 sudo systemctl stop $dm_name.service
@@ -419,21 +403,13 @@ RemainAfterExit=yes
 WantedBy=multi-user.target
 EOF
 
-    if fzf_confirm "Enable NumLock on boot?"; then
+    if confirm "Enable NumLock on boot?"; then
         sudo systemctl enable numlock.service
         echo -e "${GREEN}NumLock will be enabled on boot.${ENDCOLOR}"
     else
         echo -e "${GREEN}NumLock setup skipped.${ENDCOLOR}"
     fi
 }
-
-if ! command -v fzf &> /dev/null; then
-    echo -e "${RED}${BOLD}Error: fzf is not installed${NC}"
-    echo -e "${YELLOW}Please install fzf before running this script:${NC}"
-    echo -e "${CYAN}  • Fedora: ${NC}sudo dnf install fzf"
-    echo -e "${CYAN}  • Arch Linux: ${NC}sudo pacman -S fzf"
-    exit 1
-fi
 
 detect_distro
 install_packages
