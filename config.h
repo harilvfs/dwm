@@ -50,7 +50,7 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "󰊖", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "", "" };
 
 static const char ptagf[] = "[%s %s]";  /* format of a tag label */
 static const char etagf[] = "[%s]";     /* format of an empty tag */
@@ -141,7 +141,7 @@ static Key keys[] = {
     { MODKEY,                       XK_space,      setlayout,              {0} }, // toggles between current and previous layout
     { MODKEY|ShiftMask,             XK_m,          togglefloating,         {0} }, // toggles between tiled and floating arrangement for the currently focused client
     { MODKEY|ShiftMask,             XK_y,          togglefakefullscreen,   {0} }, // toggles "fake" fullscreen for the selected window
-    { MODKEY,                       XK_0,          view,                   {.ui = ~0 } }, // view all tags on the current monitor
+    TAGKEYS(                        XK_0,                                  9)
     { MODKEY,                       XK_comma,      focusmon,               {.i = -1 } }, // focus on the previous monitor, if any
     { MODKEY,                       XK_period,     focusmon,               {.i = +1 } }, // focus on the next monitor, if any
     { MODKEY|ShiftMask,             XK_comma,      tagmon,                 {.i = -1 } }, // tag previous monitor
@@ -151,6 +151,10 @@ static Key keys[] = {
     TAGKEYS(                        XK_3,                                  2)
     TAGKEYS(                        XK_4,                                  3)
     TAGKEYS(                        XK_5,                                  4)
+    TAGKEYS(                        XK_6,                                  5)
+    TAGKEYS(                        XK_7,                                  6)
+    TAGKEYS(                        XK_8,                                  7)
+    TAGKEYS(                        XK_9,                                  8)
     { MODKEY|ShiftMask,             XK_q,          quit,                   {0} }, // exit dwm
     { MODKEY|ControlMask,           XK_q,          spawn,                  SHCMD("$HOME/.config/rofi/powermenu.sh")}, // exit dwm
     { MODKEY|ControlMask|ShiftMask, XK_r,          spawn,                  SHCMD("systemctl reboot")}, // reboot system
