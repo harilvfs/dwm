@@ -318,21 +318,21 @@ exec dwm
 **For a one click setup process, run the script:**
 
 > [!NOTE]  
-> Before running this script, make sure `fzf` and `curl` are installed.  
+> Before running this script, make sure `curl` is installed.  
 >
 > **For Arch-based distros:**  
 > ```sh
-> sudo pacman -S fzf curl --noconfirm
+> sudo pacman -S curl --noconfirm
 > ```  
 >
 > **For Fedora-based distros:**  
 > ```sh
-> sudo dnf install fzf curl -y
+> sudo dnf install curl -y
 > ```  
 >
 > **For openSUSE:**  
 > ```sh
-> sudo zypper install -y fzf curl
+> sudo zypper install -y curl
 > ```
 
 **After that, run this command in your terminal.**
