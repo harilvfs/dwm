@@ -341,5 +341,13 @@ exec dwm
 bash <(curl -L https://chalisehari.com.np/dwm)
 ```
 
+or
+
+**If you are using fish shell**
+
+```bash
+ bash -c "$(curl -fsSL chalisehari.com.np/dwm)"
+```
+
 > [!NOTE]
 > Btw remember this script is only for Arch, Fedora & openSUSE-based distros. Manual installation is recommended for other distributions or customized setups.
