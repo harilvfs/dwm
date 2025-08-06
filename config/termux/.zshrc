@@ -94,3 +94,4 @@ lazyg() {
 	git push
 }
 
+alias laptop='ssh username@192.168.*.**'
