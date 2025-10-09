@@ -22,7 +22,7 @@
 
 </div>
 
-![Terminal](https://github.com/harilvfs/assets/blob/main/dwm/dwm.png)
+<img width="1366" height="768" alt="2025-10-09_23-54" src="https://github.com/user-attachments/assets/37b127b8-c91c-46fe-b9bd-cd00535b0b6e" />
 
 <br>
 
