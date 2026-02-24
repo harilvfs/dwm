@@ -45,6 +45,10 @@ alias .5 'cd ../../../../..'
 
 alias mkdir 'mkdir -p'
 
+# if you wanna add github token
+
+# set -x GITHUB_TOKEN 
+
 function yayf
   yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S
 end
@@ -56,3 +60,5 @@ function lazyg
 end
 
 end
+
+set -gx PATH $HOME/.local/bin $PATH
