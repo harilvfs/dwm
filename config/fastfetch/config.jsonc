@@ -71,34 +71,33 @@
         },
         {
             "type": "shell",
-            "key": "└ └󰞷 ",
+            "key": "│ ├󰞷 ",
             "keyColor": "yellow"
         },
-        "break",
         {
             "type": "de",
-            "key": "󰧨  DE",
-            "keyColor": "blue"
+            "key": "│ ├󰧨  ",
+            "keyColor": "yellow"
         },
         {
             "type": "lm",
             "key": "│ ├󰍁 ",
-            "keyColor": "blue"
+            "keyColor": "yellowyellow"
         },
         {
             "type": "wm",
             "key": "│ ├󱂬 ",
-            "keyColor": "blue"
+            "keyColor": "yellow"
         },
         {
             "type": "wmtheme",
             "key": "│ ├󰉦 ",
-            "keyColor": "blue"
+            "keyColor": "yellow"
         },
         {
             "type": "terminal",
             "key": "└ └󰆍 ",
-            "keyColor": "blue"
+            "keyColor": "yellow"
         },
         {
             "type": "custom",
