@@ -86,7 +86,7 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd noto-fonts-emoji ttf-joypixel
 Store wallpapers in `~/Pictures/wallpapers`. Use the following command to clone a curated wallpaper collection:
 
 ```bash
-git clone https://github.com/harilvfs/wallpapers ~/Pictures
+git clone https://github.com/harilvfs/wallpapers 
 ```
 
 ## Picom Configuration
