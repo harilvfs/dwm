@@ -18,7 +18,7 @@ fi
 
 GRUB_CUSTOM="/etc/grub.d/40_custom"
 
-cat <<EOF > "$GRUB_CUSTOM"
+cat << EOF > "$GRUB_CUSTOM"
 menuentry "Timeshift Recovery (Latest: $LATEST_SNAPSHOT)" {
     set root=(hd0,3)
     linux $BOOT_PATH/vmlinuz-linux root=/dev/sda3 rw
