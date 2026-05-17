@@ -145,80 +145,6 @@ Preconfigured package settings are included in this repository under the `config
 - Install the necessary packages for your distribution.
 - Copy the preconfigured files to your `~/.config` directory.
 
-### **Package Installation by Distribution**  
-
-#### Arch Linux  
-> <img src="https://img.icons8.com/?size=48&id=uIXgLv5iSlLJ&format=png" width="20" />
- 
-```bash
-sudo pacman -S --needed --noconfirm kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi starship bash zsh ghostty
-```
-- **BetterDiscord**: Install as an AppImage or via AUR using `paru` or `yay`.  
-  ```bash
-  yay -S betterdiscord-installer
-  ```
-  
-#### Fedora  
-> <img src="https://img.icons8.com/?size=48&id=ZbBhBW0N2q3D&format=png" width="20" />
-
-```bash
-sudo dnf install kitty alacritty kvantum dunst fastfetch fish helix neovim picom rofi bash zsh
-```
-- **Starship**: Install using the official script:
-  ```bash
-  curl -sS https://starship.rs/install.sh | sh
-  ```
-- **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
-
-> **Ghostty**: Download Ghostty Terminal 
-> ```bash
-> dnf copr enable pgdev/ghostty
-> dnf install ghostty
->```
-
-#### Debian/Ubuntu  
-> <img src="https://img.icons8.com/?size=48&id=17838&format=png" width="20" />
- 
-```bash
-sudo apt install -y kitty alacritty qt5-style-kvantum fish neovim rofi dunst picom bash zsh
-```
-- **Fastfetch**: Download the appropriate `.deb` package from [Fastfetch's release page](https://github.com/fastfetch-cli/fastfetch/releases) and install it:
-  ```bash
-  sudo dpkg -i fastfetch-linux-<architecture>.deb
-  ```
-- **Helix**: Install from source using the [Helix documentation](https://docs.helix-editor.com/install.html).
-- **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
-- **Starship**: Install using the official script:
-  ```bash
-  curl -sS https://starship.rs/install.sh | sh
-  ```
-> **Ghostty**: Download Ghostty Terminal
-> ```bash
-> echo 'deb http://download.opensuse.org/repositories/home:/clayrisser:/bookworm/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:clayrisser:bookworm.list
-> curl -fsSL https://download.opensuse.org/repositories/home:clayrisser:bookworm/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_clayrisser_bookworm.gpg > /dev/null
-> sudo apt update
-> sudo apt install ghostty
-> ```
-
-#### openSUSE  
-> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/suse/opensuse.png" width="20" />
-
-```bash
-sudo zypper install kitty alacritty kvantum-manager fish neovim rofi fastfetch dunst picom starship bash zsh ghostty
-```
-- **BetterDiscord**: Download the AppImage from the [official website](https://betterdiscord.app/).
-
-### **Using Preconfigured Files**  
-
-Once the required packages are installed, copy the preconfigured files to your `.config` directory:
-
-```bash
-cp -r config/* ~/.config/
-```
-
-> [!IMPORTANT]  
-> If you don’t have a preconfigured setup, it’s recommended to use the provided configurations for better compatibility with the DWM patches.
-
 </details>
 
 ## SDDM Theme (Optional) 
@@ -244,7 +170,7 @@ Customize your bootloader appearance with GRUB themes.
 - Explore themes from ChrisTitusTech's repository:  
   [Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes)
 
-> **Note**: Ensure GRUB customization aligns with your workflow and is applied carefully to avoid bootloader issues.
+> **Note**: Ensure GRUB customization is applied carefully to avoid bootloader issues.
 
 </details>
 

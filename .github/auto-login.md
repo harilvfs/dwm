@@ -21,27 +21,6 @@ Replace `your_username`. Then reload:
 sudo systemctl daemon-reexec
 ```
 
-> Auto-login skips the password — only use on trusted machines.
-
-### (Optional) Add Screen Lock
-
-Install `slock`:
-
-```bash
-sudo pacman -S slock
-```
-
-To lock after 5 minutes, add to `.xinitrc` **before** `exec dwm`:
-
-```bash
-xautolock -time 5 -locker slock &
-```
-
-> Manually lock with this command or if you already have install my dwm then press `mod+u` [ mod refers to window key ( eww window ) ] :
-> ```bash
-> slock
-> ```
-
 ### Remove Auto-Login (If Needed)
 
 Delete config:
@@ -56,7 +35,7 @@ Then reload systemd:
 sudo systemctl daemon-reexec
 ```
 
-### Reboot & Test
+### Reboot
 
 Restart your system to apply changes:  
 
