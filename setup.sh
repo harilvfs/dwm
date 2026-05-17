@@ -79,7 +79,7 @@ install_packages() {
             sudo dnf install -y git libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel \
                 gnome-keyring unzip lxappearance feh mate-polkit meson ninja-build jetbrains-mono-fonts-all \
                 google-noto-color-emoji-fonts network-manager-applet blueman pasystray google-noto-emoji-fonts thunar flameshot \
-                trash-cli tumbler fzf gvfs-mtp vim neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer \
+                trash-cli tumbler fzf gvfs-mtp neovim slock nwg-look swappy kvantum gtk3 gtk4 qt5ct qt6ct man man-db pamixer \
                 pavucontrol pavucontrol-qt ffmpeg-devel ffmpegthumbnailer yazi xautolock dunst \
                 picom || {
                 print_message "$RED" "Failed to install some packages via dnf."
@@ -92,7 +92,7 @@ install_packages() {
             sudo zypper install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel \
                 gnome-keyring unzip lxappearance feh mate-polkit meson ninja jetbrains-mono-fonts \
                 google-noto-fonts noto-coloremoji-fonts NetworkManager-applet blueman pasystray thunar flameshot \
-                trash-cli tumbler mtp-tools fzf vim neovim i3lock nwg-look swappy kvantum-manager libgtk-3-0 libgtk-4-1 qt5ct qt6ct man man-pages pamixer \
+                trash-cli tumbler mtp-tools fzf neovim i3lock nwg-look swappy kvantum-manager libgtk-3-0 libgtk-4-1 qt5ct qt6ct man man-pages pamixer \
                 pavucontrol pavucontrol-qt ffmpeg-7 ffmpegthumbnailer yazi xautolock dunst \
                 picom || {
                 print_message "${RED}" "Failed to install some packages via zypper."
