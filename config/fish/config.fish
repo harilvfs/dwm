@@ -17,6 +17,7 @@ set -x EDITOR nvim
 
 # --- Aliases ---
 alias c 'clear'
+alias ts 'ssh -p 8022 u0_a585@192.168.1.5'  # SSH into Termux
 alias l 'eza -lh --icons=auto'
 alias ls 'eza -1 --icons=auto'
 alias ll 'eza -lha --icons=auto --sort=name --group-directories-first'

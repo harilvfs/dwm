@@ -78,6 +78,7 @@ alias chcolor="bash ~/.termux/scripts/chcolor.sh"
 source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias vim='nvim'
+alias sl='ssh aayush@192.168.1.10'
 alias l='eza -lh --icons=auto' # long list
 alias ls='eza -1 --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
