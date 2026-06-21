@@ -6,6 +6,7 @@ if status is-interactive
     zoxide init fish | source
 
     alias vim 'nvim'
+    alias vi 'nvim'
     alias ll 'ls -la'
     alias la 'ls -la'
 
