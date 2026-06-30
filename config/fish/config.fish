@@ -65,7 +65,8 @@ end
 
 set -gx PATH $HOME/.local/bin $PATH
 
-set -x QT_QPA_PLATFORMTHEME qt5ct
+set -gx QT_QPA_PLATFORMTHEME qt6ct
+set -gx QT_STYLE_OVERRIDE kvantum
 
 # tty window manager launchers
 alias startxdwm 'startx ~/.xinitrc dwm'
