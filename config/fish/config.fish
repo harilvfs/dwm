@@ -64,3 +64,13 @@ end
 end
 
 set -gx PATH $HOME/.local/bin $PATH
+
+set -x QT_QPA_PLATFORMTHEME qt5ct
+
+# tty window manager launchers
+alias startxdwm 'startx ~/.xinitrc dwm'
+alias startxi3 'startx ~/.xinitrc i3'
+
+# function fish_greeting
+#    npltz show
+# end

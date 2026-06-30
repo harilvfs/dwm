@@ -96,3 +96,5 @@ lazyg() {
 }
 
 alias laptop='ssh username@192.168.*.**'
+
+# npltz show
