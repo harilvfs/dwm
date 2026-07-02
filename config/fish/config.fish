@@ -38,6 +38,7 @@ alias aa 'startx'
 alias rm 'trash -v'
 alias hx 'helix'
 alias ff 'fastfetch'
+alias ze 'zellij'
 
 alias .. 'cd ..'
 alias ... 'cd ../..'
