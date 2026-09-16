@@ -125,7 +125,7 @@ Install system tray applets for network, Bluetooth, and sound management.
   ```
 
 ### openSUSE  
-> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/suse/opensuse.png" width="20" />
+> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/carch-docs/opensuse.png" width="20" />
 
   ```bash
   sudo zypper install NetworkManager-applet blueman pasystray
