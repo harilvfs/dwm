@@ -8,14 +8,6 @@
 
 </div>
 
-<div align="center">
-
-<img src="https://img.shields.io/github/issues/harilvfs/dwm?style=for-the-badge&color=dbb6ed&logoColor=85e185&labelColor=1c1c29" /> <img src="https://img.shields.io/github/issues-pr/harilvfs/dwm?style=for-the-badge&color=ef9f9c&logoColor=85e185&labelColor=1c1c29" /> <img src="https://img.shields.io/github/last-commit/harilvfs/dwm?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29"/> <img src="https://img.shields.io/github/stars/harilvfs/dwm?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29"/>
-
-[![Discord](https://img.shields.io/discord/757266205408100413.svg?label=Discord&logo=Discord&style=for-the-badge&color=8bd5ca&logoColor=e78284&labelColor=1c1c29)](https://discord.com/invite/8NJWstnUHd) [![Telegram Channel](https://img.shields.io/badge/harilvfs-Telegram-c6a0f6?style=for-the-badge&logo=telegram&labelColor=1c1c29)](https://t.me/harilvfs)
-
-</div>
-
 <img width="1366" height="768" alt="2026-03-29_23-49" src="https://github.com/user-attachments/assets/7a623ce8-7f22-4b9a-9941-90b34a7c26f1" />
 
 <br>
