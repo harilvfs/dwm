@@ -24,7 +24,7 @@ sudo dnf install -y libX11-devel libXinerama-devel libXft-devel imlib2-devel lib
 ```
 
 ### openSUSE  
-> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/suse/opensuse.png" width="20" />
+> <img src="https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/carch-docs/opensuse.png" width="20" />
 
 ```bash
 sudo zypper install libX11-devel libXinerama-devel libXft-devel imlib2-devel libxcb-devel unzip flameshot lxappearance feh mate-polkit meson ninja-build gnome-keyring thunar trash-cli
